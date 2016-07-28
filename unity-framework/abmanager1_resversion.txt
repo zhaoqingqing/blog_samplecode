@@ -1,0 +1,20 @@
+{
+    "buildDatetime": "20160728-010315",
+    "listResInfo": [
+        {
+            "strName": "beiji",
+            "strPath": "assetbundles/audios/beiji.unity3d",
+            "strHash": "977077bec3b362b74f084c93ff3d5fc"
+        },
+        {
+            "strName": "M2_ZC_Minimap",
+            "strPath": "textures/M2_ZC_Minimap.unity3d",
+            "strHash": "bfbe425f3b74abad3fd3219c7510d6b1"
+        },
+        {
+            "strName": "settingclient",
+            "strPath": "settingclient.unity3d",
+            "strHash": "6a88b87c1cce7ff2acbb8782bf7503e"
+        }
+    ]
+}

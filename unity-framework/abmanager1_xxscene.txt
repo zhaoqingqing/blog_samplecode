@@ -1,0 +1,113 @@
+{
+    "renderSetting": {
+        "fogEnable": true,
+        "fogColor": [
+            0.654411792755127,
+            0.307958483695984,
+            0.601846218109131,
+            1
+        ],
+        "fogMode": 3,
+        "fogDensity": 0.00999999977648258,
+        "fogStartDistance": 0,
+        "fogEndDistance": 300,
+        "ambientLight": [
+            0.503904640674591,
+            0.558823525905609,
+            0.349264711141586,
+            1
+        ],
+        "bloomEnable": false,
+        "ssaoEnable": false,
+        "antialiasingEnable": false
+    },
+    "lightList": [],
+    "assetList": [
+        {
+            "materialList": [
+                {
+                    "name": "building01_c",
+                    "mainTex": "building01_c.unity3d",
+                    "bumpTex": null,
+                    "detailTexs": []
+                }
+            ],
+            "name": "Building_Test_popingtai",
+            "source": "building/building_test_popingtai.unity3d",
+            "position": [
+                33.4996376037598,
+                16.0347023010254,
+                26.0608234405518
+            ],
+            "rotation": [
+                270,
+                0,
+                0
+            ],
+            "scale": [
+                0.811651527881622,
+                0.811651527881622,
+                0.524521589279175
+            ],
+            "lightMapIndex": 0,
+            "lightmapTilingOffset": [
+                0.0654296875,
+                0.0654296875,
+                0.167713165283203,
+                0.858142852783203
+            ],
+            "waterReflect": 0,
+            "bounding": [
+                27.9424133300781,
+                15.9865112304688,
+                20.5035934448242,
+                39.0568618774414,
+                16.089469909668,
+                31.6180534362793
+            ]
+        },
+        {
+            "materialList": [
+                {
+                    "name": "trees01_c",
+                    "mainTex": "trees01_c.unity3d",
+                    "bumpTex": null,
+                    "detailTexs": []
+                }
+            ],
+            "name": "Trees_Test_zhuzi01",
+            "source": "trees/trees_test_zhuzi01.unity3d",
+            "position": [
+                33.0035018920898,
+                13.2223606109619,
+                56.4292221069336
+            ],
+            "rotation": [
+                292.654388427734,
+                257.985260009766,
+                265.143280029297
+            ],
+            "scale": [
+                1.37031161785126,
+                1.37031161785126,
+                1.37031126022339
+            ],
+            "lightMapIndex": 0,
+            "lightmapTilingOffset": [
+                0.0830078125,
+                0.0830078125,
+                0.167644500732422,
+                0.563152313232422
+            ],
+            "waterReflect": 0,
+            "bounding": [
+                23.0275344848633,
+                11.7310638427734,
+                50.7825050354004,
+                37.1795768737793,
+                28.9210357666016,
+                60.8415718078613
+            ]
+        }
+    ]
+}
