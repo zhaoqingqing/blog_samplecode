@@ -1,10 +1,10 @@
 @echo off
 echo ****************************************
-echo            自动编译并打包
+echo            auto build vs project
 echo                         
-echo                 for wd visual studio by qingqing.zhao
+echo                 for wd visual studio by qingqing.zhao@foxmail.com
 echo ****************************************
-title 自动编译微端
+title build visual studio project
 color 0a
 rem link:http://blog.csdn.net/edcvf3/article/details/10136347
 rem 使用方法：1.此bat放在和源代码同级父目录,否则请修改路径 2.执行bat
@@ -37,7 +37,7 @@ rem document https://msdn.microsoft.com/zh-cn/library/xee0c8y7.aspx
 rem 用法：devenv [解决方案文件 | 项目文件 | 任意文件.扩展名] [开关]
 
 echo.
-echo *** start building ......***
+echo *** start build ......***
 
 devenv %ylwd_sln% /Rebuild Release /project "ylwd\ylwd.csproj" /projectconfig Release /Out %log_file% 
 copy %ylwd_files% %save_path%\ylwd_test.exe
