@@ -1,0 +1,44 @@
+package Protoc;
+message PbPkg{
+    required int32 id = 1;
+    required bytes data = 2;
+}
+message S2C_UPDATE_PLAYER {
+  required string id = 1;
+  required string name = 2;
+  required int32 lv = 3;
+  required int32 hp = 4;
+  required int32 mp = 5;	
+}
+
+message S2C_UPDATE_ENTITY{
+  required int32 id = 1;
+  required int32 x = 2;
+  required int32 y = 3;
+  required int32 z = 4;
+  required int32 face = 5;
+  required int32 status = 6;
+  required bool isPlayer = 7;
+}
+
+message S2C_CommonAPI{
+  required string api = 1;
+  required string args = 2;
+}
+message C2S_UPDATE_PLAYER {
+  required string id = 1;
+  required int32 hp = 4;
+  required int32 mp = 5;	
+}
+
+message C2S_UPDATE_ENTITY{
+  required int32 id = 1;
+  required int32 x = 2;
+  required int32 y = 3;
+  required int32 z = 4;
+}
+
+message C2S_CommonAPI{
+  required string api = 1;
+  required string args = 2;
+}
