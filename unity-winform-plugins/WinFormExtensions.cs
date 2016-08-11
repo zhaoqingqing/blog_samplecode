@@ -13,10 +13,11 @@ public static class WinFormExtensions
 {
 	public static void AppendNewLine(this TextBox textBox, string text,params object[] args)
 	{
+		string newText = args == null || args.Length < 1 ? text : string.Format(text, args);
 		if (!string.IsNullOrEmpty(textBox.Text))
-			textBox.AppendText("\r\n" + string.Format(text,args));
+			textBox.AppendText(string.Concat("\r\n",newText));
 		else
-			textBox.AppendText(string.Format(text,args));
+			textBox.AppendText(newText);
 	}
 
 }
