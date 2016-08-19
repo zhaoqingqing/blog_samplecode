@@ -24,13 +24,25 @@ public class ReporterMessageReceiver : MonoBehaviour
 	}
 	void OnHideReporter()
 	{
-		//TO DO : resume your game
-	}
+        //TO DO : resume your game
+        //NOTE if use ngui enable input
+        //if (UICamera.eventHandler != null)
+        //{
+        //    UICamera.eventHandler.useMouse = true;
+        //    UICamera.eventHandler.useTouch = true;
+        //}
+    }
 
-	void OnShowReporter()
+    void OnShowReporter()
 	{
-		//TO DO : pause your game and disable its GUI
-	}
+        //TO DO : pause your game and disable its GUI
+        //NOTE if use ngui disable input
+        //if (UICamera.eventHandler != null)
+        //{
+        //    UICamera.eventHandler.useMouse = false;
+        //    UICamera.eventHandler.useTouch = false;
+        //}
+    }
 
 	void OnLog( Reporter.Log log )
 	{

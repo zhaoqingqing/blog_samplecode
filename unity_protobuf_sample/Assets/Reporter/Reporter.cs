@@ -1526,20 +1526,23 @@ public class Reporter : MonoBehaviour {
 			GUILayout.BeginHorizontal( ); 
 			
 			GUILayout.Box( showTimeContent,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
-			GUILayout.Label( selectedSample.time.ToString("0.000"),nonStyle );
-			GUILayout.Space( size.x );
+		    if (selectedSample != null)
+		    {
+		        GUILayout.Label( selectedSample.time.ToString("0.000"),nonStyle );
+		        GUILayout.Space( size.x );
 			
-			GUILayout.Box( showSceneContent,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
-			GUILayout.Label( scenes[ selectedSample.loadedScene],nonStyle );
-			GUILayout.Space( size.x );
+		        GUILayout.Box( showSceneContent,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
+		        GUILayout.Label( scenes[ selectedSample.loadedScene],nonStyle );
+		        GUILayout.Space( size.x );
 			
-			GUILayout.Box( showMemoryContent,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
-			GUILayout.Label( selectedSample.memory.ToString("0.000") ,nonStyle);
-			GUILayout.Space( size.x );
+		        GUILayout.Box( showMemoryContent,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
+		        GUILayout.Label( selectedSample.memory.ToString("0.000") ,nonStyle);
+		        GUILayout.Space( size.x );
 			
-			GUILayout.Box( showFpsContent,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
-			GUILayout.Label( selectedSample.fpsText ,nonStyle);
-			/*GUILayout.Space( size.x );
+		        GUILayout.Box( showFpsContent,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
+		        GUILayout.Label( selectedSample.fpsText ,nonStyle);
+		    }
+		    /*GUILayout.Space( size.x );
 			GUILayout.Box( graphContent ,nonStyle, GUILayout.Width(size.x) ,GUILayout.Height(size.y));
 			GUILayout.Label( selectedLog.sampleId.ToString() ,nonStyle  );*/
 			GUILayout.FlexibleSpace();
