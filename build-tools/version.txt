@@ -1,0 +1,6 @@
+{
+"WdVer":"1",
+"ResVer":"2",
+"ConfigVer":"3",
+"LogicVer":"4",
+}
