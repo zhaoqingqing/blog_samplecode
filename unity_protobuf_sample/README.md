@@ -38,3 +38,9 @@ protobuf_tools
  	 build_server_protobuf.bat(自动生成proto服务器代码)
 
 </pre>
+
+
+
+### protobuf_examples
+
+protobuf_examples目录是从google官方checkout的example https://github.com/google/protobuf/trunk/examples
