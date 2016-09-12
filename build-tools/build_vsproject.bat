@@ -8,6 +8,7 @@ title build visual studio project
 color 0a
 rem link:http://blog.csdn.net/edcvf3/article/details/10136347
 rem 使用方法：1.此bat放在和源代码同级父目录,否则请修改路径 2.执行bat
+rem update 2016-09-12  best way to use msbuild
 cd %~dp0 
 echo project path %~dp0
 
