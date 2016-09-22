@@ -177,4 +177,31 @@ public class FileHelper
 		}
 		fileInfo.Attributes = FileAttributes.Normal;
 	}
+	
+	/// <summary>
+	/// 文件大小格式化转换
+	/// </summary>
+	/// <param name="pContentLength"></param>
+	/// <returns></returns>
+	public static string FormatSizeType(float pContentLength)
+	{
+		string type = "";
+		float size;
+		if (pContentLength >= 1073741824)
+		{
+			size = pContentLength / 1073741824.00F;
+			type = "GB";
+		}
+		else if (pContentLength >= 1048576)
+		{
+			size = pContentLength / 1048576.00F;
+			type = "MB";
+		}
+		else
+		{
+			size = pContentLength / 1024.00F;
+			type = "KB";
+		}
+		return size.ToString("0.0") + type;
+	}
 }
