@@ -1,0 +1,74 @@
+﻿using UnityEngine;
+using System.Collections;
+using Object = System.Object;
+/// <summary>
+/// 已知Error:runtime sc
+	出现条件：当Java中的Class，用在unity中的全局变量，返回值，协程时，会报
+	猜测原因：ikvm是在运行时启动的虚拟机，然后在Editor未运行时，dll中的class unity并不能序列化到
+/// </summary>
+public class IKVM_Java_HelloWorld : MonoBehaviour
+{
+    System.Object exampleLibrary;
+    //private ExampleLibrary exampleLibrary2;
+    void OnGUI()
+    {
+        
+        GUILayout.Label("hello from java code .....");
+        //string text = exampleLibrary.HelloWorld();
+        //GUILayout.Label(text);
+        if (GUILayout.Button("TEST"))
+        {
+           
+            //DoLog(exampleLibrary.HelloWorld());
+        }
+
+        if (GUILayout.Button("TEST2"))
+        {
+            TestLog();
+        }
+        if (GUILayout.Button("TEST3"))
+        {
+            //exampleLibrary = new ExampleLibrary();
+            //var tmp = GetLib() as ExampleLibrary;
+            //if (tmp != null) Debug.Log(tmp.HelloWorld());
+        }
+        if (GUILayout.Button("Coroutine"))
+        {
+            StartCoroutine(CoLog());
+        }
+
+    }
+
+    IEnumerator CoLog()
+    {
+        //int idx = 0;
+        //ExampleLibrary exampleLibrary = new ExampleLibrary();
+        //while (idx < 100)
+        //{
+        //    DoLog(exampleLibrary.HelloWorld());
+        //    yield return null;
+        //    idx++;
+        //}
+        TestLog();
+        yield break;
+    }
+
+    void TestLog()
+    {
+        //ExampleLibrary exampleLibrary = new ExampleLibrary();
+        //for (int idx = 0; idx < 20; idx++)
+        //{
+        //    DoLog(exampleLibrary.HelloWorld());
+        //}
+    }
+
+    Object GetLib()
+    {
+        return exampleLibrary;
+    }
+
+    void DoLog(string text)
+    {
+        Debug.Log("from java : " + text);
+    }
+}
