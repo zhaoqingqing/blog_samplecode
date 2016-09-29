@@ -20,5 +20,8 @@ _ReSharper*/
 *.DotSettings.user
 
 unity-framework/attribute_sample/Library/
+unity-framework/attribute_sample/Temp/
 unity-framework/attribute_sample/*.sln
 unity-framework/attribute_sample/*.csproj
+unity-framework/attribute_sample/*.suo
+unity-framework/attribute_sample/*.user
