@@ -1,0 +1,1 @@
+IntervalTimeClick 指定时间内只可点击一次
