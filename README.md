@@ -1,7 +1,25 @@
 ### 仓库说明
-此仓库是存放的是[我的博客园](http://www.cnblogs.com/zhaoqingqing/)里的代码片段，方便代码阅读和查看diff
+此仓库是存放的是[我的博客园](http://www.cnblogs.com/zhaoqingqing/)中文章的代码片段，方便阅读和查看，同时欢迎大家点★Star(点赞/收藏)
 
-每个文件夹下都有对应的 **README.md**，可以进入每个文件夹查看详细的说明
+每个文件夹(目录)点击之后都有对应的 **README.md**(说明文件)，包含这个目录及文件的一些说明
+
+### 下载方法
+
+如果只需要下载单个文件或者下载单个文件夹，请查看以下的教程
+
+- [GitHub 下载文件夹](http://www.cnblogs.com/zhaoqingqing/p/5558253.html)
+
+- [Github 下载单个文件](http://www.cnblogs.com/zhaoqingqing/p/5534827.html)
+
+- [github 使用教程](http://www.cnblogs.com/zhaoqingqing/p/5151192.html)
+
+- [Github 扩展推荐](http://www.cnblogs.com/zhaoqingqing/p/5559178.html)
+
+如果你想下载完整的仓库，有以下几种方法：
+
+方法1. 点击右侧的 **Clone or download** - 点击 **Download ZIP**
+方法2. 在https://github.com/zhaoqingqing/blog_samplecode/releases页面中下载，我会按日期进行release(压缩包)
+方法3. 点击右侧的 **Clone or download** -  使用git或者svn clone 整个仓库
 
 ## 目录说明
 
@@ -76,15 +94,3 @@ unity standalone 平台的插件，包括windows ,mac os, linux平台。
 ### dotnet-network
 
 donet的网络编程的相关片段
-
-## 其它
-
-### git操作知识
-
-[GitHub 下载文件夹](http://www.cnblogs.com/zhaoqingqing/p/5558253.html)
-
-[Github 下载单个文件](http://www.cnblogs.com/zhaoqingqing/p/5534827.html)
-
-[github 使用教程](http://www.cnblogs.com/zhaoqingqing/p/5151192.html)
-
-[Github 扩展推荐](http://www.cnblogs.com/zhaoqingqing/p/5559178.html)
