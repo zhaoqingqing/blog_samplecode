@@ -15,8 +15,19 @@ public class TrackableTest : MonoBehaviour
     private Dictionary<string, TrackableBehaviour> Name2TrackDict = new Dictionary<string, TrackableBehaviour>();
     public float ImageOffsetX = 1.45f;
 
+    void Awake()
+    {
+        //NOTE vuforia 打印创建成功的log之后,才可以获取到所有的ImageTarget
+        VuforiaBehaviour.Instance.RegisterVuforiaStartedCallback(OnInitFinish);
+    }
+
+    void OnInitFinish()
+    {
+        InitImageTarget();
+    }
+
     // Use this for initialization
-    void Start()
+    void InitImageTarget()
     {
         //获取所有的可识别对象
         IEnumerable<TrackableBehaviour> trackableBehaviours = TrackerManager.Instance.GetStateManager().GetTrackableBehaviours();
@@ -34,7 +45,7 @@ public class TrackableTest : MonoBehaviour
                 trackableBehaviour.gameObject.layer = 8;
 
                 ImageTargetBehaviour targetBehaviour = trackableBehaviour.gameObject.GetComponent<ImageTargetBehaviour>();
-                //NOTE 不建议手动设置ImageTargetBehaviour的Size，看实际情况
+                //NOTE 不建议手动设置ImageTargetBehaviour的Size,设置之后会导致计算出的位置不对
                 //NOTE 多个ImageTarget之间要有间隙,可以理解为平铺开来
                 pos += new Vector3(targetBehaviour.GetSize().y, pos.y, pos.z);
                 ImageOffsetX = targetBehaviour.GetSize().y;
