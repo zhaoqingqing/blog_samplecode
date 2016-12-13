@@ -53,4 +53,37 @@ public partial class XToolUtils
 		}
 		return _list;
 	}
+	
+	//获取当前正在播放的AnimationClip
+	 public static string GetCurrentPlayingAnimationClip(GameObject go)
+    {
+        if (go == null)
+        {
+            return string.Empty;
+        }
+        var animation = go.GetComponent<Animation>();
+        if (animation == null) return string.Empty;
+        foreach (AnimationState anim in animation)
+        {
+            if (animation.IsPlaying(anim.name))
+            {
+                return anim.name;
+            }
+        }
+        return string.Empty;
+    }
+	
+	//获取指定AnimationClip的长度
+    public static float GetgAnimationClipLength(GameObject go, string animName)
+    {
+        if (go == null)
+        {
+            return 0;
+        }
+        var animation = go.GetComponent<Animation>();
+        if (animation == null) return 0;
+        var animClip = animation.GetClip(animName);
+        if (animation == null) return 0;
+        return animClip.length;
+    }
 }
