@@ -38,6 +38,7 @@ public class VuMarkHandler : MonoBehaviour
         mVuMarkManager = TrackerManager.Instance.GetStateManager().GetVuMarkManager();
         mVuMarkManager.RegisterVuMarkDetectedCallback(OnVuMarkDetected);
         mVuMarkManager.RegisterVuMarkLostCallback(OnVuMarkLost);
+        mVuMarkManager.RegisterVuMarkBehaviourDetectedCallback(OnBehaviourDetected);
     }
 
     void Update()
@@ -63,7 +64,7 @@ public class VuMarkHandler : MonoBehaviour
     /// </summary>
     public void OnVuMarkDetected(VuMarkTarget target)
     {
-        Debug.Log("New VuMark: " + GetVuMarkString(target));
+        Debug.Log("New VuMark: " + GetVuMarkString(target) + " name:"+ target.Name);
     }
 
     /// <summary>
@@ -75,6 +76,22 @@ public class VuMarkHandler : MonoBehaviour
 
         if (target == mCurrentVuMark)
             mIdPanel.ResetShowTrigger();
+    }
+
+    public void OnBehaviourDetected(VuMarkAbstractBehaviour target)
+    {
+        Debug.Log("New VuMarkBehaviour Found: " + target.name);
+        var obj= GameObject.CreatePrimitive(PrimitiveType.Cube);
+        obj.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+        string markId = "null";
+        var vuTarget =  target.GetComponent<VuMarkBehaviour>();
+        if (vuTarget != null && vuTarget.VuMarkTarget != null)
+        {
+            markId = GetVuMarkString(vuTarget.VuMarkTarget);
+        }
+      
+        obj.name = markId;
+        obj.transform.SetParent(target.transform);
     }
 
     #endregion // PUBLIC_METHODS
@@ -108,7 +125,7 @@ public class VuMarkHandler : MonoBehaviour
             var vuMarkId = GetVuMarkString(mClosestVuMark);
             var vuMarkTitle = GetVuMarkDataType(mClosestVuMark);
             var vuMarkImage = GetVuMarkImage(mClosestVuMark);
-            
+
             mCurrentVuMark = mClosestVuMark;
             mIdPanel.Hide();
             StartCoroutine(ShowPanelAfter(0.5f, vuMarkTitle, vuMarkId, vuMarkImage));
