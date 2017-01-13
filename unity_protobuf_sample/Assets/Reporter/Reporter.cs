@@ -110,7 +110,7 @@ public class Reporter : MonoBehaviour {
 	//to save memory
 	Dictionary<string , string > cachedString = new Dictionary<string, string>();
 
-	[HideInInspector]
+	//[HideInInspector]
 	//show hide In Game Logs
 	public bool show = false ;
 	//collapse logs
@@ -355,7 +355,7 @@ public class Reporter : MonoBehaviour {
 
 
 		currentView = (ReportView)PlayerPrefs.GetInt( "Reporter_currentView" , 1);
-		show 		= (PlayerPrefs.GetInt( "Reporter_show" )==1)?true:false;
+		//show 		= (PlayerPrefs.GetInt( "Reporter_show" )==1)?true:false;
 		collapse 	= (PlayerPrefs.GetInt( "Reporter_collapse" )==1)?true:false;
 		clearOnNewSceneLoaded = (PlayerPrefs.GetInt( "Reporter_clearOnNewSceneLoaded" )==1)?true:false;
 		showTime 	= (PlayerPrefs.GetInt( "Reporter_showTime" )==1)?true:false;
