@@ -30,3 +30,8 @@ unity-framework/attribute_sample/*.user
 # fsm
 unity-framework/fsm/Library/
 unity-framework/fsm/Temp/
+
+*.sln
+*.csproj
+*.suo
+*.user
