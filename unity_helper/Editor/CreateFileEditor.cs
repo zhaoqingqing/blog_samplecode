@@ -8,6 +8,35 @@ using UnityEngine;
 /// </summary>
 public class CreateFileEditor : Editor
 {
+    [MenuItem("Assets/Create/xLua File")]
+    static void CreateXLuaFile()
+    {
+        var fileEx = "lua.txt";
+        //获取当前所选择的目录（相对于Assets的路径）
+        var selectPath = AssetDatabase.GetAssetPath(Selection.activeObject);
+        var path = Application.dataPath.Replace("Assets", "") + "/";
+        var newFileName = "new_xlua." + fileEx;
+        var newFilePath = selectPath + "/" + newFileName;
+        var fullPath = path + newFilePath;
+
+        //简单的重名处理
+        if (File.Exists(fullPath))
+        {
+            var newName = "new_xlua-" + UnityEngine.Random.Range(0, 100) + "." + fileEx;
+            newFilePath = selectPath + "/" + newName;
+            fullPath = fullPath.Replace(newFileName, newName);
+        }
+
+        //如果是空白文件，编码并没有设成UTF-8
+        File.WriteAllText(fullPath, "-- test", Encoding.UTF8);
+
+        AssetDatabase.Refresh();
+
+        //选中新创建的文件
+        var asset = AssetDatabase.LoadAssetAtPath(newFilePath, typeof(Object));
+        Selection.activeObject = asset;
+    }
+
     [MenuItem("Assets/Create/Lua File")]
     static void CreateLuaFile()
     {
