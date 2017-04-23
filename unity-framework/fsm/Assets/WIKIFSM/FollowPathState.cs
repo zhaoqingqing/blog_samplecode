@@ -27,7 +27,7 @@ public class FollowPathState : FSMState
     {
         // Follow the path of waypoints
         // Find the direction of the current way point 
-        Vector3 vel = npc.rigidbody.velocity;
+        Vector3 vel = npc.GetComponent<Rigidbody>().velocity;
         Vector3 moveDir = waypoints[currentWayPoint].position - npc.transform.position;
 
         if (moveDir.magnitude < 1)
@@ -51,7 +51,7 @@ public class FollowPathState : FSMState
         }
 
         // Apply the Velocity
-        npc.rigidbody.velocity = vel;
+        npc.GetComponent<Rigidbody>().velocity = vel;
     }
 
 } // FollowPathState

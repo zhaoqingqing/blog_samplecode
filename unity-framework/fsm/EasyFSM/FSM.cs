@@ -8,8 +8,7 @@ Description		:   状态机类，角色的每一个状态对应于一个FSM类的实例。如果有特殊的
 Author		:    Jeg
 CreateTime	:  2016-7-22 16:21:17
 */
-namespace CCYMR
-{
+
     public class FSM
     {
         //FSM唯一ID
@@ -185,4 +184,3 @@ namespace CCYMR
         /// <param name="obj"></param>
         public virtual void Reason(GameObject obj) { }
     }
-}
