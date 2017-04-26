@@ -1119,16 +1119,7 @@ public class Reporter : MonoBehaviour {
 		
 		if( GUILayout.Button(closeContent ,barStyle, GUILayout.Width(size.x*2) , GUILayout.Height(size.y*2)))
 		{
-			show = false;
-			ReporterGUI gui = gameObject.GetComponent<ReporterGUI>();
-			DestroyImmediate( gui );
-
-			try{
-				gameObject.SendMessage( "OnHideReporter" );
-			}
-			catch( System.Exception e ){
-				Debug.LogException( e );
-			}
+		    DoClose();
 		}
 		
 		
@@ -1690,7 +1681,7 @@ public class Reporter : MonoBehaviour {
 	}
 
 	float lastClickTime = -1 ;
-	bool isDoubleClickDone()
+	public bool isDoubleClickDone()
 	{
 		if( Application.platform == RuntimePlatform.Android || 
 		   Application.platform == RuntimePlatform.IPhonePlayer )
@@ -1799,7 +1790,7 @@ public class Reporter : MonoBehaviour {
 	float lastUpdate = 0;
 	float lastUpdate2 = 0;
 	Rect temp;
-	void doShow(){
+	public void doShow(){
 		show = true; 
 		currentView = ReportView.Logs ;
 		gameObject.AddComponent<ReporterGUI>();
@@ -1826,7 +1817,8 @@ public class Reporter : MonoBehaviour {
 		calculateStartIndex();
 		if( !show && isGestureDone() )
 		{
-			doShow();
+			//屏蔽手势打开日志窗口
+			//doShow();
 		}
 
 
@@ -2059,6 +2051,22 @@ public class Reporter : MonoBehaviour {
 		
 		yield break;
 	}
+
+    public void DoClose()
+    {
+        show = false;
+        ReporterGUI gui = gameObject.GetComponent<ReporterGUI>();
+        DestroyImmediate(gui);
+
+        try
+        {
+            gameObject.SendMessage("OnHideReporter");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogException(e);
+        }
+    }
 }
 
 
