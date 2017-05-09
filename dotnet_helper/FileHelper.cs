@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.AccessControl;
 
-public class FileHelper
+public partial class FileHelper
 {
 	/// <summary>
 	/// 递归获取所有的目录
