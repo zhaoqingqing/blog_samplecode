@@ -10,7 +10,7 @@ using System.Collections;
 public class MyAssetModificationProcessor : UnityEditor.AssetModificationProcessor
 {
     
-	[MenuItem("Reporter/Create")]
+	[MenuItem("Tools/Create Reporter")]
 	public static void CreateReporter()
 	{
 		GameObject reporterObj = new GameObject();
@@ -20,7 +20,7 @@ public class MyAssetModificationProcessor : UnityEditor.AssetModificationProcess
 		//reporterObj.AddComponent<TestReporter>();
 
 		reporter.images = new Images();
-	    string imageRootPath = "Assets/Reporter/Images/";
+	    string imageRootPath = "Assets/Plugins/ThirdParty/Reporter/Images/";
 		reporter.images.clearImage 			= (Texture2D)AssetDatabase.LoadAssetAtPath(imageRootPath +"clear.png", typeof(Texture2D));
 		reporter.images.collapseImage 		= (Texture2D)AssetDatabase.LoadAssetAtPath(imageRootPath +"collapse.png", typeof(Texture2D));
 		reporter.images.clearOnNewSceneImage= (Texture2D)AssetDatabase.LoadAssetAtPath(imageRootPath +"clearOnSceneLoaded.png", typeof(Texture2D));
@@ -53,21 +53,24 @@ public class MyAssetModificationProcessor : UnityEditor.AssetModificationProcess
 		reporter.images.reporterScrollerSkin = (GUISkin)AssetDatabase.LoadAssetAtPath(imageRootPath+"reporterScrollerSkin.guiskin", typeof(GUISkin));
 
 	}
-	[InitializeOnLoad]
-	public class BuildInfo
+
+    [InitializeOnLoad]
+    public class BuildInfo
 	{
 		static BuildInfo ()
 	    {
-	        EditorApplication.update += Update;
-	    }
+            //屏蔽生成build info
+            EditorApplication.update += Update;
+
+        }
 	 
 		static bool isCompiling = true ; 
 	    static void Update ()
 	    {
 			if( !EditorApplication.isCompiling && isCompiling )
 			{
-	        	//Debug.Log("Finish Compile");
-				if( !Directory.Exists( Application.dataPath + "/StreamingAssets"))
+                Debug.Log("Finish Compile");
+                if ( !Directory.Exists( Application.dataPath + "/StreamingAssets"))
 				{
 					Directory.CreateDirectory( Application.dataPath + "/StreamingAssets");
 				}

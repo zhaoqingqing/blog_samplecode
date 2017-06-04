@@ -1,6 +1,6 @@
 @echo off
 set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-set javahome=C:\Tools\Java\jdk1.8.0_45
+set javahome=C:\Program Files\Java\jdk1.8.0_92
 rem javahome=D:\Tools\Java\jdk1.7.0_51
 rem LPY
 echo.
