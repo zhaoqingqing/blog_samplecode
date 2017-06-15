@@ -1,8 +1,7 @@
 @echo off
 set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-set javahome=C:\Program Files\Java\jdk1.8.0_92
-rem javahome=D:\Tools\Java\jdk1.7.0_51
-rem LPY
+set sdkhome=C:\Program Files\Java\jdk1.8.0_92
+rem sdkhome=D:\Tools\Java\jdk1.7.0_51
 echo.
 echo ************************************************************
 echo *                                                          *
@@ -10,7 +9,7 @@ echo *                   JDK 系统环境变量设置                   *
 echo *                                                          *
 echo ************************************************************
 echo.
-echo === 准备设置环境变量: JAVA_HOME=%javahome%
+echo === 准备设置环境变量: JAVA_HOME=%sdkhome%
 echo === 注意: 如果JAVA_HOME存在,会被覆盖,此操作不可逆的,请仔细检查确认!! ===
 echo.
 echo === 准备设置环境变量(后面有个.): classPath=%%JAVA_HOME%%\lib\tools.jar;%%JAVA_HOME%%\lib\dt.jar;.
@@ -24,8 +23,8 @@ echo.
 echo.
 echo.
 echo.
-echo === 新创建环境变量 JAVA_HOME=%javahome%
-setx "JAVA_HOME" "%javahome%" -M
+echo === 新创建环境变量 JAVA_HOME=%sdkhome%
+setx "JAVA_HOME" "%sdkhome%" -M
 echo.
 echo.
 echo === 新创建环境变量 classPath=%%JAVA_HOME%%\lib\tools.jar;%%JAVA_HOME%%%\lib\dt.jar;.

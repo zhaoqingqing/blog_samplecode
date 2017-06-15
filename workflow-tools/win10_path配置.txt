@@ -1,0 +1,1 @@
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\ProgramData\Oracle\Java\javapath;%JAVA_HOME%\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;
