@@ -33,6 +33,25 @@ public class GetPlayingAnim : MonoBehaviour
         component.GetAllState();
         return component;
     }
+    
+    /// <summary>
+    /// 在编辑器下可以右键执行初始化
+    /// </summary>
+    /// <returns></returns>
+    [ContextMenu("Init GetPlayingAnim")]
+    public GetPlayingAnim DoInit()
+    {
+        var attachObj = this.gameObject;
+        if (attachObj == null) return null;
+        if (attachObj.GetComponent<Animator>() == null)
+        {
+            Debug.LogErrorFormat("{0} 没有Animator组件！！！", attachObj.name);
+            return null;
+        }
+        GetPlayingAnim component = attachObj.GetComponent<GetPlayingAnim>() ?? attachObj.AddComponent<GetPlayingAnim>();
+        component.GetAllState();
+        return component;
+    }
 
     void Start()
     {
