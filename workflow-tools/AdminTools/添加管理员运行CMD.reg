@@ -1,0 +1,1 @@
+reg add "HKEY_CLASSES_ROOT\batfile\shell\open" /v HasLUAShield /t REG_SZ
