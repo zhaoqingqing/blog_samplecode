@@ -31,7 +31,7 @@ require("lsqlite")
 -- db = lsqlite.open(":memory:")
 
 -- open a file
-local db = lsqlite.open("test.db")
+ 
 
 -- open an inaccessible file
 -- db = lsqlite.open("/root/test.db")
@@ -60,7 +60,6 @@ end
 print("sum: " .. sum)
 
 db:close()
-
 ```
 
 ### 判断某张表是否存在
@@ -73,8 +72,22 @@ db:close()
 
 sqlite的部分功能在lua中并不能完全使用
 
+## 遇到问题
 
+### no lsqlite
 
+在xlua中`require lsqlite`，报找不到lsqlite
+
+	no field package.preload['lsqlite']
+	no such builtin lib 'lsqlite'
+	no such file 'lsqlite' in CustomLoaders!
+	no such resource 'lsqlite.lua'
+	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\lua\lsqlite.lua'
+	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\lua\lsqlite\init.lua'
+	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\lsqlite.lua'
+	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\lsqlite\init.lua'
+	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\..\share\lua\5.3\lsqlite.lua'
+	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\..\share\lua\5.3\lsqlite\init.lua'
 ## 在Mono/Unity中使用sqlite
 
 如果你是在Unity C#中使用sqlite，那么你需要导入sqlite.dll，打开Unity的安装目录，找到以下文件，拷贝到Plugins目录
