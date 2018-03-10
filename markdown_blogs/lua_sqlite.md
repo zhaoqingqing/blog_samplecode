@@ -1,6 +1,6 @@
  
 
-## 在Lua中使用sqlite For Unity3D
+## 在Lua中使用sqlite
 
 Lua版本Sqlite文档：[http://lua.sqlite.org/index.cgi/doc/tip/doc/lsqlite3.wiki](http://lua.sqlite.org/index.cgi/doc/tip/doc/lsqlite3.wiki)
 
@@ -8,19 +8,16 @@ Lua版本Sqlite文档：[http://lua.sqlite.org/index.cgi/doc/tip/doc/lsqlite3.wi
 
 ### 运行环境
 
-无需导入额外的库，只需要使用 `require("lsqlite")`即可。
-
+需要把sqlite编译进lib中
 我的运行环境如下
 
-XLua/ULua
+XLua
 
 Unity 5.3.7
 
-
-
 ### 示例
 
-更多例子：https://docs.coronalabs.com/api/library/sqlite3/index.html
+表的创建，添加数据，查询
 
 ```lua
 --a simple libsqlite3 binding for lua5.0-5.2 that provides 3 functions only and is still fully functional: local db = lsqlite.open(database) results, err = db:exec(statments) db:close()
@@ -28,7 +25,7 @@ Unity 5.3.7
 require("lsqlite")
 
 -- open an in memory database
--- db = lsqlite.open(":memory:")
+db = lsqlite.open(":memory:")
 
 -- open a file
  
@@ -62,21 +59,47 @@ print("sum: " .. sum)
 db:close()
 ```
 
+更多例子：https://docs.coronalabs.com/api/library/sqlite3/index.html
+
+
+
 ### 判断某张表是否存在
 
 如果使用sqlite的语法，在lua版本中是无效的。
 
+解决办法：使用xpcall捕获异常
 
+
+
+接口笔记
+
+### 数据查询
+
+```lua
+---比如select(query)功能
+for row in self.db:nrows('SELECT * FROM '..tableName..' where '..idKey..'="'..value..'"') do
+--- row就是一行数据
+end
+```
+
+### 对表的操作
+
+```lua
+ ---对table的操作，通常用于insert,update，append，create
+self.db:exec(sql)
+```
 
 ###  注意事项
 
 sqlite的部分功能在lua中并不能完全使用
 
+
+
 ## 遇到问题
 
 ### no lsqlite
 
-在xlua中`require lsqlite`，报找不到lsqlite
+在lua环境中`require lsqlite`，报找不到lsqlite
 
 	no field package.preload['lsqlite']
 	no such builtin lib 'lsqlite'
@@ -88,12 +111,3 @@ sqlite的部分功能在lua中并不能完全使用
 	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\lsqlite\init.lua'
 	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\..\share\lua\5.3\lsqlite.lua'
 	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\..\share\lua\5.3\lsqlite\init.lua'
-## 在Mono/Unity中使用sqlite
-
-如果你是在Unity C#中使用sqlite，那么你需要导入sqlite.dll，打开Unity的安装目录，找到以下文件，拷贝到Plugins目录
-
-Sqlite3.dll
-
-Mono.Data.Sqlite.dll
-
-Mono.Data.SqliteClient.dll
