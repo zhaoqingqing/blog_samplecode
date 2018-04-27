@@ -129,7 +129,11 @@ self.scrollRect.prefabSource = CS.UnityEngine.UI.XLoopScrollPrefabSource(self.it
 
 
 
-跳转到指定的index/Item：https://github.com/qiankanglai/LoopScrollRect/issues/14
+跳转到指定的index/Item：
+
+https://github.com/qiankanglai/LoopScrollRect/issues/14
+
+https://github.com/qiankanglai/LoopScrollRect/issues/27
 
 
 
