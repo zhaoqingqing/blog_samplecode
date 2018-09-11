@@ -1,0 +1,22 @@
+DllToLuaLib.cs
+    把DLL程序集翻译成EmmyLua格式的注解并打成zip压缩包，只要是用在Unity上的lua都可用。
+ICSharpCode.SharpZipLib.dll
+    提供zip压缩功能的程序集。
+
+以下产生的zip文件都在Unity工程目录下的LuaLib文件夹内
+
+DllToLuaLib使用方法：
+    1.将DllToLuaLib.cs和ICSharpCode.SharpZipLib.dll两个文件复制到工程里的Editor目录下（没有的话自己创建一个）。
+    2.将DllToLuaLib.cs里的静态变量DLL_NAMES里的dll名称改成自己需要的（默认写了"Assembly-CSharp"、"UnityEngine"和"mscorlib"三个）。
+    3.将修饰GenDlls()函数的MenuItem属性里的菜单名称参数改成自己喜欢的名称（默认写了"XLua/DllToLuaLib"）。
+    4.等待工程编译完成，点击对应菜单项。
+    5.在Unity控制台里出现“XXX.zip generating is complete!”后，在IDE中引入即可。
+
+
+附：XluaNameSpaceMap.CS（XLua专用）
+    由于XLua的风格是把所有C#端的类全放在一个叫CS的table下的，为了兼容这种风格，需要额外增加一个命名空间的映射。
+
+XluaNameSpaceMap使用方法：
+    1.将XluaNameSpaceMap.cs和ICSharpCode.SharpZipLib.dll两个文件复制到工程里的Editor目录下（没有的话自己创建一个）。
+    2.等待工程编译完成，点击菜单项“XLua/Generate NameSpaceMap”。
+    3.在Unity控制台里出现“NameSpaceMap.zip generating is complete!”后，在IDE中引入即可。
