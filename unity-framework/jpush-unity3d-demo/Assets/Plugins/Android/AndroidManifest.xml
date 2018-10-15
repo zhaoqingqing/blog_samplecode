@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.qing.jpush">
+
+  <permission
+      android:name="org.qing.jpush.permission.JPUSH_MESSAGE"
+      android:protectionLevel="signature"/>
+
+  <!-- Required  一些系统要求的权限，如访问网络等-->
+  <uses-permission android:name="org.qing.jpush.permission.JPUSH_MESSAGE"/>
+  <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+  <!-- Optional for location -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+  <application
+      android:label="@string/app_name"
+      android:icon="@drawable/app_icon">
+
+    <!-- For test only. Demo 的主程序 start -->
+    <activity
+        android:name="cn.jiguang.unity.push.UnityPluginActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <!-- For test only. 测试的主程序 end -->
+
+    <activity
+        android:name="cn.jpush.android.ui.PushActivity"
+        android:configChanges="orientation|keyboardHidden"
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="org.qing.jpush"/>
+      </intent-filter>
+    </activity>
+
+    <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的 JPush 服务相互拉起的功能。 -->
+    <!-- 若不启用该功能可删除该组件，将不拉起其他应用，也不能被其他应用拉起 -->
+    <service
+        android:name="cn.jpush.android.service.DaemonService"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.DaemonService" />
+        <category android:name="org.qing.jpush" />
+      </intent-filter>
+    </service>
+
+    <service
+        android:name="cn.jpush.android.service.DownloadService"
+        android:enabled="true"
+        android:exported="false">
+    </service>
+
+    <service
+        android:name="cn.jpush.android.service.PushService"
+        android:enabled="true"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.REGISTER"/>
+        <action android:name="cn.jpush.android.intent.REPORT"/>
+        <action android:name="cn.jpush.android.intent.PushService"/>
+        <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+      </intent-filter>
+    </service>
+
+    <receiver
+        android:name="cn.jpush.android.service.PushReceiver"
+        android:enabled="true">
+      <intent-filter android:priority="1000">
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+        <category android:name="org.qing.jpush" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.USER_PRESENT"/>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+      <!-- Optional -->
+      <intent-filter>
+        <action android:name="android.intent.action.PACKAGE_ADDED"/>
+        <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+        <data android:scheme="package" />
+      </intent-filter>
+    </receiver>
+
+    <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
+
+    <!-- Rich push 核心功能 since 2.0.6 -->
+    <activity
+        android:name="cn.jpush.android.ui.PopWinActivity"
+        android:configChanges="orientation|keyboardHidden"
+        android:exported="false"
+        android:theme="@style/MyDialogStyle">
+        <intent-filter>
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="org.qing.jpush" />
+        </intent-filter>
+      </activity>
+
+    <receiver
+        android:name="cn.jiguang.unity.push.JPushReceiver"
+        android:enabled="true">
+        <intent-filter>
+            <!--Required 用户注册 SDK 的 intent-->
+            <action android:name="cn.jpush.android.intent.REGISTRATION" />
+            <!--Required 用户接收 SDK 消息的 intent-->
+            <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+            <!--Required 用户接收 SDK 通知栏信息的 intent-->
+            <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+            <!--Required 用户打开自定义通知栏的 intent-->
+            <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+            <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+            <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+            <category android:name="org.qing.jpush" />
+          </intent-filter>
+    </receiver>
+
+    <!-- 用于处理 tag/alias 的操作结果 -->
+    <receiver android:name="cn.jiguang.unity.push.JPushEventReceiver">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+        <category android:name="org.qing.jpush" />
+      </intent-filter>
+    </receiver>
+
+    <!-- since 3.0.9 Required SDK 核心功能-->
+    <provider 
+      android:authorities="org.qing.jpush.DataProvider" 
+      android:name="cn.jpush.android.service.DataProvider" 
+      android:exported="true" />
+
+    <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。
+      例如:
+        发到 Google Play 的 APK 可以设置为 google-play;
+        发到其他市场的 APK 可以设置为 xxx-market。 -->
+    <meta-data
+        android:name="JPUSH_CHANNEL"
+        android:value="developer-default" />
+
+    <!-- 值来自开发者平台取得的 AppKey -->
+    <meta-data
+        android:name="JPUSH_APPKEY"
+        android:value="792996ff10209803ea86e0f1" />
+
+  </application>
+</manifest>
