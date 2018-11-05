@@ -28,11 +28,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SqLiteTest.lua" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SqLiteTest.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SqLiteTest.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
               <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newindex.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/metatable/newindex.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexFindDefault.lua" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/metatable/indexFindDefault.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexDemo.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/metatable/indexDemo.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.lua" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_PLUGINS_DIR$/EmmyLua/lib/EmmyLua-1.2.6-eap-8-IDEA172.jar!/std/Lua53/global.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="291" column="49" lean-forward="false" selection-start-line="291" selection-start-column="43" selection-end-line="291" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -64,11 +104,14 @@
         <option value="$PROJECT_DIR$/ExceptionDemo.lua" />
         <option value="$PROJECT_DIR$/Helloworld.lua" />
         <option value="$PROJECT_DIR$/SqLiteTest.lua" />
+        <option value="$PROJECT_DIR$/metatable/newindex.lua" />
+        <option value="$PROJECT_DIR$/metatable/index.lua" />
+        <option value="$PROJECT_DIR$/metatable/indexDemo.lua" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -88,8 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -98,14 +139,34 @@
               <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="lua_scripts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lua_scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="metatable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Lua 5.3" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -119,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Lua Application.SqLiteTest.lua">
+  <component name="RunManager" selected="Lua Application.indexDemo.lua">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -146,12 +207,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
@@ -184,13 +239,11 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
     </configuration>
-    <configuration default="true" type="lua.app" factoryName="Lua Application">
-      <option name="program" value="lua.exe" />
-      <option name="file" value="" />
-      <option name="workingDir" value="" />
-      <option name="debuggerType" value="1" />
-      <option name="params" value="" />
-      <method />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration name="ExceptionDemo.lua" type="lua.app" factoryName="Lua Application" temporary="true">
       <option name="program" value="lua.exe" />
@@ -198,6 +251,8 @@
       <option name="workingDir" value="" />
       <option name="debuggerType" value="1" />
       <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
     </configuration>
     <configuration name="Helloworld.lua" type="lua.app" factoryName="Lua Application" activateToolWindowBeforeRun="false" temporary="true">
       <option name="program" value="lua.exe" />
@@ -205,6 +260,8 @@
       <option name="workingDir" value="$PROJECT_DIR$/" />
       <option name="debuggerType" value="1" />
       <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
     </configuration>
     <configuration name="SqLiteTest.lua" type="lua.app" factoryName="Lua Application" temporary="true">
       <option name="program" value="lua.exe" />
@@ -212,17 +269,60 @@
       <option name="workingDir" value="" />
       <option name="debuggerType" value="1" />
       <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Lua Application.Helloworld.lua" />
-      <item index="1" class="java.lang.String" itemvalue="Lua Application.ExceptionDemo.lua" />
-      <item index="2" class="java.lang.String" itemvalue="Lua Application.SqLiteTest.lua" />
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="" />
+      <option name="workingDir" value="" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
+    </configuration>
+    <configuration name="indexDemo.lua" type="lua.app" factoryName="Lua Application" temporary="true">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="$PROJECT_DIR$/metatable/indexDemo.lua" />
+      <option name="workingDir" value="E:\Code\blog_samplecode\lua_scripts" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
+    </configuration>
+    <configuration name="index.lua" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="$PROJECT_DIR$/metatable/index.lua" />
+      <option name="workingDir" value="E:\Code\blog_samplecode\lua_scripts" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
+    </configuration>
+    <configuration name="newindex.lua" type="lua.app" factoryName="Lua Application" temporary="true">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="$PROJECT_DIR$/metatable/newindex.lua" />
+      <option name="workingDir" value="E:\Code\blog_samplecode\lua_scripts" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Lua Application.index.lua" />
+      <item index="1" class="java.lang.String" itemvalue="Lua Application.newindex.lua" />
+      <item index="2" class="java.lang.String" itemvalue="Lua Application.Helloworld.lua" />
+      <item index="3" class="java.lang.String" itemvalue="Lua Application.ExceptionDemo.lua" />
+      <item index="4" class="java.lang.String" itemvalue="Lua Application.SqLiteTest.lua" />
+      <item index="5" class="java.lang.String" itemvalue="Lua Application.indexDemo.lua" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Lua Application.SqLiteTest.lua" />
-        <item index="1" class="java.lang.String" itemvalue="Lua Application.Helloworld.lua" />
-        <item index="2" class="java.lang.String" itemvalue="Lua Application.ExceptionDemo.lua" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Lua Application.indexDemo.lua" />
+        <item index="1" class="java.lang.String" itemvalue="Lua Application.newindex.lua" />
+        <item index="2" class="java.lang.String" itemvalue="Lua Application.SqLiteTest.lua" />
+        <item index="3" class="java.lang.String" itemvalue="Lua Application.Helloworld.lua" />
+        <item index="4" class="java.lang.String" itemvalue="Lua Application.ExceptionDemo.lua" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +343,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -254,7 +355,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -275,6 +376,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Helloworld.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExceptionDemo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SqLiteTest.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Helloworld.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -315,5 +440,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/EmmyLua/lib/EmmyLua-1.2.6-eap-8-IDEA172.jar!/std/Lua53/global.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="291" column="49" lean-forward="false" selection-start-line="291" selection-start-column="43" selection-end-line="291" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metatable/newindex.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metatable/indexDemo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metatable/indexFindDefault.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android 4.0 Google APIs</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>lua_scripts</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Lua</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
