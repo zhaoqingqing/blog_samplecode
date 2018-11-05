@@ -35,3 +35,6 @@ unity-framework/fsm/Temp/
 *.csproj
 *.suo
 *.user
+unity-framework/*/Library/
+unity-framework/*/Temp/
+*Library/*
