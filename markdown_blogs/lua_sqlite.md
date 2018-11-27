@@ -8,12 +8,14 @@ Lua版本Sqlite文档：[http://lua.sqlite.org/index.cgi/doc/tip/doc/lsqlite3.wi
 
 ### 运行环境
 
-需要把sqlite编译进lib中
+我们是把sqlite编译进lib(*.so)，在Unity中调用
 我的运行环境如下
 
-XLua
+XLua： v2.1.6 2017年3月1日
 
-Unity 5.3.7
+Unity ：5.3.7
+
+luasqlite版本：
 
 ### 示例
 
@@ -99,7 +101,7 @@ sqlite的部分功能在lua中并不能完全使用
 
 ### no lsqlite
 
-在lua环境中`require lsqlite`，报找不到lsqlite
+直接在lua环境下，'require lsqlite`，报找不到lsqlite
 
 	no field package.preload['lsqlite']
 	no such builtin lib 'lsqlite'
@@ -111,3 +113,12 @@ sqlite的部分功能在lua中并不能完全使用
 	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\lsqlite\init.lua'
 	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\..\share\lua\5.3\lsqlite.lua'
 	no file 'C:\Program Files\Unity_5_3_7_p4\Editor\..\share\lua\5.3\lsqlite\init.lua'
+### 在Unity的lua环境无法close所有连接，导致Unity锁定db
+
+查看文档：http://lua.sqlite.org/index.cgi/doc/tip/doc/lsqlite3.wiki#db_close
+
+使用db:close和db:close_vm() 都无法完全关闭db的连接
+
+编辑db文件，提示database被锁定
+
+通过在Unity的C#层进行Close
