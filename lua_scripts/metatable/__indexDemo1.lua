@@ -4,25 +4,11 @@
 ---
 
 
-local tempTable = {}
-tempTable.memberB = "test"
-print(tempTable.memberA)
-print(tempTable.memberB)
-
---[[
-nil
-test
-]]
-print("\r")
+local tempTable = { memberB = "test" }
 ---__index定义了当key查找不到的行为
 setmetatable(tempTable, { __index = function()
     return "not find"
 end })
 
-print(tempTable.memberA)
-print(tempTable.memberB)
-
---[[
-not find
-test
-]]
+print(tempTable.memberA) --打印 not find
+print(tempTable.memberB) --打印test
