@@ -12,9 +12,11 @@ local father = {
 father.__index = function()
     return "i am function"
 end
-
+print(father.coin)
+print(father.house)
 local son = {
     car = 1
 }
-setmetatable(son,father)
-print(son.house)
+---注意：在没有对father进行__index赋值之前，father中的成员通过son并不能查找到！
+--local ret = setmetatable(son,father)
+--print(son.house)

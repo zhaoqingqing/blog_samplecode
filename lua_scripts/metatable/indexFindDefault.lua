@@ -13,7 +13,7 @@ print(tempTable.memberB)
 nil
 test
 ]]
-
+print("\r")
 ---__index定义了当key查找不到的行为
 setmetatable(tempTable, { __index = function()
     return "not find"
