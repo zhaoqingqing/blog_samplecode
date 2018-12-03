@@ -37,4 +37,4 @@ unity-framework/fsm/Temp/
 *.user
 unity-framework/*/Library/
 unity-framework/*/Temp/
-*Library/*
+unity-framework/*/*.apk
