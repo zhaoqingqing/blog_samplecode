@@ -38,3 +38,5 @@ unity-framework/fsm/Temp/
 unity-framework/*/Library/
 unity-framework/*/Temp/
 unity-framework/*/*.apk
+lua_scripts/.idea/workspace.xml
+
