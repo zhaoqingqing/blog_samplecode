@@ -67,3 +67,25 @@ print("排序后：", table.tostring(x))
 
 ```
 
+### 解决办法
+
+```lua
+local tb = { [101] = { x = 6 },
+             [2] = { x = 5 },
+             [10] = { x = 7 } }
+--保存全部的key
+local keys = {}
+for k, v in pairs(tb) do
+    table.insert(keys, k)
+end
+--对key进行排序
+table.sort(keys, function(a, b)
+    return a < b
+end)
+for i, key in ipairs(keys) do
+    local data = tb[key]
+end
+```
+
+
+
