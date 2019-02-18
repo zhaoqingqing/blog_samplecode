@@ -18,10 +18,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="__newindexDemo.lua" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__newindexDemo.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/metatable/__newindexDemo.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
+            <state relative-caret-position="210">
               <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding />
             </state>
@@ -41,8 +41,18 @@
       <file leaf-file-name="__newindexDemo2.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/metatable/__newindexDemo2.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            <state relative-caret-position="336">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ffi_benchmark.lua" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jit/ffi_benchmark.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-399">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -61,7 +71,7 @@
       <file leaf-file-name="global.lua" pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_PLUGINS_DIR$/EmmyLua/lib/EmmyLua-1.2.6-IDEA172.jar!/std/Lua53/global.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="6300">
               <caret line="300" column="9" lean-forward="false" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
               <folding />
             </state>
@@ -73,16 +83,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
               <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PairDemo.lua" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table/PairDemo.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -111,8 +111,8 @@
       <file leaf-file-name="__indexDemo2.lua" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/metatable/__indexDemo2.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+            <state relative-caret-position="84">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -134,7 +134,11 @@
       <find>version</find>
       <find>__index</find>
       <find>__newindex</find>
+      <find>123</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&quot;memberA&quot;</replace>
+    </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -157,6 +161,7 @@
         <option value="$PROJECT_DIR$/metatable/newindex_index.lua" />
         <option value="$PROJECT_DIR$/metatable/__newindexDemo2.lua" />
         <option value="$PROJECT_DIR$/metatable/__newindexDemo.lua" />
+        <option value="$PROJECT_DIR$/jit/ffi_benchmark.lua" />
       </list>
     </option>
   </component>
@@ -181,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
@@ -193,33 +199,16 @@
             <path>
               <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="lua_scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="metatable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lua_scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="oop" type="462c0819:PsiDirectoryNode" />
+              <item name="jit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Lua 5.3" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="lua_scripts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Lua 5.3" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="Lua53" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Lua Application.__newindexDemo2.lua">
+  <component name="RunManager" selected="Lua Application.ffi_benchmark.lua">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -306,15 +295,6 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <configuration name="__indexDemo1.lua" type="lua.app" factoryName="Lua Application" temporary="true">
-      <option name="program" value="lua.exe" />
-      <option name="file" value="$PROJECT_DIR$/metatable/__indexDemo1.lua" />
-      <option name="workingDir" value="$PROJECT_DIR$" />
-      <option name="debuggerType" value="1" />
-      <option name="params" value="" />
-      <option name="charset" value="UTF-8" />
-      <option name="showConsole" value="false" />
-    </configuration>
     <configuration name="__indexDemo2.lua" type="lua.app" factoryName="Lua Application" temporary="true">
       <option name="program" value="lua.exe" />
       <option name="file" value="$PROJECT_DIR$/metatable/__indexDemo2.lua" />
@@ -337,6 +317,15 @@
       <option name="program" value="lua.exe" />
       <option name="file" value="" />
       <option name="workingDir" value="" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="false" />
+    </configuration>
+    <configuration name="ffi_benchmark.lua" type="lua.app" factoryName="Lua Application" temporary="true">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="$PROJECT_DIR$/jit/ffi_benchmark.lua" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
       <option name="debuggerType" value="1" />
       <option name="params" value="" />
       <option name="charset" value="UTF-8" />
@@ -372,18 +361,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Lua Application.index.lua" />
       <item index="1" class="java.lang.String" itemvalue="Lua Application.rawsetDemo.lua" />
-      <item index="2" class="java.lang.String" itemvalue="Lua Application.__indexDemo1.lua" />
-      <item index="3" class="java.lang.String" itemvalue="Lua Application.__indexDemo2.lua" />
-      <item index="4" class="java.lang.String" itemvalue="Lua Application.newindex_index.lua" />
-      <item index="5" class="java.lang.String" itemvalue="Lua Application.__newindexDemo2.lua" />
+      <item index="2" class="java.lang.String" itemvalue="Lua Application.__indexDemo2.lua" />
+      <item index="3" class="java.lang.String" itemvalue="Lua Application.newindex_index.lua" />
+      <item index="4" class="java.lang.String" itemvalue="Lua Application.__newindexDemo2.lua" />
+      <item index="5" class="java.lang.String" itemvalue="Lua Application.ffi_benchmark.lua" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Lua Application.__newindexDemo2.lua" />
-        <item index="1" class="java.lang.String" itemvalue="Lua Application.rawsetDemo.lua" />
-        <item index="2" class="java.lang.String" itemvalue="Lua Application.newindex_index.lua" />
-        <item index="3" class="java.lang.String" itemvalue="Lua Application.__indexDemo2.lua" />
-        <item index="4" class="java.lang.String" itemvalue="Lua Application.__indexDemo1.lua" />
+        <item index="0" class="java.lang.String" itemvalue="Lua Application.ffi_benchmark.lua" />
+        <item index="1" class="java.lang.String" itemvalue="Lua Application.__newindexDemo2.lua" />
+        <item index="2" class="java.lang.String" itemvalue="Lua Application.rawsetDemo.lua" />
+        <item index="3" class="java.lang.String" itemvalue="Lua Application.newindex_index.lua" />
+        <item index="4" class="java.lang.String" itemvalue="Lua Application.__indexDemo2.lua" />
       </list>
     </recent_temporary>
   </component>
@@ -434,27 +423,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="lua-line">
+          <url>file://$PROJECT_DIR$/metatable/__newindexDemo2.lua</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="lua-line">
+          <url>file://$PROJECT_DIR$/metatable/__newindexDemo2.lua</url>
+          <line>16</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/metatable/__indexDemo1.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/EmmyLua/lib/EmmyLua-1.2.6-eap-8-IDEA172.jar!/std/Lua53/table.lua" />
     <entry file="file://$PROJECT_DIR$/common/extable.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6174">
           <caret line="294" column="15" lean-forward="false" selection-start-line="294" selection-start-column="15" selection-end-line="294" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -462,7 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -470,7 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6174">
           <caret line="294" column="15" lean-forward="false" selection-start-line="294" selection-start-column="15" selection-end-line="294" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,15 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/metatable/__indexDemo2.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,17 +726,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metatable/__newindex__index.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/EmmyLua/lib/EmmyLua-1.2.6-IDEA172.jar!/std/Lua53/global.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="6300">
           <caret line="300" column="9" lean-forward="false" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
           <folding />
         </state>
@@ -771,18 +742,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metatable/__newindexDemo2.lua">
+    <entry file="file://$PROJECT_DIR$/metatable/__newindexDemo.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="210">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metatable/__newindexDemo.lua">
+    <entry file="file://$PROJECT_DIR$/metatable/__newindex__index.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="147">
+          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metatable/__indexDemo2.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metatable/__newindexDemo2.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jit/ffi_benchmark.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
