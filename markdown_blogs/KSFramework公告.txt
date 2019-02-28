@@ -1,0 +1,24 @@
+统计Showcase公告
+统计KSFramework的Showcase(商业案例)
+大家好：
+统计一下使用KSFramework开发的游戏
+wiki开放编辑地址：https://github.com/mr-kelly/KSFramework/wiki
+wiki编辑指南：https://github.com/mr-kelly/KSFramework/wiki/showcase-edit
+同时欢迎大家提Issues或Pull requests
+
+
+置顶公告
+项目GitHub地址：https://github.com/mr-kelly/KSFramework
+官方文档：https://mr-kelly.github.io/KSFramework/
+master分支现在默认集成的是xlua
+如果GitHub的submodule下载KEngine或sLua/xLua失败，请单独下载各子模块
+KEngine：https://github.com/mr-kelly/KEngine
+sLua：https://github.com/mr-kelly/slua
+XLua：https://github.com/Tencent/xLua
+国内OSChina下载：
+https://git.oschina.net/mrkelly/KSFramework
+https://git.oschina.net/mrkelly/KEngine
+
+
+roadmap
+https://www.teambition.com/project/5c6bf89c8cab5c001965b478/tasks/scrum/5c6bf89c0cf3e60019eb949f
