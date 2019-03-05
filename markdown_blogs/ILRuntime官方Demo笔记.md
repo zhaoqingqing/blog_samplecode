@@ -1,14 +1,14 @@
 ### 调用/执行 热更中的方法
 
-调用热更代码中方法，写在AppDomain中，建议查看源码
+调用热更代码中方法，写在AppDomain中，记录一下主要几个方法：
 
 AppDomain.LoadAssembly 加载热更dll
 
-有两种方法：
+执行热更代码的方法，有两种方式：
 
 > 1. appdomain.Invoke("HotFix_Project.InstanceClass", "StaticFunTest", null, null);
 
-> 2. 预先获得IMethod，可以减低每次调用查找方法耗用的时间
+> 2. 预先获得IMethod，可以减低每次调用查找方法耗用的时间，代码如下：
 
 ```c#
 //预先获得IMethod，可以减低每次调用查找方法耗用的时间
@@ -79,7 +79,7 @@ public class MonoBehaviourAdapter : CrossBindingAdaptor
 
 CLRRedirectionDemo，需要**在AppDomain中注册 RegisterCLRMethodRedirection**
 
-在热更工程中调用主工程的代码时进行重定向，有区别于主工程的源代码实现，新手可以从修改CLR生成的绑定代码开始。
+在热更工程中调用主工程的代码时会重定向新的实现，新手可以从修改CLR生成的绑定代码开始。
 
 例子是修改Debug.Log方法，在热更中打印的日志也能显示堆栈信息。
 
@@ -147,40 +147,33 @@ Value: a=(100001.0, 100002.0),dot=0, time = 1902ms
 
 ### 我的小结
 
-由于Unity 2018和Unity5的目录结构调整，**Library\UnityAssemblies\ **在Unity2018目录没有 
-
-所以我在热更工程引用 Unity_2018_2_7f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll，
-
 可以把热更工程的VS项目(**HotFix_Project.csproj**)添加到Unity生成的解决方案中(**ILRuntimeDemo.sln**)，在开发期不用两个工程切换。
 
+由于Unity 2018和Unity5的目录结构调整，**Library\UnityAssemblies\ **在Unity2018目录没有 
 
-
-> 热更工程最常做的事情
-
-根据我以往的项目使用Lua做为热更脚本，举例在热更工程做的最多的事情
-
-在热更工程中调用主工程的方法，或监听主工程的事件，监听Unity组件触发的事件。
-
-热更工程调用主工程接口加载资源
-
-热更工程处理UI代码逻辑
-
-读取配置，对配置解析
-
-热更工程中处理网络的回调
-
-热更工程基本处理所有的业务逻辑
+所以我在热更工程引用 Unity_2018_2_7f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll
 
 
 
-作者的本意
+**热更工程最常做的事情**
 
-在我以往的项目中，游戏逻辑几乎都是在热更工程写的，而看ILRuntime和XLua的例子，似乎作者是建议在主工程中调用热更代码，比如修复逻辑问题或执行具体的逻辑，而不是绝大多数逻辑都放在热更工程。
+根据我们以往的项目使用Lua做为热更脚本为例，我们在热更工程做的最多的事情：
+
+- 在热更工程中调用主工程的方法，或监听主工程的事件，监听Unity组件触发的事件。
+
+- 热更工程调用主工程接口加载资源
+
+- 热更工程处理UI代码逻辑
+
+- 读取配置，对配置解析
+
+- 热更工程中处理网络的回调
+
+- 热更工程基本处理所有的业务逻辑
+
 
 ### 为什么要写适配器
 
 因为ILRuntime可以理解为蓝大写的C#虚拟机，这个虚拟机要在运行时和Unity的脚本进行交互。
 
-由于IOS的AOT限制
-
-在ILRuntime中是不知道
+由于IOS的AOT限制，在运行时ILRuntime中是不知道Unity中的类型，所以需要我们在主工程写适配器让ILRuntime知道如何调用在Unity的代码，或当Unity的事件触发时让ILRuntime能够监听到。
