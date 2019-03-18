@@ -1,6 +1,8 @@
 REM appdata = C:\Users\zhaoq\AppData\Roaming\
 echo %Appdata%
 
-start explorer %AppData%"\Microsoft\Windows\Start Menu\Programs\Startup"
+REM start explorer %AppData%"\Microsoft\Windows\Start Menu\Programs\Startup"
+
+start explorer shell:startup
 
 pause
