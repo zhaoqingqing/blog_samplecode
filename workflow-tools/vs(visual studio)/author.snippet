@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+    <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+        <CodeSnippet Format="1.0.0">
+            <Header>
+                <Title>author</Title>
+                <Shortcut>author</Shortcut>
+                <Description>插入作者信息 的代码片段</Description>
+                <Author>赵青青</Author>
+                <SnippetTypes>
+                    <SnippetType>Expansion</SnippetType>
+                </SnippetTypes>
+            </Header>
+            <Snippet>
+                <Declarations>
+                    <Literal>
+                        <ID>Author</ID>
+                        <ToolTip>作者：</ToolTip>
+                        <Default>赵青青</Default>
+                    </Literal>
+                    <Literal>
+                        <ID>Date</ID>
+                        <ToolTip>日期</ToolTip>
+                        <Default>2019/xx/xx hh:mm:ss</Default>
+                    </Literal>
+                </Declarations>
+                <Code Language="csharp">
+                <![CDATA[
+    /// <summary>
+    /// 作者：赵青青 (https://www.cnblogs.com/zhaoqingqing)
+    /// 时间：$Date$
+    /// 说明：
+    /// </summary>
+                $end$ ]]>
+                </Code>
+            </Snippet>
+        </CodeSnippet>
+    </CodeSnippets>
