@@ -20,7 +20,7 @@ set log_file=%~dp0\channel_packages\build_installer_log_%DATE:~0,4%%DATE:~5,2%%D
 set savePath=%~dp0\channel_packages\
 set installerPath=%~dp0\MicroLauncher\ylwd\ylwd.csproj
 set installerBuildFiles=%~dp0\MicroLauncher\ylwd\bin\Release\ylwd.exe
-
+REM /p:Configuration=Android
 msbuild /m %installerPath% /t:clean;Rebuild /p:Configuration=Release  /fl /flp:logfile=%log_file%;verbosity=diagnostic
 
 copy %installerBuildFiles% %savePath%\ylwd.exe
