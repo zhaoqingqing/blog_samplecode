@@ -35,3 +35,9 @@ https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.excel._work
 excel2007格式无法打开
 
 <https://github.com/tonyqus/npoi/issues/182>
+
+使用npoi对应版本的SharpZipLib，比如：
+
+NPOI.2.4.1/net40/*.dll
+
+SharpZipLib.0.86.0
