@@ -41,3 +41,13 @@ excel2007格式无法打开
 NPOI.2.4.1/net40/*.dll
 
 SharpZipLib.0.86.0
+
+
+
+创建xlsx格式和xls格式
+
+把   HSSFWorkbook wk = new HSSFWorkbook(fs);
+
+改成 XSSFWorkbook wk = new XSSFWorkbook(fs); 就可以了
+
+应该数据流写入的 是 .xlsx 的数据模式但是 用的是.xls的后缀名,导致数据识别错误
