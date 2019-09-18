@@ -1,4 +1,4 @@
-Unity官方已提供中文语言包
+Unity官方已提供编辑器的中文语言包
 
 Unity官方的中文文档：在官方的帮助文档中选择中文语言
 
@@ -18,7 +18,9 @@ Mac: <https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg>
 
 1. 把语言包文件(**zh-cn.po**)放在Unity的安装目录下：
 
-   C:\Program Files\Unity\2018.4.9f1\Editor\Data\Localization
+   C:\Program Files\Unity\2018.4.9f1\Editor\Data\Localization\
+
+   如果没有这目录，则自己新建一个，注意文件名为**zh-cn.po**
 
 2. 重启Unity
 
