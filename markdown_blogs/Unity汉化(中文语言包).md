@@ -1,6 +1,6 @@
 Unity官方已提供编辑器的中文语言包
 
-Unity官方的中文文档：在官方的帮助文档中选择中文语言
+Unity官方的中文文档：[在官方的帮助文档中选择中文语言](https://connect.unity.com/doc/Manual/)
 
 ### 下载方法
 
