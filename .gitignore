@@ -40,3 +40,9 @@ unity-framework/*/Temp/
 unity-framework/*/*.apk
 lua_scripts/.idea/workspace.xml
 
+# Rider project files
+*/*/bin/*
+*/*/obj/*
+*/.idea
+*/*/.idea/*
+
