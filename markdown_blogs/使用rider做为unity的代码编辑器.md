@@ -1,5 +1,11 @@
 使用Rider做的编写Unity代码的IDE，记录一些与VS不相同的笔记
 
+安装和设置方法：
+
+我使用Rider 2019.1 + Unity3D 2018.3.4，在安装完Rider之后，在Unity中选择Rider做为脚本编辑器，然后在Unity中双击代码就可以跳转到Rider中，Rider会自动在Unity工程中导入调试的dll。
+
+
+
 ### Rider的使用笔记
 
 1. 从进程中来看，Rider中包含了一个Resharper
@@ -15,7 +21,7 @@
 
 
 
-### 禁用自动保存
+### Rider禁用自动保存
 
 rider默认会开启自动保存功能，如果想关闭它的话，就把这2个地方点掉。
 
@@ -35,6 +41,8 @@ VS 2017企业版/专业版
 Rider 2019.1
 
 IDEA 2018.4
+
+
 
 ### Rider比VS的优点
 
