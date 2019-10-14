@@ -18,6 +18,8 @@
 
 5. 可以为不同语言禁用 ReSpeller
 
+Rider编写纯C#程序时，要先Build，再执行 run/debug。
+
 
 
 
