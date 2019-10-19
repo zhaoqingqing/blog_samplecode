@@ -1,4 +1,8 @@
-python中需要特别注意代码的缩进，这是为了可读性，不像 C#，lua ( function do end)，js这样函数范围用{}g表示。
+python中需要特别注意代码的缩进，这是为了可读性，不像 C#，lua ( function do end)，js等语言的函数范围用{}表示。
+
+对于判断是否包含尽量使用in，而不使用for，具体参考：《Python编程惯例.md》
+
+
 
 ### 变量定义
 
@@ -78,13 +82,48 @@ If和elif后面加冒号:
 
 没有++和--
 
-end=
+
 
 for else一般很少用，当for循环要退出时要加break
+
+### 类
+
+python类中的方法，需要传入self，这点和原生的Lua是一样的。
 
 
 
 ### 常用术语
+
+end=，对于文本中文字本来就是有换行的，如果想在输出时不换行，可以写end=""，如果不加，那么会多出换行
+
+```python
+filepath = r'E:\Code\test.txt'
+with open(filepath, mode="r", encoding="utf-8") as f:
+    for line in f:
+        print(line)
+
+"""
+不加 end=""
+第一行
+
+第二行
+
+共三行
+"""
+
+"""
+加上end=""
+第一行
+第二行
+共三行
+"""
+```
+
+
+
+
+
+
 
 tuple 元组 
 
@@ -95,13 +134,25 @@ if __name__ == '__main__':
 </pre>
 
 
+善于使用in运算符。
+
+```Python
+if x in items: # 包含
+for x in items: # 迭代
+```
+
+**好**的代码：
+
+```Python
+name = 'Hao LUO'
+if 'L' in name:
+    print('The name has an L in it.')
+```
 
 
 
-建议参考文章： 
+### 参考资料
 
 [Python3 与 C# 基础语法对比（就当Python和C#基础的普及吧）](https://www.cnblogs.com/dotnetcrazy/p/9102030.html)
 
-[Python-100-Days](https://github.com/jackfrued/Python-100-Days)
-
-(基础部分看到Day01-15就可以，进阶部分可以选择性看)
+[Python-100-Days](https://github.com/jackfrued/Python-100-Days)     (基础部分看到Day01-15就可以，进阶部分可以选择性看)
