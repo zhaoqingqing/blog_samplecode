@@ -47,3 +47,10 @@ list.Sort((left,right)=>{
      return right-left;
 });
 ````
+
+
+
+
+
+注意：C# sort的返回值和Lua语言中table.sort返回值是不一样的。
+
