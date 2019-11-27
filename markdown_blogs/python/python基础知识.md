@@ -74,7 +74,23 @@ print(name,pwd)
 
 【**注意引号后面没有，也没有空格**】
 
+转义字符后接 %()
 
+### 数据结构-dict 
+
+判断字典中不存在key
+
+```python
+if "skin_name" not in hero:
+```
+
+### 数据结构-list
+
+遍历列表
+
+```python
+for k in range(len(skins)):
+```
 
 ### 逻辑控制
 
