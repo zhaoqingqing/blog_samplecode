@@ -2,6 +2,18 @@ python中需要特别注意代码的缩进，这是为了可读性，不像 C#�
 
 对于判断是否包含尽量使用in，而不使用for，具体参考：《Python编程惯例.md》
 
+python】报错“Non-ASCII character '\xe5' ”
+
+解决方法：
+
+在Python源文件的最开始一行，加入一句：
+
+\# coding=UTF-8
+
+或者
+
+\# -*- coding:UTF-8 -*-
+
 
 
 ### 变量定义
