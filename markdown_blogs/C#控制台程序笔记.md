@@ -1,0 +1,3 @@
+程序启动路径
+
+Environment.CurrentDirectory 取得或设置当前工作目录的完整限定路径
