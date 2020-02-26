@@ -95,6 +95,13 @@ https://oemdrivers.com/sound-realtek-audio%20driver-windows-64-bit
 
 **安装SSD后， 在主板的BIOS进行设置，在SATA中设置默认IDE为AHCI**
 
+> **怎么查看SATA硬盘是否处于AHCI开启状态?** 
+>
+> 1. 右键我的电脑 - 管理 - 打开设备管理器
+> 2. 定位到 IDE ATA/ATAPI控制器，展开可以看到当前的状态，类似文字为：Intel XXX SATA CHCI Controller
+
+​      
+
 下面说一下这两种不同的磁盘模式区别
 
 **SATA/AHCI驱动** Intel RST(Rapid Storage Technology)即英特尔快速存储技术，早期的版本称Intel Matrix Storage Manager（简称IMSM）。该程序整合了磁盘管理程序控制台及SATA、AHCI、RAID驱动程序，主要用于Intel芯片组的磁盘管理、应用支持、状态查看等应用
