@@ -1,0 +1,32 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\*\shell\文件哈希校验]
+"SubCommands"="MACTripleDES;MD5;RIPEMD160;SHA1;SHA256;SHA384;SHA512"
+"MUIVerb"="文件哈希校验"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MACTripleDES]
+@="MACTripleDES"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MACTripleDES\command]
+@="PowerShell Get-FileHash -Algorithm MACTripleDES \\\"%1\\\" | format-list;“按任意键退出...”;[Console]::Readkey() | Out-Null;exit"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MD5]
+@="MD5"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MD5\command]
+@="PowerShell Get-FileHash -Algorithm MD5 \\\"%1\\\" | format-list;“按任意键退出...”;[Console]::Readkey() | Out-Null;exit"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\RIPEMD160]
+@="RIPEMD160"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\RIPEMD160\command]
+@="PowerShell Get-FileHash -Algorithm RIPEMD160 \\\"%1\\\" | format-list;“按任意键退出...”;[Console]::Readkey() | Out-Null;exit"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA1]
+@="SHA1"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA1\command]
+@="PowerShell Get-FileHash -Algorithm SHA1 \\\"%1\\\" | format-list;“按任意键退出...”;[Console]::Readkey() | Out-Null;exit"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA256]
+@="SHA256"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA256\command]
+@="PowerShell Get-FileHash -Algorithm SHA256 \\\"%1\\\" | format-list;“按任意键退出...”;[Console]::Readkey() | Out-Null;exit"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA384]
+@="SHA384"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA384\command]
+@="PowerShell Get-FileHash -Algorithm SHA384 \\\"%1\\\" | format-list;“按任意键退出...”;[Console]::Readkey() | Out-Null;exit"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA512]
+@="SHA512"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\SHA512\command]
+@="PowerShell Get-FileHash -Algorithm SHA512 \\\"%1\\\" | format-list;“按任意键退出...”;[Console]::Readkey() | Out-Null;exit"
