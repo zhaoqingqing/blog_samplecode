@@ -1,0 +1,38 @@
+根据您提供的信息，可能是图标缓存的问题或者是三方软件的干扰。
+
+可以先进行干净启动排除一下是否是三方软件的干扰：
+
+1.Win+r输入：msconfig 打开系统配置
+
+ 
+
+2.点击”服务”标签卡，选择”隐藏所有的微软服务”，然后点击全部禁用（若您启用了指纹识别功能，请不要关闭相关服务）
+
+ 
+
+3.点击”启动”标签卡, 点击”打开任务管理器”，然后禁用全部启动项并确定
+
+ 
+
+4. 重启设备。
+
+图标缓存可以进行以下操作：
+
+1. 按Windows+R键，输入%userprofile%\AppData\Local\Microsoft\Windows\Explorer （复制粘贴即可）
+
+2. 在打开的文件夹中你会看到像 iconcache_32.db、iconcache_48.db、iconcache_96.db、iconcache_256.db、 iconcache_1024.db、iconcache_1280.db、iconcache_1600.db、iconcache_1920.db、 iconcache_2560.db、iconcache_exif.db、iconcache_idx.db、iconcache_sr.db、 iconcache_wide.dd、iconcache_wide_alternate.db 这样的文件。
+
+将这些文件全部删除，就可以重建 Windows 10 图标缓存了。
+
+当然，如果 Windows 资源管理器正在使用当前文件，可能会导致部分文件无法删除。
+
+3. 此时，我们可以新建个记事本将以下代码复制粘贴进去，保存，然后将.txt的后缀名改为.bat 文件，再以管理员权限打开运行即可。
+
+cd /d %userprofile%\AppData\Local\Microsoft\Windows\Explorer
+taskkill /f /im explorer.exe
+attrib -h iconcache_*.db
+del iconcache_*.db /a
+start explorer
+pause
+
+4. 执行以上批处理会重启 Windows Explorer，因此桌面会消失一下。执行完之后 Windows 10 图标缓存数据库就被删除了，然后 Windows 10 会自动为我们重建图标缓存。
