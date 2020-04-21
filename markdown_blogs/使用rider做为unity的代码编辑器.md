@@ -4,7 +4,7 @@
 
 我使用Rider 2019.1 + Unity3D 2018.3.4，在安装完Rider之后，在Unity中选择Rider做为脚本编辑器，然后在Unity中双击代码就可以跳转到Rider中，Rider会自动在Unity工程中导入调试的dll。
 
-
+> 更新于2020-4-21 ，使用Rider 2019.2 + Unity3D 2019.3.7f1
 
 ### Rider的使用笔记
 
@@ -40,7 +40,7 @@ Save files on frame deactivation -> 切换到其它窗口自动保存
 
 VS 2017企业版/专业版
 
-Rider 2019.1
+Rider 2019.1/2019.2
 
 IDEA 2018.4
 
@@ -65,6 +65,34 @@ IDEA 2018.4
 
 
 
+### Rider的自定义
+
+> 修改每行字符的长度
+
+**使用情景：**当使用快捷键格式化代码时，如果一行代码的长度(字符个数)太多，编辑器会自动换行。同时在编辑器的右侧会有一条坚立分隔线，超过这条线的在格式化时会自动换行
+
+**修改方法：**Settings - Editor - Code Style - C#(可以换成其它语言) - Line Break and Wrapping - Hard wrap at 修改这个值就可以(默认是120可以修改成180，在1920x1280的分辨率下180会比满屏一行长一些)。从字段的描述来看，它是超过X个字符就会换行。
+
+
+
+> 避免每次修改代码都进行编译
+
+**遇到问题：**每当在Rider中按下Ctrl+S保存代码时，就会感觉Rider卡卡的，因为此时Rider正在和Unity同步，让Unity编译代码
+
+**修改方法：** Settings - Languages&Frameworks - Unity Engine - 取消勾选 Automatically refresh assets in Unity
+
+
+
+> Rider和ILRuntime集成
+
+ Rider 生成dll 方法，点击 Build  - Build Solution 就可以生成出dll
+
+在Project中切换到Solution视图，右键热更新project -  Properties，修改编译事件，和VS的编译选项类似
+
+用Rider调试ILRuntime目前还没有好方法，ILRuntime官方只提供了VS的扩展插件，需要社区开发Rider调试插件
+
+​      
+
 ### 其它
 
 汉化包：[Rider 2019.2 汉化包](https://blog.csdn.net/pingfangx/article/details/97928905)
@@ -79,4 +107,3 @@ Rider插件平台：https://plugins.jetbrains.com/rider
 
 
 
-Rider 调试ILRuntime，目前还没有好的方法。因为ILRuntime只提供了VS的扩展插件。
