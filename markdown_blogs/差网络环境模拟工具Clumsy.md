@@ -1,8 +1,12 @@
 **clumsy 能在 Windows 平台下人工造成不稳定的网络状况，方便你调试应用程序在极端网络状况下的表现。**
 
+
+
 官网：https://jagt.github.io/clumsy/
 
+可以将常用个过滤器写到clumsy.exe所在文件夹下的config.txt中。
 
+​      
 
 ### 简介
 
