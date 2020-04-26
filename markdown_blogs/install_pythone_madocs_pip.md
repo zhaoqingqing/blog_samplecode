@@ -4,25 +4,17 @@
 
 ### 安装必需软件
 
-作者是在windows下安装的，如果是linux或mac用户，官网有更详细的安装说明。
+我是在windows下安装的，如果是linux或mac用户，官网有更详细的安装说明。
 
-**windows 10 x64**
+我的操作系统**windows 10 x64**，当然对于广大的windows 7/8  用户，也是适用的。
 
-当然还有广大的windows 7/8  用户，也是适用的。
-
-
-
-
-
-**python** 3.4 x86版本(必备依赖)
+> **python** 3.4 x86版本(必备依赖)
 
  下载地址：https://www.python.org/downloads/release/python-344rc1/
 
 
 
-
-
-**pip(pytone包管理器)**
+> **pip(pytone包管理器)**
 
 下载地址：https://pypi.python.org/pypi/pip
 
@@ -37,14 +29,11 @@ C:\Python34\pip-9.0.1>python setup.py install
 
 
 
-
-
-**安装mkdocs**(把markdown转成静态html)
+> **安装mkdocs**(把markdown转成静态html)
 
 ```powershell
 pip install mkdocs
 ```
-
 
 
 
@@ -66,8 +55,6 @@ mkdocs serve --dev-addr=0.0.0.0:8001
 
 
 安装部分参考文章：http://www.cnblogs.com/yuanzm/p/4089856.html
-
-
 
 
 
