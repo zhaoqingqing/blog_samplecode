@@ -3,7 +3,7 @@ echo ****************************************
 echo            自动编译微端渠道版
 echo                         
 echo                 	for wd visual studio project
-echo					by qingqing.zhao@foxmail.com
+echo					by qingqing.zhao(569032731@qq.com)
 echo ****************************************
 title 自动编译微端渠道版
 color 0a
