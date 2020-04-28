@@ -1,10 +1,14 @@
-## Dism++
+在我之前中博客中有篇关于win 10的入门文章：[Win10 使用笔记](https://www.cnblogs.com/zhaoqingqing/p/6934891.html)，本篇写于三年后的2020年，记录近年我在win 10上常用软件和使用习惯。
 
-系统维护工具
+## Dism ++
+
+[Dism++，也许是最强的实用工具系统维护工具](https://www.chuyu.me/)
+
+下载地址：https://github.com/Chuyu-Team/Dism-Multi-language/releases/
 
 ## 应用类软件
 
-> Snipaste
+> [Snipaste](https://zh.snipaste.com/download.html)
 
 截图/贴图软件
 
@@ -12,11 +16,11 @@
 
 > [微软极品工具箱-Sysinternals Suite](https://www.cnblogs.com/zhaoqingqing/p/5641934.html)
 
-最常用使用的 Process Explorer
+极品工具箱中最常用使用 Process Explorer
 
 
 
-## 如何卸载 Win10 的自带应用 & 禁止自动安装推荐应用
+## 对win10系统进行瘦身
 
 Win10 系统自带了一些官方的内置应用，如人脉、Groove、消息、天气、地图等，有时还会自动安装推荐的应用程序和游戏到电脑上，而其中很多应用我们并不需要。
 
