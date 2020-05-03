@@ -1,5 +1,21 @@
 在我之前中博客中有篇关于win 10的入门文章：[Win10 使用笔记](https://www.cnblogs.com/zhaoqingqing/p/6934891.html)，本篇写于三年后的2020年，记录近年我在win 10上常用软件和使用习惯。
 
+## 微软常用运行库合集
+
+微软官网：[最新支持的 Visual C++ 下载](https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads)
+
+下载地址：[[Windows]微软常用运行库合集 2020.04.10](https://www.52pojie.cn/thread-1153336-1-1.html)
+
+这些运行库是采用 Microsoft Visual Studio 20XX 编写的软件必须使用的公用 DLL 运行库，相当于程序的字典文件。
+某些网上和论坛的部分精简软件没有附带这些公用 DLL，所以安装这些运行库是系统安装后第一件要做的事情。
+某些程序在 64 位系统下运行任然需要 32 位版本的运行库，因为程序是 32 位程序，需要使用 32 位运行库，典型的例子比如 QQ。
+
+包含以下内容
+
+Visual c++ 运行库 ，缺少会出现错误提示：“配置不正确”或其他错误；没有找到 Msvcp100.DLL
+
+
+
 ## Dism ++
 
 [Dism++，也许是最强的实用工具系统维护工具](https://www.chuyu.me/)
