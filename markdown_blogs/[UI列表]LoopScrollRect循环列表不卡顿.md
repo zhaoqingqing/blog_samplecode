@@ -9,7 +9,7 @@
 
 
 
-## **LoopScrollRect(无限滑动不卡顿)**
+## **LoopScrollRect(UGUI循环列表不卡顿)**
 
 插件地址：<https://github.com/qiankanglai/LoopScrollRect>
 
@@ -101,8 +101,22 @@ self.chatScrollRect:RefreshCells()
 
 ## 刷新并让列表滑动到底部
 
+在聊天列表中每次发言完都是最新消息都在最底下，可以使用这个接口
+
 ```lua
 self.chatScrollRect:RefillCellsFromEnd()
+```
+
+如果在模拟器上出现无法滑动到底部的现象，在Unity 2018.4.15f + 网易MuMu模拟环境下可添加下列代码
+
+```c#
+IEnumerator RefreshToEnd()
+{
+	yield return null;
+	yield return null;
+	Canvas.ForceUpdateCanvases();
+	loop_scroll.verticalNormalizedPosition = 1.0f;
+}
 ```
 
 
@@ -163,6 +177,22 @@ self.scrollRect.prefabSource = CS.UnityEngine.UI.XLoopScrollPrefabSource(self.it
 ```
 
 方法二：不绑定initInStart脚本，并调用 RefillCells(90)
+
+## 两次调用列表滑动位置不正确
+
+对于tab页签，左右切页都使用同一个ScrollRect，在前一个滑动到底部之后，再切到下一个页签，会出现列表还在滑动的现象，在切换页签前添加以下代码，停止上一次的滑动，并把位置进行复位
+
+```c#
+void ResetPos()
+{
+	loop_scroll.StopAllCoroutines();
+	loop_scroll.StopMovement();
+	loop_scroll.content.anchoredPosition = Vector2.zero;
+}
+```
+
+
+
 
 
 ## 技巧和事项
