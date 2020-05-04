@@ -1,4 +1,4 @@
-### **LoopScrollRect(无限滑动不卡顿)**
+### **LoopScrollRect(循环滑动不卡顿)**
 
 插件地址：<https://github.com/qiankanglai/LoopScrollRect>
 
