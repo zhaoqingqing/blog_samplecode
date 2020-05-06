@@ -24,11 +24,11 @@ Visual c++ 运行库 ，缺少会出现错误提示：“配置不正确”或�
 
 ## 应用类软件
 
-> [Snipaste](https://zh.snipaste.com/download.html)
-
-截图/贴图软件
+> [Snipaste ](https://zh.snipaste.com/download.html) 截图/贴图软件
 
 
+
+[imageglass](https://imageglass.org/)  开源免费的看图软件，支持70多种格式，现代化
 
 > [微软极品工具箱-Sysinternals Suite](https://www.cnblogs.com/zhaoqingqing/p/5641934.html)
 
