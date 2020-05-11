@@ -1,9 +1,10 @@
 #! /usr/bin/env python
 # coding=utf-8
 
-# 感谢nickchen121提供的脚本，原地址(https://github.com/nickchen121/cnblogs_automatic_blog_uploading)
-# 使用python xmlrpc 发送内容到博客园
-# http://rpc.cnblogs.com/metaweblog/ 从链接可以看到支持的metaweblog API
+# 感谢nickchen121的脚本，开源地址(https://github.com/nickchen121/cnblogs_automatic_blog_uploading)
+# 原理：使用python 基于 xmlrpc 调用metaweblog API 发送内容到博客园
+# 查看支持的metaweblog API：http://rpc.cnblogs.com/metaweblog/
+# 博客园限制，不能连续不断的发表，所以使用threading间隔60S发一次。
 import xmlrpc.client as xmlrpclib
 import glob
 import os
@@ -15,20 +16,15 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # 发布文章路径(article path)
-art_path = "./../articles/"
-# 不发布文章路径(unpublished article path)
+art_path = "./../markdown_blogs/"
+# 草稿箱文章路径(unpublished article path)
 unp_path = "./../unpublished_blogs/"
-# 博客配置路径(config path)
+# 博客配置文件(config path)
 cfg_path = "./blog_config.json"
 # 备份路径(backup path)
 bak_path = "./../backup_blogs/"
-# 获取文章篇数
-recentnum = 10
-
-# 创建路径
-for path in [art_path, unp_path, bak_path]:
-    if not os.path.exists(path):
-        os.makedirs(path)
+# 获取最近发布文章篇数(经测试数量>=10则出现获取内容解析异常)
+recentnum = 9
 
 # -----配置读写操作-----
 '''
@@ -95,6 +91,9 @@ title2id = {}
 
 
 def get_cfg():
+    '''
+    初始化文章参数
+    '''
     global url, appkey, blogid, usr, passwd, server, mwb, title2id
     with open(cfg_path, "r", encoding="utf-8") as f:
         cfg = json.load(f)
@@ -103,13 +102,13 @@ def get_cfg():
         blogid = cfg["blogid"]
         usr = cfg["usr"]
         passwd = cfg["passwd"]
-        server = xmlrpclib.ServerProxy(cfg["url"])
+        server = xmlrpclib.ServerProxy(url)
         mwb = server.metaWeblog
-        # title2id[title]=postid  储存博客中文章标题对应的postid
-        print(cfg["blogid"], cfg["usr"], recentnum)
-        recentPost = mwb.getRecentPosts(
-            cfg["blogid"], cfg["usr"], cfg["passwd"], recentnum)
+        print("初始化 blogid:{0},usr:{1},recentnum:{2},url:{3}".format(blogid, usr, recentnum, url))
+        #储存博客中文章标题对应的postid
+        recentPost = mwb.getRecentPosts(blogid, usr, passwd, recentnum)
         for post in recentPost:
+            print("最近发布文章为:",post)
             # 1.把datetime转成字符串
             dt = post["dateCreated"]
             # post["dateCreated"] = dt.strftime("%Y%m%dT%H:%M:%S")
@@ -118,15 +117,11 @@ def get_cfg():
             # datetime.datetime.strptime(st, "%Y%m%dT%H:%M:%S")
             # datetime.datetime.fromisoformat(str)
             title2id[post["title"]] = post["postid"]
-        # 格式化成20160320-114539形式
+        # 保存最近发布内容到文件中，文件名：20160320-114539
         filename = time.strftime("%Y%m%d-%H%M%S", time.localtime())
         with open(bak_path + filename + ".json", "w", encoding="utf-8") as f:
             json.dump(recentPost, f, indent=4)
 
-
-# server = xmlrpclib.ServerProxy(url)
-# userInfo = server.blogger.getUsersBlogs(appkey, usr, passwd)
-# recentPost = mwb.getRecentPosts(blogid, usr, passwd, 9)
 def newPost(blogid, usr, passwd, post, publish):
     while True:
         try:
@@ -159,7 +154,7 @@ def post_art(path, publish=True):
                 print("New:[title=%s][postid=%s][publish=%r]" %
                       (title, postid, publish))
 
-                filepath_ = os.path.join('./unpublished/', f'{title}.md')
+                filepath_ = os.path.join(unp_path, f'{title}.md')
                 os.remove(filepath_)
 
                 return (title, postid, publish)
@@ -201,7 +196,26 @@ def download_art():
                 f.write(post["description"])
 
 
+def send_draft():
+    '''
+    发布到草稿箱
+    '''
+    for mdfile in glob.glob(unp_path + "*.md"):
+        title, postid, publish = post_art(mdfile, False)
+
+def send_article():
+    '''
+    发布正式文章
+    '''
+    for mdfile in glob.glob(art_path + "*.md"):
+        title, postid, publish = post_art(mdfile, True)
+        title_postid_dict[title] = postid
+
 if __name__ == "__main__":
+    # 创建路径
+    for path in [art_path, unp_path, bak_path]:
+        if not os.path.exists(path):
+            os.makedirs(path)
 
     title_postid_dict = dict()
 
@@ -220,16 +234,13 @@ if __name__ == "__main__":
             elif sys.argv[1] == "config":
                 create_cfg()
                 get_cfg()
+            elif sys.argv[1] == "unpublished":
+                send_draft()
+            elif sys.argv[1] == "publish":
+                send_article()
 
-        # 发布文章
-        # for mdfile in glob.glob(art_path + "*.md"):
-        #     title, postid, publish = post_art(mdfile, True)
-        #     title_postid_dict[title] = postid
-
-        # 提交文章不发布
-        for mdfile in glob.glob(unp_path + "*.md"):
-            title, postid, publish = post_art(mdfile, False)
     except KeyboardInterrupt:
+        #保存操作日志
         with open('title_postid.json', 'w', encoding='utf8') as fw:
             json.dump(title_postid_dict, fw)
 
