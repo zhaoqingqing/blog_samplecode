@@ -1,3 +1,5 @@
+git或svn提交中需要忽略.idea目录
+
 ## Rider(.Net/C#/Unity)
 
 ## Pycharm(python)
