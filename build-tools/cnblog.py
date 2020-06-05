@@ -4,7 +4,7 @@
 # 感谢nickchen121的脚本，开源地址(https://github.com/nickchen121/cnblogs_automatic_blog_uploading)
 # 原理：使用python 基于 xmlrpc 调用metaweblog API 发送内容到博客园
 # 查看支持的metaweblog API：http://rpc.cnblogs.com/metaweblog/
-# 博客园限制，不能连续不断的发表，所以使用threading间隔60S发一次。
+# 博客园限制，不能连续发表博客，所以使用threading间隔60S发一次。
 import xmlrpc.client as xmlrpclib
 import glob
 import os
@@ -108,7 +108,7 @@ def get_cfg():
         #储存博客中文章标题对应的postid
         recentPost = mwb.getRecentPosts(blogid, usr, passwd, recentnum)
         for post in recentPost:
-            print("最近发布文章为:",post)
+            #print("最近发布文章为:",post)
             # 1.把datetime转成字符串
             dt = post["dateCreated"]
             # post["dateCreated"] = dt.strftime("%Y%m%dT%H:%M:%S")
@@ -201,6 +201,7 @@ def send_draft():
     发布到草稿箱
     '''
     for mdfile in glob.glob(unp_path + "*.md"):
+        print("发布到草稿箱:",mdfile)
         title, postid, publish = post_art(mdfile, False)
 
 def send_article():
@@ -208,6 +209,7 @@ def send_article():
     发布正式文章
     '''
     for mdfile in glob.glob(art_path + "*.md"):
+        print("发布正式文章:",mdfile)
         title, postid, publish = post_art(mdfile, True)
         title_postid_dict[title] = postid
 
