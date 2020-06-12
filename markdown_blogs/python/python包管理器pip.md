@@ -15,6 +15,32 @@ Consider using the `--user` option or check the permissions.
 
 把 pip install requests 修改为：pip install requests --user
 
+如果提示中包含：`拒绝访问 c:\program files\python38\` ，还可以使用的解决办法为：
+
+1. 打开报错中提示的目录，比如我的 c:\program files\ 
+
+2. 鼠标右击python38这个目录，点击 属性 ，
+
+3. 首先切换到  **安全** 这个大标题下面，选中当前登陆的用户，然后再点击编辑
+
+4. 给当前用户勾选“完全控制”，再点击确定就大功告成。
+
+参考：[windows下pip安装python模块时报错总结](https://www.cnblogs.com/liaojiafa/p/5100550.html)
+
+## pip无法连接
+
+原因：在win10下使用了代理服务器，但代理软件未开启，或无法访问，需要取消它。
+
+解决办法：设置 - 代理服务器设置，取消代理服务器
+
+```
+C:\Users\qing>pip install mkdocs
+Collecting mkdocs
+  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x0000021C34102D60>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))': /simple/mkdocs/
+```
+
+
+
 ## pip版本升级
 
 > python -m pip install --upgrade pip
