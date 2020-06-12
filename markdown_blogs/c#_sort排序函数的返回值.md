@@ -48,6 +48,12 @@ list.Sort((left,right)=>{
 
 
 
+## sort函数
+
+注意：当只有两个值排序时，sort函数并不是只执行两次，而是4次
+
+
+
 
 
 注意：C# sort的返回值和Lua语言中table.sort返回值是不一样的。
