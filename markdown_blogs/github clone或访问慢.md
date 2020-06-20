@@ -8,11 +8,11 @@
 
 1、 获取github地址
 
-访问 http://github.com.ipaddress.com/ 获取cdn域名以及ip地址
+访问 http://github.com.ipaddress.com/ 获取ip地址
 
 2、 获取 global.ssl.fastly地址
 
-http://github.global.ssl.fastly.net.ipaddress.com/ 获取cdn域名以及ip地址
+http://github.global.ssl.fastly.net.ipaddress.com/ 获取ip地址
 
 3、 获取assets-cdn.github.com 地址（可选）
 
@@ -62,6 +62,29 @@ ping github.com
  ![image-20200612191809558](https://img2020.cnblogs.com/blog/363476/202006/363476-20200612192759890-10979560.png)
 
 ​     
+
+## github Issues图片无法显示
+
+打开https://githubusercontent.com.ipaddress.com/avatars1.githubusercontent.com，找到最新的IP地址，在host中添加映射，示例
+
+```powershell
+199.232.68.133    avatars0.githubusercontent.com
+199.232.68.133    avatars1.githubusercontent.com
+199.232.68.133    avatars2.githubusercontent.com
+```
+
+​     
+
+## 疑问点
+
+这些网站是什么？
+
+```
+github.global.ssl.fastly.net 
+avatars0.githubusercontent.com
+```
+
+
 
 ## 小技巧
 
