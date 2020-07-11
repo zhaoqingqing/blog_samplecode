@@ -79,3 +79,7 @@ IDA官网：https://www.hex-rays.com/products/ida/
 ​      
 
 ## APK包名修改(制作分身)
+
+## QuickEdit
+
+用来查看日志，显示行号，文件内查找，多标签页，比安卓自带的html编辑器好用
