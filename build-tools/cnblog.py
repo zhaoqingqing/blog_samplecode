@@ -4,7 +4,8 @@
 # 感谢nickchen121的脚本，开源地址(https://github.com/nickchen121/cnblogs_automatic_blog_uploading)
 # 原理：使用python 基于 xmlrpc 调用metaweblog API 发送内容到博客园
 # 查看支持的metaweblog API：http://rpc.cnblogs.com/metaweblog/
-# 博客园限制，不能连续发表博客，所以使用threading间隔60S发一次。
+# 博客园限制，不能连续不断的发表，所以使用threading间隔60S发一次。
+# NOTE: 文章从目录中发布正式或草稿后，会删除原文件，所以需要对源md文件进行备份
 import xmlrpc.client as xmlrpclib
 import glob
 import os
@@ -15,14 +16,15 @@ import datetime
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# 发布文章路径(article path)
-art_path = "./../markdown_blogs/"
-# 草稿箱文章路径(unpublished article path)
-unp_path = "./../unpublished_blogs/"
-# 博客配置文件(config path)
-cfg_path = "./blog_config.json"
-# 备份路径(backup path)
-bak_path = "./../backup_blogs/"
+# 使用相对路径
+# 发布为正式文章
+path_publish = "./article_publish/"
+# 发布到草稿箱
+path_draft = "./article_draft/"
+# 博客配置文件
+path_cfgfile = "./blog_config.json"
+# 备份路径
+path_backup = "./article_backup/"
 # 获取最近发布文章篇数(经测试数量>=10则出现获取内容解析异常)
 recentnum = 9
 
@@ -43,7 +45,7 @@ def exist_cfg():
     返回配置是否存在
     '''
     try:
-        with open(cfg_path, "r", encoding="utf-8") as f:
+        with open(path_cfgfile, "r", encoding="utf-8") as f:
             try:
                 cfg = json.load(f)
                 if cfg == {}:
@@ -53,7 +55,7 @@ def exist_cfg():
             except json.decoder.JSONDecodeError:  # 文件为空
                 return False
     except:
-        with open(cfg_path, "w", encoding="utf-8") as f:
+        with open(path_cfgfile, "w", encoding="utf-8") as f:
             json.dump({}, f)
             return False
 
@@ -80,7 +82,7 @@ def create_cfg():
             break
         except:
             print("发生错误！")
-    with open(cfg_path, "w", encoding="utf-8") as f:
+    with open(path_cfgfile, "w", encoding="utf-8") as f:
         json.dump(cfg, f, indent=4, ensure_ascii=False)
 
 
@@ -95,7 +97,7 @@ def get_cfg():
     初始化文章参数
     '''
     global url, appkey, blogid, usr, passwd, server, mwb, title2id
-    with open(cfg_path, "r", encoding="utf-8") as f:
+    with open(path_cfgfile, "r", encoding="utf-8") as f:
         cfg = json.load(f)
         url = cfg["url"]
         appkey = cfg["appkey"]
@@ -119,8 +121,8 @@ def get_cfg():
             title2id[post["title"]] = post["postid"]
         # 保存最近发布内容到文件中，文件名：20160320-114539
         filename = time.strftime("%Y%m%d-%H%M%S", time.localtime())
-        with open(bak_path + filename + ".json", "w", encoding="utf-8") as f:
-            json.dump(recentPost, f, indent=4)
+        with open(path_backup + filename + ".json", "w", encoding="utf-8") as f:
+            json.dump(recentPost, f, indent=4 ,ensure_ascii=False)
 
 def newPost(blogid, usr, passwd, post, publish):
     while True:
@@ -128,14 +130,15 @@ def newPost(blogid, usr, passwd, post, publish):
             postid = mwb.newPost(blogid, usr, passwd, post, publish)
             break
         except:
+            #发布失败
             time.sleep(5)
     return postid
 
-
+#已经发布的不会重复发布，且未发布目录内容如果为空，会报TypeError: cannot unpack non-iterable NoneType object
 def post_art(path, publish=True):
     title = os.path.basename(path)  # 获取文件名做博客文章标题
     [title, _] = os.path.splitext(title)  # 去除扩展名
-    with open(mdfile, "r", encoding="utf-8") as f:
+    with open(path, "r", encoding="utf-8") as f:
         post = dict(description=f.read(), title=title)
         post["categories"] = ["[Markdown]"]
 
@@ -145,39 +148,44 @@ def post_art(path, publish=True):
             # xmlrpc.client.Fault: <'published post can not be saved as draft'>
             # 所以先删除这个文章
             # if title in title2id.keys():
-            #     server.blogger.deletePost(
-            #         appkey, title2id[title], usr, passwd, True)
+            #     server.blogger.deletePost(appkey, title2id[title], usr, passwd, True)
+
             if title not in title2id.keys():
                 post["categories"].append('[随笔分类]unpublished')  # 标记未发布
-                # post["postid"] = title2id[title]
                 postid = newPost(blogid, usr, passwd, post, publish)
-                print("New:[title=%s][postid=%s][publish=%r]" %
-                      (title, postid, publish))
 
-                filepath_ = os.path.join(unp_path, f'{title}.md')
+                print("New Draft:[title=%s][postid=%s][publish=%r]" %(title, postid, publish))
+            else:
+                postid = title2id[title]
+                succcess = mwb.editPost(title2id[title], usr, passwd, post, publish)
+                print("Update Draft:[success=%s][title=%s][postid=%s][publish=%r]" % (succcess,title, title2id[title], publish))
+
+            f.close()
+            if not postid.strip == "" :
+                filepath_ = os.path.join(path_draft, f'{title}.md')
                 os.remove(filepath_)
+            else:
+                print("Send Draf Faild")
 
-                return (title, postid, publish)
+            return (title, postid, publish)
         else:  # 发布
             if title in title2id.keys():  # 博客里已经存在这篇文章
-                mwb.editPost(title2id[title], usr, passwd, post, publish)
-                print("Update:[title=%s][postid=%s][publish=%r]" %
-                      (title, title2id[title], publish))
-
-                filepath_ = os.path.join('./articles/', f'{title}.md')
-                os.remove(filepath_)
-
-                return (title, title2id[title], publish)
+                postid = title2id[title]
+                succcess = mwb.editPost(title2id[title], usr, passwd, post, publish)
+                print("Update:[success=%s][title=%s][postid=%s][publish=%r]" %(succcess,title, title2id[title], publish))
 
             else:  # 博客里还不存在这篇文章
                 postid = newPost(blogid, usr, passwd, post, publish)
-                print("New:[title=%s][postid=%s][publish=%r]" %
-                      (title, postid, publish))
+                print("New:[title=%s][postid=%s][publish=%r]" %(title, postid, publish))
 
-                filepath_ = os.path.join('./articles/', f'{title}.md')
+            f.close()
+            if succcess or (not postid.strip == ""):
+                filepath_ = os.path.join(path_publish, f'{title}.md')
                 os.remove(filepath_)
+            else:
+                print("Send Publish Faild")
 
-                return (title, postid, publish)
+            return (title, postid, publish)
 
 
 def download_art():
@@ -187,11 +195,11 @@ def download_art():
     for post in recentPost:
         if "categories" in post.keys():
             if '[随笔分类]unpublished' in post["categories"]:
-                with open(unp_path + post["title"] + ".md",
+                with open(path_draft + post["title"] + ".md",
                           "w", encoding="utf-8") as f:
                     f.write(post["description"])
         else:
-            with open(art_path + post["title"] + ".md",
+            with open(path_publish + post["title"] + ".md",
                       "w", encoding="utf-8") as f:
                 f.write(post["description"])
 
@@ -200,22 +208,20 @@ def send_draft():
     '''
     发布到草稿箱
     '''
-    for mdfile in glob.glob(unp_path + "*.md"):
-        print("发布到草稿箱:",mdfile)
+    for mdfile in glob.glob(path_draft + "*.md"):
         title, postid, publish = post_art(mdfile, False)
 
 def send_article():
     '''
     发布正式文章
     '''
-    for mdfile in glob.glob(art_path + "*.md"):
-        print("发布正式文章:",mdfile)
+    for mdfile in glob.glob(path_publish + "*.md"):
         title, postid, publish = post_art(mdfile, True)
         title_postid_dict[title] = postid
 
 if __name__ == "__main__":
     # 创建路径
-    for path in [art_path, unp_path, bak_path]:
+    for path in [path_publish, path_draft, path_backup]:
         if not os.path.exists(path):
             os.makedirs(path)
 
@@ -240,11 +246,15 @@ if __name__ == "__main__":
                 send_draft()
             elif sys.argv[1] == "publish":
                 send_article()
+        else:#开发环境下调试
+            send_draft()
+            send_article()
+
 
     except KeyboardInterrupt:
         #保存操作日志
         with open('title_postid.json', 'w', encoding='utf8') as fw:
-            json.dump(title_postid_dict, fw)
+            json.dump(title_postid_dict, fw ,ensure_ascii=False)
 
     with open('title_postid.json', 'w', encoding='utf8') as fw:
-        json.dump(title_postid_dict, fw)
+        json.dump(title_postid_dict, fw , ensure_ascii=False)
