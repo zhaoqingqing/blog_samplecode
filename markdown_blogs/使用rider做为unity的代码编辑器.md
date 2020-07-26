@@ -4,7 +4,7 @@
 
 我使用Rider 2019.1 + Unity3D 2018.3.4，在安装完Rider之后，在Unity中选择Rider做为脚本编辑器，然后在Unity中双击代码就可以跳转到Rider中，Rider会自动在Unity工程中导入调试的dll。
 
-> 更新于2020-4-21 ，使用Rider 2019.2 + Unity3D 2019.3.7f1
+> 更新于2020-4-21 ，使用Rider 2019.2 + Unity3D 2019.3.7f1 无需再导入调试dll到Unity中，需要在Rider中取消勾选自动导入(具体选项名字在Unity中会以日志输出)
 
 ### Rider的使用笔记
 
@@ -19,7 +19,6 @@
 5. 可以为不同语言禁用 ReSpeller
 
 Rider编写纯C#程序时，要先Build，再执行 run/debug。
-
 
 
 
@@ -93,17 +92,18 @@ IDEA 2018.4
 
 ​      
 
+## Rider常见提示
+
+第一次用Rider打开项目时会提示
+
+> rider detects naming conventions in opend soultions and updates setting accordingly
+
+
+
 ### 其它
 
 汉化包：[Rider 2019.2 汉化包](https://blog.csdn.net/pingfangx/article/details/97928905)
 
-
-
 Rider插件平台：https://plugins.jetbrains.com/rider
 
-
-
 使用Rider开发.Net程序，比如web项目或者前端项目：https://www.cnblogs.com/Leo_wl/p/8467901.html
-
-
-
