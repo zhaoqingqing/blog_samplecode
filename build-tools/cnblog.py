@@ -7,6 +7,7 @@
 # 博客园限制，不能连续不断的发表，所以使用threading间隔60S发一次。
 # NOTE: 文章从目录中发布正式或草稿后，会删除原文件，所以需要对源md文件进行备份
 import xmlrpc.client as xmlrpclib
+#import xmlrpclib
 import glob
 import os
 import sys
@@ -26,7 +27,7 @@ path_cfgfile = "./blog_config.json"
 # 备份路径
 path_backup = "./article_backup/"
 # 获取最近发布文章篇数(经测试数量>=10则出现获取内容解析异常)
-recentnum = 9
+recentnum = 200
 
 # -----配置读写操作-----
 '''
@@ -110,7 +111,7 @@ def get_cfg():
         #储存博客中文章标题对应的postid
         recentPost = mwb.getRecentPosts(blogid, usr, passwd, recentnum)
         for post in recentPost:
-            #print("最近发布文章为:",post)
+            #print("最近发布文章为:",post["title"])
             # 1.把datetime转成字符串
             dt = post["dateCreated"]
             # post["dateCreated"] = dt.strftime("%Y%m%dT%H:%M:%S")
@@ -141,7 +142,7 @@ def post_art(path, publish=True):
     with open(path, "r", encoding="utf-8") as f:
         post = dict(description=f.read(), title=title)
         post["categories"] = ["[Markdown]"]
-
+        succcess= False
         # 判断是否发布
         if not publish:  # 不发布
             # 对于已经发布的文章，直接修改为未发布会报错：
