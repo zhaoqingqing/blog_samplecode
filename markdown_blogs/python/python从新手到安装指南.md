@@ -74,7 +74,24 @@ python 3.x 系列，比如3.5, 3.6在同一个月更新两个不同的版本，
 
 ​      
 
-## python学习资料
+## 安装多个版本的python
+
+参考这篇：《[安装多个版本的python环境](https://www.cnblogs.com/weew12/p/10583046.html)》，注意事项：在安装时，勾选把python安装目录添加到Path中，安装多版本后需要对python.exe和pythonw.exe进行重命名，这样在CMD可以使用不同版本的python
+
+pycharm中选择对应版本的python，参考：《[在pycharm中切换python版本的方法](https://blog.csdn.net/sgfmby1994/article/details/77876873)》
+
+## 验证安装的python是64还是32位
+
+一般来说，在命令行中输入python就会打印出python的版本，如果你还想进一步确认，使用以下代码
+
+```python
+import sys, platform
+print(platform.architecture())
+
+input("Press <enter>")
+```
+
+
 
 
 

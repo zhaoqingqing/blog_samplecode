@@ -4,6 +4,30 @@
 
 如果是python 2.7的版本或者其它python未安装pip，可以在网上找找安装pip
 
+### 卸载包
+
+```powershell
+pip uninstall [options] <package>
+```
+
+### 安装历史版本
+
+包名字后面加上==版本号
+
+```
+pip install mkdocs==1.0.4
+```
+
+pip严重失败
+
+如果在电脑上同时安装了python2和python3，使用pip时可能会遇到这个报错
+
+```
+Fatal error in launcher: Unable to create process using '"'
+```
+
+如果这条指令还是无法安装`python -m pip install –upgrade pip`，可以在控制面板 - 程序和功能 - 找到python - 右键  - 更改，选择 Repail ，对python进行重装 
+
 ## pip安装包失败
 
 如果你像我一样在pip安装包时，出现失败，则按照提示在后面添加 --user
