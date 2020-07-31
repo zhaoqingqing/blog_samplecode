@@ -20,6 +20,8 @@
 
 Rider编写纯C#程序时，要先Build，再执行 run/debug。
 
+关于Rider和Resharper的关系可查看中的Rider部分：https://github.com/JetBrains/resharper-unity
+
 
 
 ### Rider禁用自动保存
@@ -51,6 +53,8 @@ IDEA 2018.4
 2. 安装包没有VS大，Rider2019.1约500MB，而VS2017接近20GB。
 3. 对于习惯使用Resharper来说，Rider的快捷键和使用体验是一致的，文件跳转和查找引用更加方便。
 4. 个人感觉Rider相对没有VS那么卡顿
+
+Rider对于Unity的支持介绍：https://www.jetbrains.com/zh-cn/dotnet/promo/unity/
 
 
 
@@ -100,7 +104,7 @@ IDEA 2018.4
 
 
 
-### 其它
+## 其它
 
 汉化包：[Rider 2019.2 汉化包](https://blog.csdn.net/pingfangx/article/details/97928905)
 
