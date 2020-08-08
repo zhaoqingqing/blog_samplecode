@@ -49,3 +49,16 @@ alter("file1", "09876", "python")
 python调用资源管理器打开某个文件夹：os.startfile(full_path)
 
 进入某个目录，此后的操作是在这个目录下：os.chdir(full_path)
+
+### 文件夹拷贝
+
+如果目录存在需要先删除，否则会报目录不为空不可访问
+
+```python
+if os.path.exists(dst_path):
+	print("exist path,delete", dst_path)
+	shutil.rmtree(dst_path)
+
+shutil.copytree(src_path, dst_path)
+```
+

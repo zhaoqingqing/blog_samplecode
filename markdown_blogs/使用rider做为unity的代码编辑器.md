@@ -28,7 +28,7 @@ Rider编写纯C#程序时，要先Build，再执行 run/debug。
 
 rider默认会开启自动保存功能，如果想关闭它的话，就把这2个地方点掉。
 
-打开Systemsetting - Synchronize
+打开设置， 外观&行为 - Systemsetting - Synchronize
 
 Synchronize files on frame or editor tab activation -> 编辑时自动保存
 Save files on frame deactivation -> 切换到其它窗口自动保存
