@@ -1,27 +1,23 @@
 """
 Author: qingqing-zhao(569032731@qq.com)
 Date: 2020/4/26 22:42
-Desc:
+Desc: 把md文件中的###替换为##
 """
 # -*- coding: utf-8 -*-
+import glob
 import os
+import sys
 import logging
 
-blog_path = r'E:\Code\blog_samplecode\markdown_blogs'
-test_blog = r'E:\Code\blog_samplecode\markdown_blogs\LoopScrollRect循环滑动列表不卡顿.md'
-
-
-# str_log = ""
-# def log(str):
-
+blog_path = "./article_publish/"
+#blog_path = r'E:\Code\blog_samplecode\markdown_blogs'
 
 # 分析blog
-
 def analysisBlog(file):
     with open(file,'r',-1,encoding="utf-8") as sw:
         h2_num = 0
         if sw:
-            print("本篇blog中h1~h6如下：")
+            print(file,"这篇blog中h1~h6如下：")
             for line in sw:
                 if line.startswith("#"):
                     print(line)
@@ -32,7 +28,7 @@ def analysisBlog(file):
             # 如果整篇文章中没有一处h2，则自动进行替换，否则手动处理
             if h2_num <=0:
                 print("本篇没有h2标签可以自动处理")
-                print("========== begin 执行替换操作###->## ========")
+                print("========== begin 执行替换操作 ========")
                 str_blog = ""
                 num = 0
                 with open(file, 'r', -1, encoding="utf-8") as sw:
@@ -51,4 +47,9 @@ def analysisBlog(file):
                 print("此篇有{0}个h2标签，请手动处理".format(h2_num))
 
 if __name__ =="__main__":
-    analysisBlog(test_blog)
+    try:
+        for mdfile in glob.glob(blog_path + "*.md"):
+            analysisBlog(mdfile)
+    except Exception,err:
+        print("error:",err)
+    input("Press Enter")
