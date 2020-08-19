@@ -15,7 +15,7 @@ public class DoubleClickShow : MonoBehaviour {
             if (ButtonClicked)
             {
                 ButtonClicked = false;
-
+                Debug.Log("It's DoubleClick!");
                 ReporterExpand.ShowOrHide();
             }
             else

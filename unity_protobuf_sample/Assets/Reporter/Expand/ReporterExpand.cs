@@ -3,6 +3,7 @@ using System.Collections;
 
 /// <summary>
 /// 对reporter的扩展
+/// 通过Reporter的菜单栏来创建Reporter，用到的图片脚本中已进行赋值
 /// </summary>
 public class ReporterExpand
 {
@@ -35,7 +36,7 @@ public class ReporterExpand
             }
             else
             {
-                reporter.reporter.doShow();
+                reporter.reporter.DoShow();
             }
         }
     }
@@ -50,37 +51,6 @@ public class ReporterExpand
         else
         {
             reporter.reporter.DoClose();
-        }
-    }
-}
-
-public class DoubleGUIButton : MonoBehaviour
-{
-    private bool ButtonClicked = false;
-    private float ResetTime = 0.0f;
-
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect(10, 10, 80, 50), "双击"))
-        {
-            ResetTime = Time.time;
-            if (ButtonClicked)
-            {
-                print("It's DoubleClick!");
-                ButtonClicked = false;
-            }
-            else
-            {
-                ButtonClicked = true;
-            }
-        }
-    }
-
-    void FixedUpdate()
-    {
-        if (ResetTime + 0.5 < Time.time)
-        {
-            ButtonClicked = false;
         }
     }
 }
