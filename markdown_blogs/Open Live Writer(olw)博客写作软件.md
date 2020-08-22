@@ -8,6 +8,8 @@ olw是wlw的开源版本，所以wlw上的操作是可以在olw上继续使用�
 
 olw官网：http://openlivewriter.org/
 
+github：https://github.com/OpenLiveWriter/OpenLiveWriter
+
 每日构建页面也可以下载：https://ci.appveyor.com/project/dotnetfoundation/openlivewriter/build/artifacts
 
 下载链接：https://openlivewriter.azureedge.net/stable/Releases/OpenLiveWriterSetup.exe
