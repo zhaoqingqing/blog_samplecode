@@ -1,4 +1,8 @@
-### 调用/执行 热更中的方法
+官方Demo地址：https://github.com/Ourpalm/ILRuntimeU3D
+
+基于ILRuntime 1.6.3版本，在unity2019.3.7f1下测试
+
+## 调用/执行 热更中的方法
 
 调用热更代码中方法，写在AppDomain中，记录一下主要几个方法：
 
@@ -19,9 +23,11 @@ IMethod method = type.GetMethod("StaticFunTest", 0);
 appdomain.Invoke(method, null, null);
 ```
 
+也可以在主工程中抛出事件，在热更工程中监听，原理和Invoke是一样的
 
 
-### 监听主工程的委托
+
+## 监听主工程的委托
 
 在热更工程中监听主工程的事件，由主工程触发。
 
@@ -29,13 +35,13 @@ appdomain.Invoke(method, null, null);
 
 
 
-### 继承主工程，实现主工程接口
+## 继承主工程，实现主工程接口
 
 因为跨域继承必须要注册适配器。 如果是热更DLL里面继承热更里面的类型，不需要任何注册。
 
 
 
-### 适配器代码怎么写
+## 适配器代码怎么写
 
 Demo中有三个适配器示例，都继承自CrossBindingAdaptor，适配器中有内部类，继承或实现接口的方法。
 
@@ -73,9 +79,13 @@ public class MonoBehaviourAdapter : CrossBindingAdaptor
 }
 ```
 
+注：1.6版本开始提供了半自动生成适配器代码
+
+在写了适配器之后，热更中访问的是xxx_Adapter.cs中的方法和字段
 
 
-### CLR重定向/热补丁
+
+## CLR重定向/热补丁
 
 CLRRedirectionDemo，需要**在AppDomain中注册 RegisterCLRMethodRedirection**
 
@@ -85,15 +95,19 @@ CLRRedirectionDemo，需要**在AppDomain中注册 RegisterCLRMethodRedirection*
 
 
 
-### 生成适配代码
+## 生成CLR绑定代码
 
-类似于slua/tolua/xlua一样， 把在热更工程会用到的类添加到列表中，然后生成适配代码。
+类似于slua/tolua/xlua一样， 把在热更工程会用到主工程的类添加到列表中，然后生成绑定代码。
 
-ILRuntime提供一个智能分析在热更工程使用的代码。
+ILRuntime提供一个智能分析`在热更工程会访问主工程的代码`并生成CLR绑定代码。
+
+在CLRBindingDemo示例中生成CLR绑定代码之后性能提升10倍
+
+在生成绑定代码之后，热更中访问主工程中方法是调用的 xxx_Binding.cs，而如果不生成则是通过反射调用。
 
 
 
-### 在热更工程使用协程
+## 在热更工程使用协程
 
 官方例子是调用主工程的方法来启动协程，我测试热更工程也可以调用MonoBehaviour的方法开启协程。
 
@@ -116,7 +130,7 @@ static System.Collections.IEnumerator Coroutine()
 
 
 
-### 对主工程的值类型做绑定
+## 对主工程的值类型做绑定
 
 那些需要做绑定？Unity的常用值类型，比如：Vector3，Vector2
 
@@ -130,7 +144,7 @@ AppDomain.RegisterValueTypeBinder(typeof(Vector3), new Vector3Binder());
 
 
 
-Demo 做了十万次运算，打印日志如下：
+Demo 做了十万次向量的运算，添加值类型绑定，不绑定的耗时如下：
 
 ```c#
 Value: a=(100001.0, 100002.0, 100003.0),dot=0, time = 750ms
@@ -145,7 +159,7 @@ Value: a=(100001.0, 100002.0),dot=0, time = 1902ms
 
 
 
-### 我的小结
+## 我的小结
 
 可以把热更工程的VS项目(**HotFix_Project.csproj**)添加到Unity生成的解决方案中(**ILRuntimeDemo.sln**)，在开发期不用两个工程切换。
 
@@ -171,8 +185,7 @@ Value: a=(100001.0, 100002.0),dot=0, time = 1902ms
 
 - 热更工程基本处理所有的业务逻辑
 
-
-### 为什么要写适配器
+## 为什么要写适配器
 
 因为ILRuntime可以理解为蓝大写的C#虚拟机，这个虚拟机要在运行时和Unity的脚本进行交互。
 
