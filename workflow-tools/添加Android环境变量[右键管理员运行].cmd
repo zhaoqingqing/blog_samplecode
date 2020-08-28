@@ -1,6 +1,6 @@
 @echo off
 set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-set sdkHome=D:\Android\android_sdk_windows
+set sdkHome=D:\android_sdk
 
 echo.
 echo ************************************************************
