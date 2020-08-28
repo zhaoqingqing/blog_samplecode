@@ -2,6 +2,8 @@
 
 对于路径中含有转义字符，在路径字符串前加 r，比如 filepath = r'E:\Code\test.txt'
 
+完整路径 os.path.abspath(xxx)
+
 ## 文本读取和修改
 
 使用默认的系统函数 open，并添加encoding，使用with 代替try finally 切保一定会调用close释放文件，示例
