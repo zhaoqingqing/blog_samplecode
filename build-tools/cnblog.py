@@ -27,7 +27,7 @@ path_cfgfile = "./blog_config.json"
 # 备份路径
 path_backup = "./article_backup/"
 # 获取最近发布文章篇数(经测试数量>=10则出现获取内容解析异常)
-recentnum = 200
+recentnum = 150
 
 # -----配置读写操作-----
 '''
