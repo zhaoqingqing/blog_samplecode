@@ -7,3 +7,24 @@
 [Python: Logging模块实例详解](https://www.jianshu.com/p/29cb6a535e2d)
 
  [Python + logging 输出到屏幕，将log日志写入文件](https://www.cnblogs.com/nancyzhu/p/8551506.html)
+
+## Pycharm
+
+在pycharm中以debug方式执行python会提示这个信息：
+
+Python Debugger Extension Available
+		Cython extension speeds up Python debugging
+		Install How does it work
+
+意思是使用一个C编写的库来给python调试时加速
+
+点击安装时，提示 Compile Cython Extensions Error
+
+```powershell
+Non-zero exit code (1): 
+error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ Build Tools": https://visualstudio.microsoft.com/downloads/
+```
+
+Microsoft Visual C++ Build Tools 可以通过VS来安装，单独安装也有4个G?
+
+下载地址：https://wiki.python.org/moin/WindowsCompilers
