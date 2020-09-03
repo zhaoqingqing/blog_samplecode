@@ -1,0 +1,1 @@
+查看本机ip ` ifconfig en0 `
