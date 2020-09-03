@@ -28,6 +28,16 @@ Fatal error in launcher: Unable to create process using '"'
 
 如果这条指令还是无法安装`python -m pip install –upgrade pip`，可以在控制面板 - 程序和功能 - 找到python - 右键  - 更改，选择 Repail ，对python进行重装 
 
+## pip安装本地包
+
+安装下载后的whl包文件，进入到whl文件所在路径，执行这条命令
+
+```powershell
+pip install file_name.whl
+```
+
+
+
 ## pip安装包失败
 
 如果你像我一样在pip安装包时，出现失败，则按照提示在后面添加 --user
@@ -112,3 +122,16 @@ PIL：Python Imaging Library，已经是Python平台事实上的图像处理标�
 > ```bash
 > pip install pillow
 > ```
+
+## pip模块已安装pycharm中提示找不到
+
+原因是安装了多个版本的python，而pycharm中使用的非当前的python版本。
+
+解决办法：在pycharam中修改解释器为pip对应的python
+
+1. 点击File - Setting 找到 Project Interpreter
+2. 先删除原来的解释器，并删除本地的venv目录
+3. 添加新的python版本，点确定之后，会reload出来安装的模块
+
+![image-20200903095353199](https://img2020.cnblogs.com/blog/363476/202009/363476-20200903095523573-121339055.png)
+
