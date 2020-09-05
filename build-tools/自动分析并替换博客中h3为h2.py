@@ -17,7 +17,7 @@ def analysisBlog(file):
     with open(file,'r',-1,encoding="utf-8") as sw:
         h2_num = 0
         if sw:
-            print(file,"这篇blog中h1~h6如下：")
+            print(file,"的h1~h6如下：")
             for line in sw:
                 if line.startswith("#"):
                     print(line)
@@ -28,7 +28,6 @@ def analysisBlog(file):
             # 如果整篇文章中没有一处h2，则自动进行替换，否则手动处理
             if h2_num <=0:
                 print("本篇没有h2标签可以自动处理")
-                print("========== begin 执行替换操作 ========")
                 str_blog = ""
                 num = 0
                 with open(file, 'r', -1, encoding="utf-8") as sw:
@@ -41,7 +40,7 @@ def analysisBlog(file):
                 #执行写入操作
                 with open(file,"w",encoding="utf-8") as sw:
                     sw.write(str_blog)
-                print("========== end 执行完毕，共替换{0}个 ========".format(num))
+                print("{0} ,共替换{1}个 ".format(file,num))
 
             else:
                 print("此篇有{0}个h2标签，请手动处理".format(h2_num))
@@ -50,6 +49,6 @@ if __name__ =="__main__":
     try:
         for mdfile in glob.glob(blog_path + "*.md"):
             analysisBlog(mdfile)
-    except Exception,err:
+    except Exception as err:
         print("error:",err)
-    input("Press Enter")
+    input("Press Any Key...")
