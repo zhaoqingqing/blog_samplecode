@@ -45,7 +45,7 @@ Lua版本发布时间表，更多版本的发布时间可见lua官网
 
 注：cl是微软提供的C语言编译器
 
-如果电脑已经安装了visual studio的话，就已经有些程序了。
+如果电脑已经安装了visual studio的话，就已经有这个程序了。
 
 ## 导入第三方库
 
@@ -57,22 +57,39 @@ Lua版本发布时间表，更多版本的发布时间可见lua官网
 
 在Unity中进行调试可以使用EmmyLua的新版本
 
-在IDEA中对于纯Lua代码进行调试，需要安装Lua For Windows，如果要调试单个lua文件的话，需要新建一个Run/Debug Configurations，指定要调试的lua文件，并且勾选Allow paraller run
+在IDEA中对于纯Lua环境的代码进行调试，需要安装Lua For Windows，如果要调试单个lua文件的话，需要新建一个Run/Debug Configurations，指定要调试的lua文件，并且勾选Allow paraller run
 
-![image-20200723210028347](E:\Code\blog_samplecode\blog_images\image-20200723210028347.png)
+![image-20200723210028347](https://img2020.cnblogs.com/blog/363476/202009/363476-20200905141655341-1681563515.png)
 
 
 
-## 新版本的EmmyLua
+## EmmyLua新版本
 
-在2019年EmmyLua进行了新版本的开发，升级EmmyLua版本之后也是可以进行调试。
+EmmyLua的作者在2019年进行了新版本的开发，升级EmmyLua版本之后也是可以进行调试。
 
 如果遇到lua中文件无法查找引用和跳转问题，可以重新安装EmmyLua插件
 
 在Lua中提示Unity的API，可以使用新的方法，见EmmyLua群的教程。
 
-我之前的博客中方法是针对以前EmmyLua的版本，目前需要以EmmyLua群的教程为准。
+我之前的博客中方法是针对EmmyLua在2018年及之前的版本，新版本的EmmyLua以群的教程为准。
 
 《[在Lua中提示UnityEngine.dll的方法](https://www.cnblogs.com/zhaoqingqing/p/8296753.html)》
 
 《[在Unity中对Lua进行调试](https://www.cnblogs.com/zhaoqingqing/p/9121991.html)》
+
+## LuaPanda
+
+LuaPanda 是一个基于 VS Code 的 lua 代码工具，设计目标是简单易用。它支持多种开发框架，主要提供以下功能：
+
+- 自动补全（auto completion）
+- 代码片段（snippet completion）
+- 定义跳转（definition）
+- 生成注释（comment generation）
+- 类型推断（limited type inference）
+- 代码格式化（formatting）: 依赖 [lua-fmt](https://github.com/trixnz/lua-fmt)
+- 代码诊断（linting）：依赖 [luacheck](https://github.com/mpeterv/luacheck)
+- 调试器（debugger）
+
+功能详情可以参考[项目介绍](https://github.com/Tencent/LuaPanda/blob/master/Docs/Manual/feature-introduction.md)。LuaPanda 支持 lua5.1- 5.3，调试器运行环境需要包含 LuaSocket。
+
+官网：[LuaPanda](https://github.com/Tencent/LuaPanda)，从issus中了解到这是腾讯内部一个团队开源的作品，目前我还没有使用上这款调试工具，先占个位置。
