@@ -4,11 +4,14 @@
 
 如果是python 2.7的版本或者其它python未安装pip，可以在网上找找安装pip
 
-### 卸载包
+### 安装包
 
 ```powershell
-pip uninstall [options] <package>
+pip install mkdocs
 ```
+
+
+
 
 ### 安装历史版本
 
@@ -18,7 +21,21 @@ pip uninstall [options] <package>
 pip install mkdocs==1.0.4
 ```
 
-pip严重失败
+### pip安装本地包
+
+安装下载后的whl包文件，进入到whl文件所在路径，执行这条命令
+
+```powershell
+pip install file_name.whl
+```
+
+### 卸载包
+
+```powershell
+pip uninstall [options] <package>
+```
+
+## pip严重失败
 
 如果在电脑上同时安装了python2和python3，使用pip时可能会遇到这个报错
 
@@ -27,16 +44,6 @@ Fatal error in launcher: Unable to create process using '"'
 ```
 
 如果这条指令还是无法安装`python -m pip install –upgrade pip`，可以在控制面板 - 程序和功能 - 找到python - 右键  - 更改，选择 Repail ，对python进行重装 
-
-## pip安装本地包
-
-安装下载后的whl包文件，进入到whl文件所在路径，执行这条命令
-
-```powershell
-pip install file_name.whl
-```
-
-
 
 ## pip安装包失败
 

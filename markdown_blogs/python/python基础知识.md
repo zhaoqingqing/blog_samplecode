@@ -1,4 +1,6 @@
-python中需要特别注意代码的缩进，这是为了可读性，不像 C#，lua ( function do end)，js等语言的函数范围用{}表示。
+### 前言
+
+python中需要特别注意代码的缩进，这是为了可读性而是正确性，不像 C#，lua ( function do end)，js等语言的函数范围用{}表示。
 
 对于判断是否包含尽量使用in，而不使用for，具体参考：《Python编程惯例.md》
 
@@ -122,7 +124,12 @@ python类中的方法，需要传入self，这点和原生的Lua是一样的。
 
 在python文件的未尾添加一行输入符，等待用户按下任意键才会退出
 
+### python执行
 
+python test.py 和python -m test.py 这两者的区别？
+
+直接运行会将该脚本所在目录添加至`sys.path`
+当做模块启动则会将当前运行命令的路径添加至`sys.path`
 
 ### 常用术语
 
