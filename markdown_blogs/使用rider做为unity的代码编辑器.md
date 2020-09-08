@@ -6,7 +6,7 @@
 
 > 更新于2020-4-21 ，使用Rider 2019.2 + Unity3D 2019.3.7f1 无需再导入调试dll到Unity中，需要在Rider中取消勾选自动导入(具体选项名字在Unity中会以日志输出)
 
-### Rider的使用笔记
+## Rider的使用笔记
 
 1. 从进程中来看，Rider中包含了一个Resharper
 
@@ -24,7 +24,7 @@ Rider编写纯C#程序时，要先Build，再执行 run/debug。
 
 
 
-### Rider禁用自动保存
+## Rider禁用自动保存
 
 rider默认会开启自动保存功能，如果想关闭它的话，就把这2个地方点掉。
 
@@ -35,7 +35,7 @@ Save files on frame deactivation -> 切换到其它窗口自动保存
 
 
 
-### 对比的软件版本
+## 对比的软件版本
 
 在windows系统下比较
 
@@ -47,7 +47,7 @@ IDEA 2018.4
 
 
 
-### Rider比VS的优点
+## Rider比VS的优点
 
 1. 调试Unity更加方便，在我使用Unity 2018.4.7+vs2017 专业版/企业版，经常出现无法断点的问题，尤其对于使用**partial**关键词的文件（一个类拆分在多个文件中）
 2. 安装包没有VS大，Rider2019.1约500MB，而VS2017接近20GB。
@@ -58,7 +58,7 @@ Rider对于Unity的支持介绍：https://www.jetbrains.com/zh-cn/dotnet/promo/u
 
 
 
-### Rider和IDEA的区别
+## Rider和IDEA的区别
 
 之前使用过两年的IDEA编写Lua，记录下Rider与IDEA的区别(这两款编辑器都出自同一家公司)
 
@@ -68,7 +68,7 @@ Rider对于Unity的支持介绍：https://www.jetbrains.com/zh-cn/dotnet/promo/u
 
 
 
-### Rider的自定义
+## Rider的自定义
 
 > 修改每行字符的长度
 
@@ -96,7 +96,7 @@ Rider对于Unity的支持介绍：https://www.jetbrains.com/zh-cn/dotnet/promo/u
 
 ​      
 
-### 复制Rider的智能提示
+## 复制Rider的智能提示
 
 在代码中的警告信息，或者可以优化的写法，Rider会显示黄色波浪线，鼠标移上去，会显示警告的信息，那要怎样复制这些提示文字呢？
 
