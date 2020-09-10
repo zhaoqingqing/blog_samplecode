@@ -1,6 +1,8 @@
-## 前言
+## 下载和接入
 
 SDK下载：官网 - Pipeline SDK 选择对应Unity版本的SDK
+
+使用方法：只需要把UWA的SDK放在Unity项目下，在Editor中进行Scan
 
 创建项目：Pipeline产品 - 本地资源检测
 
@@ -27,3 +29,33 @@ SDK下载：官网 - Pipeline SDK 选择对应Unity版本的SDK
 
 
 ## 上传到uwa
+
+上传配置 config.json，project配置的名字如果不存在则会创建一个新的项目
+
+```powershell
+{
+	"user":"569032731@qq.com",
+	"password":"xxx",
+	"project":"我的项目"
+}
+```
+
+
+
+上传代码
+
+```powershell
+UwaDataUploader.exe "F:\uwa_scan_result\uwa_scan_code"
+```
+
+上传过程中，uploader工具会把文件夹压缩成zip，并在上传成功后删除源文件，所以需要做好备份源文件。
+
+上传成功后，会在uploader工具目录下生成一个result.json，内容如下：
+
+```json
+{"status" : "success", "reason" : "", "projctid" : 18324}
+```
+
+
+
+上传完成后，在uwa的项目管理页面刷新一下就会显示出来了
