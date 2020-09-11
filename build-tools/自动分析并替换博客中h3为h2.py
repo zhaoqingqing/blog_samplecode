@@ -9,7 +9,7 @@ import os
 import sys
 import logging
 
-blog_path = "./article_publish/"
+blog_path = "./"
 #blog_path = r'E:\Code\blog_samplecode\markdown_blogs'
 
 # 分析blog
