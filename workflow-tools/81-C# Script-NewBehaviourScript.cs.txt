@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// 作者：赵青青 (569032731@qq.com)
+/// 时间：#CreateTime#
+/// 说明：
+/// </summary>
+public class #SCRIPTNAME# : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        #NOTRIM#
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        #NOTRIM#
+    }
+}
