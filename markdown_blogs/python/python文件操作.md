@@ -36,6 +36,17 @@ def alter(file,old_str,new_str):
 alter("file1", "09876", "python")
 ```
 
+### 写入内容
+
+```python
+# 打开一个文件
+fo = open("foo.txt", "w")
+fo.write( "www.runoob.com!\nVery good site!\n")
+ 
+# 关闭打开的文件
+fo.close()
+```
+
 
 
 参考：  [python-修改文件内容并保存的3种方法](https://blog.csdn.net/qq_30068487/article/details/90297814)
