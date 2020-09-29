@@ -122,7 +122,7 @@ Rider官方和vs的对比文章：https://www.jetbrains.com/rider/compare/rider-
 
 ## 其它
 
-汉化包：[Rider 2019.2 汉化包](https://blog.csdn.net/pingfangx/article/details/97928905)
+汉化包：[Rider 2019.2 汉化包](https://blog.csdn.net/pingfangx/article/details/97928905) 从2020版本开始，官方提供了中文语言包，在插件商店中搜索Chinese就可以找到。
 
 Rider插件平台：https://plugins.jetbrains.com/rider
 
