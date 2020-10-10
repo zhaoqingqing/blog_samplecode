@@ -83,3 +83,11 @@ https://github.com/aliessmael/Unity-Logs-Viewer/
 UGUI的流行库：https://github.com/mob-sakai
 
 https://github.com/mob-sakai/ParticleEffectForUGUI
+
+## UnityLibrary
+
+此处免费收集有用的脚本，摘要和着色器。
+
+我们从外部资源（例如Unity社区）（论坛，答案）中收集了大多数脚本，并且自己编写了一些脚本。
+
+地址：https://github.com/UnityCommunity/UnityLibrary
