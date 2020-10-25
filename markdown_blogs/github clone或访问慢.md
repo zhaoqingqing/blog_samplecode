@@ -1,4 +1,4 @@
-做技术的我们经常会访问github.com，有时出现github访问非常慢或者git clone速度很慢，git push也很慢
+我们经常会访问github.com，有时出现github访问非常慢或者git clone速度很慢，git push也很慢
 
 原因很简单：github被高高的墙屏蔽了。 所以解决方案就是手动把 cdn 和IP地址绑定一下，或者更换地址。
 
