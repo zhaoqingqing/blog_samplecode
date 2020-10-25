@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+;use typora open md file ,need restart computer
+[HKEY_CLASSES_ROOT\.md]
+@="TyporaMarkdownFile"
+"PerceivedType"="text"
+"Content Type"="text/plain"
+
+[HKEY_CLASSES_ROOT\.md\ShellNew]
+"NullFile"=""
+"FileName"="new.md"
