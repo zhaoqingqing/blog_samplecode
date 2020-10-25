@@ -80,6 +80,30 @@ Collecting mkdocs
   WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x0000021C34102D60>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))': /simple/mkdocs/
 ```
 
+## pip国内源
+
+阿里云镜像：https://mirrors.aliyun.com/pypi/simple/
+
+清华大学镜像：https://pypi.tuna.tsinghua.edu.cn/simple/
+
+腾讯镜像：https://mirrors.cloud.tencent.com/pypi/simple
+
+豆瓣镜像：https://pypi.doubanio.com/simple/
+
+中科大镜像：https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/
+
+全局设置方法
+
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+单次设置源方法
+
+```bash
+pip install markdown -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
 
 
 ## pip版本升级
