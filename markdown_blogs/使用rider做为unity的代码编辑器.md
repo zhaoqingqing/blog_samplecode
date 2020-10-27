@@ -26,7 +26,7 @@ Rider编写纯C#程序时，要先Build，再执行 run/debug。
 
 ## Rider禁用自动保存
 
-rider默认会开启自动保存功能，如果想关闭它的话，就把这2个地方点掉。
+rider默认会开启自动保存功能，如果想关闭它的话，就把这2个地方取消勾选。
 
 打开设置， 外观&行为 - Systemsetting - Synchronize
 
