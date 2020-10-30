@@ -3,6 +3,17 @@
 dump出来的内存信息
 
 dump memory info(10:15):  MemoryInfo  GC.GetTotalMemory:86M
+
+**Profiler.GetMonoUsedSize:86M**
+
+活动对象分配管理内存和non-collected对象。 　　 　　
+
+这个函数返回的数量分配管理内存对象,活动的和non-collected。总是调用GC.Collect()作为非引用对象，在调用这个函数之前仍将占据空间,直到他们收集的垃圾收集器(GC)。请注意,这将返回一个值不断增加,直到GC.Collect ()。
+
+可以监控这个值用来分析内存的分配
+
+
+
  **Profiler.usedHeapSize:103M**
 
 当前程序使用的堆的大小。 
@@ -14,14 +25,6 @@ dump memory info(10:15):  MemoryInfo  GC.GetTotalMemory:86M
 管理内存预留空间的大小。
 
 这将成长总分配管理内存超过目前保留数量。预留空间的大小分配管理,也将影响频繁的垃圾收集器将如何运行,以及需要多长时间做一个垃圾收集。堆越大,时间越长,但很少会运行。
-
-
-
-**Profiler.GetMonoUsedSize:86M**
-
-活动对象分配管理内存和non-collected对象。 　　 　　
-
-这个函数返回的数量分配管理内存对象,活动的和non-collected。总是调用GC.Collect()作为非引用对象在调用这个函数之前仍将占据空间,直到他们收集的垃圾收集器(GC)。请注意,这将返回一个值不断增加,直到GC.Collect ()。
 
 
 
