@@ -4,23 +4,23 @@ python中需要特别注意代码的缩进，这是为了可读性而是正确�
 
 对于判断是否包含尽量使用in，而不使用for，具体参考：《Python编程惯例.md》
 
-python】报错“Non-ASCII character '\xe5' ”
+python报错“Non-ASCII character '\xe5' ”
 
 解决方法：
 
-在Python源文件的最开始一行，加入一句：
+在Python源文件的最开始一行，加入一句
 
-\# coding=UTF-8
-
-或者
-
-\# -*- coding:UTF-8 -*-
+```python
+# coding=UTF-8
+#或者
+# coding:UTF-8 --
+```
 
 
 
 ### 变量定义
 
-不需要var 也不要写类型，直接写变量名
+不需要var 也不要写类型，直接写变量名，全局和局部变量都不需要写类型
 
 ### 函数定义
 
@@ -63,9 +63,15 @@ print(calcTotal((1,2,3)))
 
 ### 代码注释
 
-'#' 单行注释
+```python
+# 单行注释
 
-""" 要注释的内容 “”“  多行注释，三个双引号连接
+""" 要注释的内容
+多行注释，三个双引号连接
+""" 
+```
+
+
 
 
 
