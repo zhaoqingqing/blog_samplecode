@@ -1,6 +1,6 @@
 ### 基础知识
 
-官方文档：https://ourpalm.github.io/ILRuntime/
+官方文档：https://ourpalm.github.io/ILRuntime/ ，离线文件目录：ILRuntime\docs\source\src\v1\guide\
 
 官方Unity3D热更例子工程：https://github.com/Ourpalm/ILRuntimeU3D/
 
@@ -48,6 +48,8 @@ appdomain.DebugService.StartDebugService(56000)
 <br />
 
 ### 线上项目和资料
+
+掌趣很多项目都是使用ILRuntime开发，并上线运营，比如：真红之刃，境·界 灵压对决，全民奇迹2，龙族世界，热血足球
 
 初音未来:梦幻歌姬 使用补丁方式：https://github.com/wuxiongbin/XIL
 
