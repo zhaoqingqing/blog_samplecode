@@ -95,13 +95,13 @@ Collecting mkdocs
 全局设置方法
 
 ```bash
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
 ```
 
 单次设置源方法
 
 ```bash
-pip install markdown -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install markdown -i https://mirrors.aliyun.com/pypi/simple
 ```
 
 
