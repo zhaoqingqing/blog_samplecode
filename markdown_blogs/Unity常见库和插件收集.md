@@ -91,3 +91,7 @@ https://github.com/mob-sakai/ParticleEffectForUGUI
 我们从外部资源（例如Unity社区）（论坛，答案）中收集了大多数脚本，并且自己编写了一些脚本。
 
 地址：https://github.com/UnityCommunity/UnityLibrary
+
+## BestHttp
+
+看到有项目组在使用这款插件
