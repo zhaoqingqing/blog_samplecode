@@ -101,5 +101,5 @@ input("Press <enter>")
 
 python开发工具我推荐 jetbrains 家的 [pycharm](https://www.jetbrains.com/pycharm/download/) 
 
-pycharm提供了免费开源的社区版本，如果有付费能力的请购买专业版。如果是学习使用，在天朝你懂的jetbrains-agent
+pycharm提供了免费开源的社区版本，如果有付费能力的请购买专业版。如果是学生或教师可申请免费使用。
 
