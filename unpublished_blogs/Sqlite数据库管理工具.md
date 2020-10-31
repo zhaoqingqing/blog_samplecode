@@ -16,7 +16,7 @@ github地址：https://github.com/pawelsalawa/sqlitestudio/releases
 
 ## Navicat for SQLite
 
-Navicat家族的数据库管理器，他家还有Mysql数据库管理器，在学生时代非常使用它。需要付费使用
+Navicat家族的数据库管理器，他家还有Mysql数据库管理器，在学生时代非常喜欢使用它。
 
 官网：[Navicat for SQLite](https://www.navicat.com.cn/products/navicat-for-sqlite)
 
