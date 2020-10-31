@@ -6,7 +6,7 @@ profiler报错日志：Non matching Profiler.EndSample (BeginSample and EndSampl
 
 出错原因：
 
-在Profiler.EndSample前没有Profiler.BeginSample ，如果仅仅写Profiler.BeginSample而不写Profiler.EndSample是不会出现这个报错的
+在Profiler.EndSample结束前没有Profiler.BeginSample ，如果仅仅写Profiler.BeginSample而不写Profiler.EndSample是不会出现这个报错的
 
 ```c#
 //这是正确的Profiler代码
