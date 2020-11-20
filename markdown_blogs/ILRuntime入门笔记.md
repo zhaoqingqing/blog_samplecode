@@ -19,7 +19,7 @@ ILRuntime肯定可以做到IOS的热更。
 
 ### ILRuntime基本原理
 
-ILRuntime借助Mono.Cecil库来读取DLL的PE信息，以及当中类型的所有信息，最终得到方法的IL汇编码，然后通过内置的IL解译执行虚拟机来执行DLL中的代码。IL解释器代码在ILIntepreter.cs，通过Opcode来执行机器码，解释器的代码在四千多行
+ILRuntime借助Mono.Cecil库来读取DLL的PE信息，以及当中类型的所有信息，最终得到方法的IL汇编码，然后通过内置的IL解译执行虚拟机来执行DLL中的代码。IL解释器代码在ILIntepreter.cs，通过Opcode来逐语句执行机器码，解释器的代码有四千多行。
 
 <img  src="https://img2018.cnblogs.com/blog/363476/201901/363476-20190115203700346-1102207440.png"  style="zoom:100%"/>
 
