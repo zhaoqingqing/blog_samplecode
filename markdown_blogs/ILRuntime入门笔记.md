@@ -1,6 +1,6 @@
 ### 基础知识
 
-官方文档：https://ourpalm.github.io/ILRuntime/ ，离线文件目录：ILRuntime\docs\source\src\v1\guide\
+官方文档：https://ourpalm.github.io/ILRuntime/ ，离线帮助文档目录：ILRuntime\docs\source\src\v1\guide\
 
 官方Unity3D热更例子工程：https://github.com/Ourpalm/ILRuntimeU3D/
 
@@ -14,12 +14,16 @@ ILRuntime肯定可以做到IOS的热更。
 
 **Assembly-CSharp.dll**: Unity脚本(C#)的编译成的dll，非特殊目录下的脚本都放在这个dll下。安卓下可通过反射获取方法和变量。
 
-**dll**： 指热更工程生成的dll，和Unity主工程是两个不同的dll。
+**hotFix.dll**： 指热更工程生成的dll，和Unity主工程是两个不同的dll。
 <br />
 
 ### ILRuntime基本原理
 
+ILRuntime借助Mono.Cecil库来读取DLL的PE信息，以及当中类型的所有信息，最终得到方法的IL汇编码，然后通过内置的IL解译执行虚拟机来执行DLL中的代码。IL解释器代码在ILIntepreter.cs，通过Opcode来执行机器码，解释器的代码在四千多行
+
 <img  src="https://img2018.cnblogs.com/blog/363476/201901/363476-20190115203700346-1102207440.png"  style="zoom:100%"/>
+
+
 
 ### ILRuntime热更流程
 
