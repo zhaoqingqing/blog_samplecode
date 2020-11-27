@@ -1,0 +1,88 @@
+[2020-11-27 16:29:47][Log]logtofile inited.
+  at System.Environment.get_StackTrace () [0x00000] in <437ba245d8404784b9fbab9b439ac908>:0 
+  at KEngine.LogFileManager.OnLogCallback (System.String condition, System.String stackTrace, UnityEngine.LogType type) [0x00000] in <992355c437d443f29f19367d0a9c39e5>:0 
+  at UnityEngine.Application.CallLogCallback (System.String logString, System.String stackTrace, UnityEngine.LogType type, System.Boolean invokedOnMainThread) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.Internal_Log (UnityEngine.LogType level, UnityEngine.LogOption options, System.String msg, UnityEngine.Object obj) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.LogFormat (UnityEngine.LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Logger.Log (UnityEngine.LogType logType, System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Debug.Log (System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at KEngine.LogFileManager.Start () [0x00000] in <992355c437d443f29f19367d0a9c39e5>:0 
+  at TestLogStackTrace.Start () [0x00000] in <a5026ef4bf664704ae744b114143a092>:0 
+[2020-11-27 16:29:53][Log]test  log
+  at System.Environment.get_StackTrace () [0x00000] in <437ba245d8404784b9fbab9b439ac908>:0 
+  at KEngine.LogFileManager.OnLogCallback (System.String condition, System.String stackTrace, UnityEngine.LogType type) [0x00000] in <992355c437d443f29f19367d0a9c39e5>:0 
+  at UnityEngine.Application.CallLogCallback (System.String logString, System.String stackTrace, UnityEngine.LogType type, System.Boolean invokedOnMainThread) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.Internal_Log (UnityEngine.LogType level, UnityEngine.LogOption options, System.String msg, UnityEngine.Object obj) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.LogFormat (UnityEngine.LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Logger.Log (UnityEngine.LogType logType, System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Debug.Log (System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at TestLogStackTrace.OnClickBtn2 () [0x00000] in <a5026ef4bf664704ae744b114143a092>:0 
+  at UnityEngine.Events.InvokableCall.Invoke () [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ReleaseMouse (UnityEngine.EventSystems.PointerEventData pointerEvent, UnityEngine.GameObject currentOverGo) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMousePress (UnityEngine.EventSystems.PointerInputModule+MouseButtonEventData data) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent (System.Int32 id) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.Process () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.EventSystem.Update () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+[2020-11-27 16:29:53][Warning]test  log warn
+  at System.Environment.get_StackTrace () [0x00000] in <437ba245d8404784b9fbab9b439ac908>:0 
+  at KEngine.LogFileManager.OnLogCallback (System.String condition, System.String stackTrace, UnityEngine.LogType type) [0x00000] in <992355c437d443f29f19367d0a9c39e5>:0 
+  at UnityEngine.Application.CallLogCallback (System.String logString, System.String stackTrace, UnityEngine.LogType type, System.Boolean invokedOnMainThread) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.Internal_Log (UnityEngine.LogType level, UnityEngine.LogOption options, System.String msg, UnityEngine.Object obj) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.LogFormat (UnityEngine.LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Logger.Log (UnityEngine.LogType logType, System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Debug.LogWarning (System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at TestLogStackTrace.OnClickBtn2 () [0x00000] in <a5026ef4bf664704ae744b114143a092>:0 
+  at UnityEngine.Events.InvokableCall.Invoke () [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ReleaseMouse (UnityEngine.EventSystems.PointerEventData pointerEvent, UnityEngine.GameObject currentOverGo) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMousePress (UnityEngine.EventSystems.PointerInputModule+MouseButtonEventData data) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent (System.Int32 id) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.Process () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.EventSystem.Update () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+[2020-11-27 16:29:53][Error]test  log error
+  at System.Environment.get_StackTrace () [0x00000] in <437ba245d8404784b9fbab9b439ac908>:0 
+  at KEngine.LogFileManager.OnLogCallback (System.String condition, System.String stackTrace, UnityEngine.LogType type) [0x00000] in <992355c437d443f29f19367d0a9c39e5>:0 
+  at UnityEngine.Application.CallLogCallback (System.String logString, System.String stackTrace, UnityEngine.LogType type, System.Boolean invokedOnMainThread) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.Internal_Log (UnityEngine.LogType level, UnityEngine.LogOption options, System.String msg, UnityEngine.Object obj) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.LogFormat (UnityEngine.LogType logType, UnityEngine.Object context, System.String format, System.Object[] args) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Logger.Log (UnityEngine.LogType logType, System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Debug.LogError (System.Object message) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at TestLogStackTrace.OnClickBtn2 () [0x00000] in <a5026ef4bf664704ae744b114143a092>:0 
+  at UnityEngine.Events.InvokableCall.Invoke () [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.UI.Button.Press () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ReleaseMouse (UnityEngine.EventSystems.PointerEventData pointerEvent, UnityEngine.GameObject currentOverGo) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMousePress (UnityEngine.EventSystems.PointerInputModule+MouseButtonEventData data) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent (System.Int32 id) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.Process () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.EventSystem.Update () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+[2020-11-27 16:29:53][Exception]NullReferenceException: Object reference not set to an instance of an object
+  at System.Environment.get_StackTrace () [0x00000] in <437ba245d8404784b9fbab9b439ac908>:0 
+  at KEngine.LogFileManager.OnLogCallback (System.String condition, System.String stackTrace, UnityEngine.LogType type) [0x00000] in <992355c437d443f29f19367d0a9c39e5>:0 
+  at UnityEngine.Application.CallLogCallback (System.String logString, System.String stackTrace, UnityEngine.LogType type, System.Boolean invokedOnMainThread) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.Internal_LogException (System.Exception exception, UnityEngine.Object obj) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.DebugLogHandler.LogException (System.Exception exception, UnityEngine.Object context) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Logger.LogException (System.Exception exception, UnityEngine.Object context) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.Debug.LogException (System.Exception exception) [0x00000] in <73b499366e5241bda47e5da76897738b>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ReleaseMouse (UnityEngine.EventSystems.PointerEventData pointerEvent, UnityEngine.GameObject currentOverGo) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMousePress (UnityEngine.EventSystems.PointerInputModule+MouseButtonEventData data) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent (System.Int32 id) [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.ProcessMouseEvent () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.StandaloneInputModule.Process () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 
+  at UnityEngine.EventSystems.EventSystem.Update () [0x00000] in <bb92b2f774b9453ab5303b40fccce083>:0 

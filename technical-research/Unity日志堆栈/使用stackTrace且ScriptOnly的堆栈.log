@@ -1,0 +1,18 @@
+[2020-11-27 14:54:34][Log]logtofile inited.
+
+[2020-11-27 14:54:35][Log]test  log
+
+[2020-11-27 14:54:35][Warning]test  log warn
+
+[2020-11-27 14:54:35][Error]test  log error
+
+[2020-11-27 14:54:35][Exception]NullReferenceException: Object reference not set to an instance of an object
+TestLogStackTrace.MyFunc () (at <ff686622d7bd4bc5aa3439ea4fdaa75c>:0)
+TestLogStackTrace.OnClickBtn2 () (at <ff686622d7bd4bc5aa3439ea4fdaa75c>:0)
+UnityEngine.Events.InvokableCall.Invoke () (at <73b499366e5241bda47e5da76897738b>:0)
+UnityEngine.Events.UnityEvent.Invoke () (at <73b499366e5241bda47e5da76897738b>:0)
+UnityEngine.UI.Button.Press () (at <f958a6d423f6417093b99af0cc19a97b>:0)
+UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) (at <f958a6d423f6417093b99af0cc19a97b>:0)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at <f958a6d423f6417093b99af0cc19a97b>:0)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at <f958a6d423f6417093b99af0cc19a97b>:0)
+UnityEngine.EventSystems.EventSystem:Update()
