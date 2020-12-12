@@ -10,7 +10,7 @@ public static bool **ScreenPointToLocalPointInRectangle**([RectTransform](https:
 
 解释：
 
-**rect：**目标界面的节点
+**rect：**目标界面的最上层节点，可以传Canvas的RectTransform
 
 **screenPoint：**要转换的节点屏幕坐标，如果worldCamera为空就返回 vector2.zero
 
@@ -26,7 +26,7 @@ public static bool **ScreenPointToLocalPointInRectangle**([RectTransform](https:
 
 
 
-**要转的节点屏幕坐标**
+**要转节点的屏幕坐标**
 
 var screenPoint = canvas.worldCamera.WorldToScreenpoint(obj.transform.position)
 
@@ -41,3 +41,6 @@ void UpdateDrag(PointerEventData eventData ,Camera cam)
 }
 ````
 
+## 相对于父节点的坐标
+
+父节点.InverseTransformPoint(子节点.transform.position)，这样得到的坐标就是脱离层级关系后的坐标
