@@ -52,18 +52,27 @@ unity保留的内存
 
 ### profile - Memory页的参数
 
- A. Used Total: 
+1. Used Total: 
       当前帧的Unity内存、Mono内存、GfxDriver内存、Profiler内存的总和. 
-   B. Reserved Total: 
-      系统在当前帧的申请内存. 
-   C. Total System Memory Usage: 
-      当前帧的虚拟内存使用量.（通常是我们当前使用内存的1.5~3倍) 
-   D. GameObjects in Scene: 
-      当前帧场景中的GameObject数量. 
-   E. Total Objects in Scene: 
-      当前帧场景中的Object数量(除GameObject外，还有Component等). 
-   F. Total Object Count: 
+      
+2. Reserved Total: 
+   系统在当前帧的申请内存. 
+   
+3. Total System Memory Usage: 
+   当前帧的虚拟内存使用量.（通常是我们当前使用内存的1.5~3倍) 
+   
+4. GameObjects in Scene: 
+   当前帧场景中的GameObject数量. 
+   
+5. Total Objects in Scene: 
+   当前帧场景中的Object数量(除GameObject外，还有Component等). 
+   
+6. Total Object Count: 
       Object数据 + Asset数量.
+      
+7. GC Allocations per Frame 103/2.0kb
+
+      
 
 
 
