@@ -1,4 +1,4 @@
-### 前言
+## 前言
 
 公司配备了两台电脑，两台电脑都是安装的win10系统，一台是磁盘占用高，另一台是内存可用低。
 
@@ -8,11 +8,13 @@
 
 另一台内网开发机器，16内存，win10专业版系统，常常会出现磁盘占用特别高，这两台电脑都未安装SSD硬盘。
 
+两台电脑安装的win10版本都是1809 企业版 LTSC
+
 注：本文的方法或多或少可以提供一些帮助，当然最简单的直接方法就是加装SSD硬盘和加装内存条。
 
 ​      
 
-### 相同进程多
+## 相同进程多
 
 比如下面几种类型的进程有非常多
 
@@ -22,17 +24,37 @@
 
 svchost是不同的服务的进程，都放在svchost上启动，所以svchost进程特别多是正常的。
 
+另一个很多进程的就是Miscrosoft开头的，经尝试卸载掉：Windows Software Development Kit - Windows 10.0.17763.132，然后重启内存占用从78%降到30%
+
 ​      
 
-### 关闭虚拟内存
+## 卸载最近安装的程序和补丁
 
-**在8G内存的机器上关闭虚拟内存后，内存占用高的问题终于解决了。**
+如果是最近一段才出现的，而先前不会，则通过来判断是那部分软件出问题了，卸载最近安装和不用软件，包括最近安装的补丁更新，然后重启电脑
 
-(注：如果物理内存在2G或2G以下不建议使用本方案!)
+​     
 
-win8/8.1默认开启虚拟内存，他会把部分应用的内存转储到硬盘中，避免物理内存不够用的情况。中低端的电脑开启虚拟内存，可以提高运行效率。
+## 强制禁用服务
 
-不过，在物理内存充沛的情况下，用虚拟内存不仅没有效果，反而会有硬盘占用率高的“副作用”，因此，推荐物理内存4G或4G以上的用户关闭虚拟内存。以下是具体解决法案。
+按WIN+R，输入CMD，打开命令行，(经测试在power shell下无效)，输入这个命令就可以禁用
+
+```powershell
+sc config "服务名称" start= disabled
+```
+
+sc命令中＝号后面都有一个空格，＝号前面没有空格
+
+如果出现：[SC] OpenService 失败 5:，因为权限不够，要以管理员身份运行
+
+按下Win+s，输入CMD，右键选择以管理员身份运行。
+
+## 16G以上关闭虚拟内存
+
+**在16G内存的机器上关闭虚拟内存后，低于16G不建议关闭**
+
+(注：如果物理内存在8G或8G以下不建议使用本方案!)
+
+win8/8.1默认开启虚拟内存，他会把部分应用的内存转储到硬盘中，避免物理内存不够用的情况。中低端的电脑开启虚拟内存，可以提高运行效率。不过，在物理内存充沛的情况下，用虚拟内存不仅没有效果，反而会有硬盘占用率高的“副作用”，以下是关闭方法：
 
 1、右击“计算机”选择属性，打开之后选择“高级系统设置”
 
@@ -59,24 +81,40 @@ https://oemdrivers.com/sound-realtek-audio%20driver-windows-64-bit
 
 ​      
 
-### 关闭不需要的服务
+## 关闭不需要的服务
+
+不建议关闭索引（Windows Search）对于C盘这样的系统盘来说，也可以关闭内容索引来提高索引性能（具体方法：右击“我的电脑”→“目标驱动器”→“属性”，取消“”复选框后确定即可），以上这些都能让索引服务跑得更快。在控制面板中可以修改索引选项，，注意：关闭索引后win+s无法搜索到已添加的索引
 
 
 1. **SuperFetch**超级预读服务主要是为企业应用与大型协作软件而设计的，个人用户没有必要开启。
-2. 关闭或优化“索引（Windows Search）”功能 http://www.52windows8.com/use-of-skills/3831.html
-同时由于Windows索引默认会包含文件内容，因此对于C盘这样的系统盘来说，也可以关闭内容索引来提高索引性能（具体方法：右击“我的电脑”→“目标驱动器”→“属性”，取消“”复选框后确定即可），以上这些都能让索引服务跑得更快。
-在控制面板中可以修改索引选项，SSD禁用此服务
-3. 关闭Ipv6
-4. 关闭 HomeGroupProvider ， HomeGroupListener
-5. 关闭自动维护计划任务
-6. 关闭Windows Defender
-在搜索栏输入gpedit.msc打开组策略编辑器，定位到“计算机配置-管理模板-Windows组建-Windows Defender-扫描”中的“指定每周的不同天运行计划扫描”配置为“已启用”根据帮助中的内容选择设置。或直接在Windows Defender设置内在管理选项中将其关闭。
-7. 更新驱动 http://tieba.baidu.com/p/4359125660?pn=1
-8. 停止 Diagnostics Tracking Service 服务
+2. 关闭Ipv6
+3. 关闭 HomeGroupProvider ， HomeGroupListener
+4. 关闭自动维护计划任务
+5. 关闭Windows Defender
+    在搜索栏输入gpedit.msc打开组策略编辑器，定位到“计算机配置-管理模板-Windows组建-Windows Defender-扫描”中的“指定每周的不同天运行计划扫描”配置为“已启用”根据帮助中的内容选择设置。或直接在Windows Defender设置内在管理选项中将其关闭。
+6. 更新驱动 http://tieba.baidu.com/p/4359125660?pn=1
+7. 停止 Diagnostics Tracking Service 服务
+8. 停止**Connected User Experiences and Telemetry**
 
-​      
+### SgrmBroker
 
-### 内存压缩
+服务名称：SgrmBroker 显示名称：System Guard 运行时监视器代理 内存占用：101mb
+
+修改方法：
+
+注册表中找到：计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SgrmBroker
+
+DelayedAutoStart从1改成3
+
+Start从2改成3
+
+### sysMain
+
+服务名称：sysMain ，显示名称：服务主机 sysMain ，内存占用：98MB
+
+在服务中找到，并禁用
+
+## 内存压缩
 
 右键点击菜单->Windows PowerShell(管理员)->并运行该命令
 > Disable-MMAgent -mc
@@ -91,7 +129,7 @@ https://oemdrivers.com/sound-realtek-audio%20driver-windows-64-bit
 
 ​            
 
-### BIOS设置SATA
+## BIOS设置SATA
 
 **安装SSD后， 在主板的BIOS进行设置，在SATA中设置默认IDE为AHCI**
 
@@ -114,8 +152,7 @@ https://oemdrivers.com/sound-realtek-audio%20driver-windows-64-bit
 
 ​      
 
-
-### 其它资料
+## 其它资料
 
 - SSD软件
 
