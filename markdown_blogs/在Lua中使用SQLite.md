@@ -1,23 +1,32 @@
- 
-
 ## 在Lua中使用sqlite
 
 Lua版本Sqlite文档：[http://lua.sqlite.org/index.cgi/doc/tip/doc/lsqlite3.wiki](http://lua.sqlite.org/index.cgi/doc/tip/doc/lsqlite3.wiki)
 
+sqlite官网：[https://www.sqlite.org/index.html](https://www.sqlite.org/index.html)
 
+### 用途
+
+- 把游戏中的配置表数据存储到sqlite中
+- 存储游戏中的聊天记录
+
+### sqlite的优点
+
+提高游戏的启动速度，在游戏启动时，不需要去加载配置文件，而是在用到时，从sqlite中读取，大大提高启动速度。
 
 ### 运行环境
 
-我们是把sqlite编译进lib(*.so)，在Unity中调用
-我的运行环境如下
+我们是把sqlite编译进xlua的lib(.so)在lua中调用，没有通过mono提供的sqlite接口访问
+我的运行环境如下（说明：文章写于2017年6月1日，在草稿箱一直未发布）
 
-XLua： v2.1.6 2017年3月1日
+XLua： v2.1.6 
 
 Unity ：5.3.7
 
-luasqlite版本：
+luasqlite版本：sqlite 3
 
-### 示例
+## 使用示例
+
+### 创建表并查询
 
 表的创建，添加数据，查询
 
@@ -30,8 +39,6 @@ require("lsqlite")
 db = lsqlite.open(":memory:")
 
 -- open a file
- 
-
 -- open an inaccessible file
 -- db = lsqlite.open("/root/test.db")
 
@@ -73,8 +80,6 @@ db:close()
 
 
 
-接口笔记
-
 ### 数据查询
 
 ```lua
@@ -101,7 +106,7 @@ sqlite的部分功能在lua中并不能完全使用
 
 ### no lsqlite
 
-直接在lua环境下，'require lsqlite`，报找不到lsqlite
+直接在lua环境下，'require lsqlite`，报找不到lsqlite，需要导入sqlite，可以把它编译到xlua.so中
 
 	no field package.preload['lsqlite']
 	no such builtin lib 'lsqlite'
@@ -121,4 +126,22 @@ sqlite的部分功能在lua中并不能完全使用
 
 编辑db文件，提示database被锁定
 
-通过在Unity的C#层进行Close
+解决办法：通过在Unity的C#层进行Close
+
+## 我的经验分享
+
+### 把配置表分成多个db
+
+经实测在移动设备或模拟器上执行Update/Create Table等SQL语句，性能非常差，执行一次热更新SQL约需要15s而直接下载并替换db则会快很多，所以我推荐直接替换db文件。
+
+因为当有数据更新时是替换db，建议把经常修改的配置表放在一个db中，不常修改的放另一个db，也就是把数据存在多个db中。
+
+根据我从业三个rpg游戏项目的经验，最常修改的部分有：
+
+1. 语言包
+2. 任务表
+3. 道具表(装备，物品等等这些)
+4. 新手引导
+5. 自宝义配置表(key/value形式的表)
+6. 活动表（充值/节日/节日活动表，部分数据放配置，部分配置协议下发）
+
