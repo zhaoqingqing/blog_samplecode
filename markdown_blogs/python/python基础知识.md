@@ -22,6 +22,26 @@ python报错“Non-ASCII character '\xe5' ”
 
 不需要var 也不要写类型，直接写变量名，全局和局部变量都不需要写类型
 
+假如全局和局部名相同，而要特殊声明使用的是全局变量，则在变量明名前加上 global
+
+```python
+x = 100
+def func():
+    global x
+    print(x)
+    x = 2
+    print(x)
+func()
+print(x)
+
+```
+
+输出结果为：
+
+100 2 2
+
+关于变量的详细可参考这篇文章《[python变量（全局、局部）：global、nonlocal、locals](https://blog.csdn.net/weixin_43178406/article/details/96478339)》
+
 ### 函数定义
 
 ```python
