@@ -49,3 +49,5 @@ lua_scripts/.idea/workspace.xml
 */.idea
 */*/.idea/*
 
+#temp files
+/build-tools/article_backup
