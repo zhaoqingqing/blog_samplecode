@@ -20,6 +20,16 @@ git push
 
 
 
+## TODO待处理
+
+git还原某个错误的push
+
+在tortoise中显示日志，还原到某个版本，然后重新push
+
+git从分支推送某个提交到master
+
+目前这个操作还有点蒙，有一次出错，导致把分支所有的提交都错误的push到master中了。
+
 
 
 ## git在windows下命令行的使用
@@ -83,3 +93,4 @@ git ls-tree -r --name-only HEAD | ForEach-Object { "$(git log -1 --format="%ai" 
 [GIT 获取文件最初创建及最新修改日期](https://github.com/Dream4ever/Knowledge-Base/issues/69)
 
 ### tortoisegit 命令行
+
