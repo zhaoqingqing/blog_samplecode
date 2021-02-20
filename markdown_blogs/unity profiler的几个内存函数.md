@@ -1,8 +1,10 @@
-### Profiler的几个函数
+## Profiler的几个函数
 
 dump出来的内存信息
 
 dump memory info(10:15):  MemoryInfo  GC.GetTotalMemory:86M
+
+### 程序员管理的
 
 **Profiler.GetMonoUsedSize:86M**
 
@@ -12,14 +14,6 @@ dump memory info(10:15):  MemoryInfo  GC.GetTotalMemory:86M
 
 可以监控这个值用来分析内存的分配
 
-
-
- **Profiler.usedHeapSize:103M**
-
-当前程序使用的堆的大小。 
-
-
-
 **Profiler.GetMonoHeapSize:180M**
 
 管理内存预留空间的大小。
@@ -27,6 +21,12 @@ dump memory info(10:15):  MemoryInfo  GC.GetTotalMemory:86M
 这将成长总分配管理内存超过目前保留数量。预留空间的大小分配管理,也将影响频繁的垃圾收集器将如何运行,以及需要多长时间做一个垃圾收集。堆越大,时间越长,但很少会运行。
 
 
+
+ **Profiler.usedHeapSize:103M**
+
+当前程序使用的堆的大小。 
+
+### unity分配
 
 **Profiler.GetTotalAllocatedMemory（分配内存）:103M**
 
@@ -50,7 +50,7 @@ unity保留的内存
 
 
 
-### profile - Memory页的参数
+## profiler - Memory页的参数
 
 1. Used Total: 
       当前帧的Unity内存、Mono内存、GfxDriver内存、Profiler内存的总和. 
@@ -74,8 +74,8 @@ unity保留的内存
 
       
 
+## Profiler的其它用途
 
-
-### Profile查函数调用次数
+### Profiler查函数调用次数
 
 可以通过多次切换场景，查看Profile中某个函数的调用次数是否有变化，来确定是否有重复调用
