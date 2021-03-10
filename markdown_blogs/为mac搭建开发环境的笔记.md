@@ -27,3 +27,21 @@ mac中没有home和end，取而代之的是苹果键+左右箭头
 ### vs社区版
 
 vs社区版在mac上可以调试unity，使用习惯和windows上有些差异，也可以使用rider来编写C#代码，使用体验一致。
+
+
+
+## 其它资料
+
+mac软件下载：https://macwk.com/
+
+mac中的快捷键使用：https://macwk.com/article/macos-keyboard-shortcuts
+
+| ⌥ option 对应alt | ⌃cmd 对应ctrl | ⌘apple键 对应 win图标 |
+| ---------------- | ------------- | --------------------- |
+| ⇧ 对应shift      |               |                       |
+|                  |               |                       |
+
+剪切/移动文件 Command + Option + V
+在 Mac 的文件右键菜单上也没有“剪切”操作的，对文件使用 Cmd+C 然后 Cmd+V 只能完成「复制」。而使用 Cmd+C 然后 Command + Option + V 快捷键，则可实现「移动文件」，文件被复制到新的位置后，原路径下的文件会被删除，相当于 Windows 下的剪切。
+
+立即锁定屏幕 Control + Command + Q
