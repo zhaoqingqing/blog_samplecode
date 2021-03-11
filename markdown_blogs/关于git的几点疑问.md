@@ -22,15 +22,19 @@ git push
 
 ## TODO待处理
 
-git还原某个错误的push
+### git还原某个错误的push
+
+有一次操作出错，导致把分支所有的提交都push到master中了，主要是这两个分支的代码差别还是非常大的
+
+我的操作方法：
 
 在tortoise中显示日志，还原到某个版本，然后重新push
 
-git从分支推送某个提交到master
+目前这个操作还有点蒙，经过几番操作才正确撤消我的push
 
-目前这个操作还有点蒙，有一次出错，导致把分支所有的提交都错误的push到master中了。
+### git从分支推送某个提交到master
 
-
+在tortoisegit的日志信息中，可以选择这个操作
 
 ## git在windows下命令行的使用
 
@@ -80,17 +84,23 @@ git ls-tree -r --name-only HEAD | ForEach-Object { "$(git log -1 --format="%ai" 
 
 ### python脚本
 
-验证代码不能直接拿来使用： [使用原始创建/修改时间戳检出旧文件](https://www.it-swarm.dev/zh/git/%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%A7%8B%E5%88%9B%E5%BB%BA%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%88%B3%E6%A3%80%E5%87%BA%E6%97%A7%E6%96%87%E4%BB%B6/968337954/)
+gitpython，目前我正在使用这个库来操作git，安装库的命令： pip install gitpython
+
+我验证过此库不能直接拿来使用： [使用原始创建/修改时间戳检出旧文件](https://www.it-swarm.dev/zh/git/%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%A7%8B%E5%88%9B%E5%BB%BA%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%88%B3%E6%A3%80%E5%87%BA%E6%97%A7%E6%96%87%E4%BB%B6/968337954/)
 
 [通过Python获取最后一次提交Git存储库文件的时间？](https://www.thinbug.com/q/13104495)
 
-### gitpython
 
-目前我正在使用这个库来操作git，安装库的命令： pip install gitpython
 
 ### linux脚本
 
 [GIT 获取文件最初创建及最新修改日期](https://github.com/Dream4ever/Knowledge-Base/issues/69)
 
 ### tortoisegit 命令行
+
+此方法理论上可行，需要去解析字符串，目前我通过python脚本解决了我的问题
+
+### 最终方案
+
+我编写的脚本，下载地址： [修改文件日期为git提交时间.py](https://github.com/zhaoqingqing/blog_samplecode/blob/master/build-tools/%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%97%A5%E6%9C%9F%E4%B8%BAgit%E6%8F%90%E4%BA%A4%E6%97%B6%E9%97%B4.py)
 
