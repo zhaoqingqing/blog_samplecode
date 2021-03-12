@@ -6,7 +6,7 @@
 
 
 
-可以使用python内置模块(import argparse)进行更加友好的传参，可参考《[Python 命令行参数的3种传入方式](https://tendcode.com/article/python-shell/)》，示例：
+可以使用python内置模块(import argparse)进行更加友好的传参，参考文章《[Python 命令行参数的3种传入方式](https://tendcode.com/article/python-shell/)》，示例：
 
 ```python
 G:\Allcodes\testscripts>python test_cmd.py -n Leijun --body "are you ok?"

@@ -1,8 +1,10 @@
 ### 前言
 
-python中需要特别注意代码的缩进，这是为了可读性而是正确性，不像 C#，lua ( function do end)，js等语言的函数范围用{}表示。
+python中需要特别注意代码的缩进，这不是为了可读性而是正确性，不像 C#，lua ( function do end)，js等语言的函数范围用{}表示。
 
 对于判断是否包含尽量使用in，而不使用for，具体参考：《Python编程惯例.md》
+
+### Non-ASCII character
 
 python报错“Non-ASCII character '\xe5' ”
 
@@ -157,7 +159,7 @@ python test.py 和python -m test.py 这两者的区别？
 直接运行会将该脚本所在目录添加至`sys.path`
 当做模块启动则会将当前运行命令的路径添加至`sys.path`
 
-### 常用术语
+### end=
 
 end=，对于文本中文字本来就是有换行的，如果想在输出时不换行，可以写end=""，如果不加，那么会多出换行
 
@@ -186,9 +188,7 @@ with open(filepath, mode="r", encoding="utf-8") as f:
 
 
 
-
-
-
+### 常见代码
 
 tuple 元组 
 
@@ -206,7 +206,7 @@ if x in items: # 包含
 for x in items: # 迭代
 ```
 
-**好**的代码：
+in的使用示例：
 
 ```Python
 name = 'Hao LUO'

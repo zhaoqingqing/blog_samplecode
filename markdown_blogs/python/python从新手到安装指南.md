@@ -1,4 +1,4 @@
-在python领域笔者是从官方文档自学入门，本文适用于windows 操作系统，基于Inter和amd的CPU(涵盖市面80%的电脑)
+在python领域我是从官方文档自学入门，本文适用于windows 操作系统，基于Inter和amd的CPU(涵盖市面80%的电脑)
 
 ## 下载和安装python
 
@@ -90,10 +90,6 @@ print(platform.architecture())
 
 input("Press <enter>")
 ```
-
-
-
-
 
 ​      
 

@@ -1,6 +1,6 @@
-Windows系统搭建好Python的环境后，进入Python的安装目录，大家会发现目录中有python.exe和pythonw.exe两个程序。如下图所示：
+在Windows系统搭建好Python的环境后，进入Python的安装目录，大家会发现目录中有python.exe和pythonw.exe两个程序。如下图所示：
 
-
+![image-20210312140234311](https://img2020.cnblogs.com/blog/363476/202103/363476-20210312140842861-334825856.png)
 
 它们到底有什么区别和联系呢？
 
