@@ -68,7 +68,7 @@ github图形化客户端，包含多国语言包。
 
 通过google查找到某些命令，这条在windows下对于英文命名的文件是可以查询到的，而对于中文命名的文件则会显示乱码，且不会显示日期。
 
-```powershell
+```sh
 git ls-tree -r --name-only HEAD | ForEach-Object { "$(git log -1 --format="%ai" -- "$_")`t$_" }
 ```
 
