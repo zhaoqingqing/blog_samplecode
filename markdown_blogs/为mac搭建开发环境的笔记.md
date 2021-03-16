@@ -20,7 +20,7 @@ start Menu: 在任务栏显示网速和cpu使用率
 
 ### xcode
 
-在mac中编写objc代码是使用xcode
+在mac中编写objc是使用xcode
 
 mac中没有home和end，取而代之的是苹果键+左右箭头
 
@@ -34,13 +34,17 @@ vs社区版在mac上可以调试unity，使用习惯和windows上有些差异，
 
 《[Mac OS 下三种修改Hosts文件的方法](https://blog.csdn.net/qq_41162289/article/details/80239468)》
 
-打开Finder，前往 输入/etc/，右键选择'显示简介'，在底部先解锁，打开‘共享和权限’给Everyone添加读写权限，编辑hosts文件
+1. 打开Finder，点击 前往 输入/etc/
+2. 右键选择'显示简介'，在底部先解锁，给Everyone添加读写权限
+3. 编辑hosts文件，然后保存
 
 ### 执行sh脚本
 
-打开终端，cd 到脚本所在的目录，然后拖动脚本过去
+打开终端，cd 到脚本所在的目录，然后拖动脚本过去。
 
-如果报出问题 ：: Permission denied。就是没有权限。
+**注意：一定要cd到脚本所在目录，才能正确地执行脚本，这点和windows下还是不一样的。**
+
+如果报错 ：: Permission denied。就是没有权限。
 
 解决办法：修改该sh 的权限 ：使用命令： chmod 777 xx.sh 。
 
@@ -48,42 +52,7 @@ chmod +x 是将文件状态改为可执行，而chmod 777 是改变文件读写�
 
 ### 执行python脚本
 
-mac有内置的python，但还是建议你自己安装一个python
-
-> 说明：env python是从环境变量中查找python的安装路径
-
-如果安装的是python3，在py脚本的第一行加入
-
-```sh
- #!/usr/bin/env python3
-```
-
-如果是python2，则加入
-
-```sh
- #!/usr/bin/env python
-```
-
-在终端，cd到脚本所在路径，执行python xxx.py
-
-如果无法运行脚本，则给py添加执行权限：
-
-```sh
-chmod +x hello.py
-```
-
-网上查找到的修改.py为.command，然后双击，在公司的打包机上这样做会报语法解析错误，示例：not find import
-
-### 双击执行python脚本
-
-我的做法是新建一个文件，修改后缀为.command，这个类型在mac下是可执行文件，然后脚本内容如下：
-
-```sh
-cd work/ios/
-python update.py
-```
-
-先要给hello.command添加可执行权限：chmod +x hello.command
+查看我的这篇文章《[在mac中双击执行python](https://www.cnblogs.com/zhaoqingqing/p/14545453.html)》
 
 
 
