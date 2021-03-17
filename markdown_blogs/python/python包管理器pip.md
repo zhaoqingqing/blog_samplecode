@@ -104,7 +104,7 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
 pip install markdown -i https://mirrors.aliyun.com/pypi/simple
 ```
 
-
+查看当前的使用的源：打开这个目录下的文件：C:\Users\qing\AppData\Roaming\pip\pip.ini
 
 ## pip版本升级
 
