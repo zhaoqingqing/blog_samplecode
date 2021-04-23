@@ -95,3 +95,11 @@ https://github.com/mob-sakai/ParticleEffectForUGUI
 ## BestHttp
 
 看到有项目组在使用这款插件
+
+
+
+## 开源项目列表
+
+里面总结了比较多unity相关的库：https://github.com/crazyshader/GameDev
+
+对象池：https://github.com/Kink3d/kPooling
