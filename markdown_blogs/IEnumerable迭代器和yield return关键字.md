@@ -1,6 +1,6 @@
 ## 前言
 
-在unity中的协程，比如你需要延迟x秒后执行某个函数，在unity中通过 `yield return new WaitForSeconds(1.0f);` 就可以实现，那么在C#中yield return这个关键字是怎样的呢？下面写一个例子来测试下
+unity中的协程，比如你需要延迟x秒后执行某个函数，在unity中通过 `yield return new WaitForSeconds(1.0f);` 就可以实现，那么在C#中yield return这个关键字是怎样的呢？下面写一个例子来测试下
 
 说明：本文代码的运行环境 .net 4.0 C# 7.3
 
@@ -55,7 +55,7 @@ return value:3,times:4
 
 ### 查看IEnumerable的定义
 
-可以使用foreach
+IEnumerable<out T>可以使用foreach
 
 ```c#
 // Assembly location: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscorlib.dll
@@ -99,7 +99,7 @@ static IEnumerator TestAdd2()
 
 public static void Main(string[] args)
 {
-    foreach (int i in TestAdd2())//无法对IEnumerator<int>进行遍历
+    foreach (int i in TestAdd2())//NOTE 无法对IEnumerator<int>进行遍历
     {
     }
 }
@@ -130,7 +130,7 @@ namespace System.Collections.Generic
   }
     
   public interface IEnumerator
-{
+  {
 	/// <summary>将枚举数推进到集合的下一个元素。</summary>
 	/// <returns>
 	///   如果枚举数已成功地推进到下一个元素，则为 <see langword="true" />；如果枚举数传递到集合的末尾，则为 <see langword="false" />。
@@ -149,11 +149,11 @@ namespace System.Collections.Generic
 	///   创建枚举器后，已修改该集合。
 	/// </exception>
 	void Reset();
-}
+  }	
 }
 ```
 
-Unity中的协程
+## Unity中的协程
 
 ```c#
 public IEnumerator OnBeforeInit()
