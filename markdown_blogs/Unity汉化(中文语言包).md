@@ -28,7 +28,6 @@ Mac: <https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg>
 
 4. 对于属性部分，鼠标移上去停在上面也会有中文翻译
 
+## 版本差异
 
-
-
-
+经过对比，同个大版本之间的语言包是可以通用的，语言包文件都是同一个，比如Unity2020.3.0，Unity2020.3.5，Unity2020.3.7语言包文件md5都是一样。
