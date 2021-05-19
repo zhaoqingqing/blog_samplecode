@@ -52,3 +52,4 @@ lua_scripts/.idea/workspace.xml
 #temp files
 /build-tools/article_backup
 /build-tools/html2md/html2md.exe
+/build-tools/zhihu_config.json
