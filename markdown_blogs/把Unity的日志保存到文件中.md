@@ -1,11 +1,12 @@
 ## Unity的日志事件
 
-Unity提供了两个API，回调函数的参数都是一样的，通过这个API可以在真机上把Debug.Log/LogWarning/LogError 日志输出到文件中保存，我建议使用Application.logMessageReceivedThreaded
+Unity提供了两个日志回调API，这两个回调函数的参数都是一样的，通过这个API可以在真机上把Debug.Log/LogWarning/LogError 日志输出到文件中保存，我建议使用Application.logMessageReceivedThreaded
 
 ```c#
 Application.logMessageReceivedThreaded
 Application.logMessageReceived
-OnLogCallback(string condition, string stackTrace, LogType type)
+    
+OnLogCallback(string condition, string stackTrace, LogType type) //回调函数
 ```
 
 **Application.logMessageReceived**
@@ -33,6 +34,23 @@ condition：就是代码中主动打印的日志
 stackTrace：堆栈信息。如果Project Setting中设置的堆栈为ScriptOnly，则除了程序出错，其它的Log是不会有堆栈信息的，而如果使用:Environment.StackTrace来代替stackTrace，则会有一串很长很长的堆栈。
 
 目前我们的项目在Project Setting中也是设置的Script Only
+
+### Exception也可捕捉到
+
+在程序中抛出异常，在日志回调中也可以捕捉到，比如在断言中抛出异常
+
+```c#
+ public static void Assert(object obj, string msg, params object[] args)
+ {
+	if (obj==null)
+    {
+		string formatMsg = $"[Error]{DateTime.Now.ToString("HH:mm:ss.fff")} Assert Failed! {string.Format(msg, args)}";
+		throw new Exception(formatMsg);
+	}
+ }
+```
+
+
 
 ## 查看stackTrace
 
