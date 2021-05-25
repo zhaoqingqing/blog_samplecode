@@ -10,7 +10,19 @@
 pip install mkdocs
 ```
 
+### 批量安装pip包
 
+实现一次pip安装所有环境
+
+1. 列出本机安装的所有pip列表： pip list
+
+2. 在cmd中导出本机安装的所有包，将列表保存在C:\Users\qing\requirements.txt中
+
+> pip freeze >requirements.txt
+
+
+
+安装所有包： pip install -r requirements.txt
 
 
 ### 安装历史版本
@@ -154,7 +166,7 @@ PIL：Python Imaging Library，已经是Python平台事实上的图像处理标�
 > pip install pillow
 > ```
 
-## pip模块已安装pycharm中提示找不到
+## pip模块已安装但pycharm提示找不到
 
 原因是安装了多个版本的python，而pycharm中使用的非当前的python版本。
 
