@@ -1,6 +1,6 @@
 ## cnpm
 
-淘宝团队做的国内镜像，因为npm的服务器位于国外可能会影响安装。淘宝镜像与官方同步频率目前为 10分钟 一次以保证尽量与官方服务同步。
+cnpm是淘宝团队做的国内镜像，因为npm的服务器位于国外可能会影响安装速度。淘宝镜像与官方同步频率目前为 10分钟 一次以保证尽量与官方服务同步。
 
 官网：https://developer.aliyun.com/mirror/NPM?from=tnpm
 
@@ -33,7 +33,7 @@ npm config set registry https://registry.npm.taobao.org/
 npm config get registry
 ```
 
-如果输出看到 taobao字样，则表示切换成功
+如果输出：https://registry.npm.taobao.org/，则表示切换成功，也可以把源换成这个：http://r.cnpmjs.org/
 
 ## npm源换回默认
 
@@ -79,8 +79,8 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     C:\Users\qing\AppData\Roaming\npm-cache\_logs\2020-05-12T04_34_24_304Z-debug.log
 ```
 
-网上有说防火墙的，我机器上的防火墙是关闭状态的，通过ping也是能连通这个链接
+在安装依赖时，报上面这个错误，网上有说防火墙的，我机器上的防火墙是关闭状态的，通过ping也是能连通这个链接
 
 解决方法
 
-通过上面提到的nrm，把源从taobao切换为其它就解决了，因为我们公司网站屏蔽了淘宝和京东等网站。
+通过上面提到的nrm，把源从taobao切换为其它就解决了，因为我们公司的网络屏蔽了淘宝和京东等网站。
