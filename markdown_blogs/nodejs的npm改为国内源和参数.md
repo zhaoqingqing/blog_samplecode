@@ -1,25 +1,6 @@
-## cnpm
-
-cnpm是淘宝团队做的国内镜像，因为npm的服务器位于国外可能会影响安装速度。淘宝镜像与官方同步频率目前为 10分钟 一次以保证尽量与官方服务同步。
-
-官网：https://developer.aliyun.com/mirror/NPM?from=tnpm
-
-安装：命令提示符执行
- `npm install cnpm -g --registry=https://registry.npm.taobao.org`
-
-`cnpm -v` 来测试是否成功安装
-
-安装完成后可以cnpm通过来代替默认的npm
-
-```
-cnpm install [name]
-```
-
-
-
 ## npm源改为国内
 
-此方法不需要安装cnpm也使用淘宝镜像，提高国内访问速度
+此方法不需要安装cnpm也可以使用淘宝镜像，提高国内访问速度
 
 由于 Node 的官方模块仓库网速太慢，模块仓库需要切换到阿里的源。
 
@@ -33,13 +14,32 @@ npm config set registry https://registry.npm.taobao.org/
 npm config get registry
 ```
 
-如果输出：https://registry.npm.taobao.org/，则表示切换成功，也可以把源换成这个：http://r.cnpmjs.org/
+如果输出：https://registry.npm.taobao.org/，则表示切换成功
 
 ## npm源换回默认
 
 ```
 npm config set registry https://registry.npmjs.org/
 npm config get registry
+```
+
+## cnpm
+
+cnpm是淘宝团队做的国内镜像，因为npm的服务器位于国外可能会影响安装速度。淘宝镜像与官方同步频率目前为 10分钟 一次以保证尽量与官方服务同步。
+
+PS.网上有一些贴子说cnpm会丢包，如果遇到丢包，删除node_modules目录，再重新使用npm，总体来说网络上不太建议使用cnpm。
+
+官网：https://developer.aliyun.com/mirror/NPM?from=tnpm
+
+安装：命令提示符执行
+ `npm install cnpm -g --registry=https://registry.npm.taobao.org`
+
+`cnpm -v` 来测试是否成功安装
+
+安装完成后可以cnpm通过来代替默认的npm
+
+```
+cnpm install [name]
 ```
 
 ## nrm
@@ -61,7 +61,7 @@ C:\Users\qing>nrm ls
 
 ## npm参数-g -S -D
 
-- `-g`：全局安装。 将会安装在C：\ Users \ Administrator \ AppData \ Roaming \ npm，**并且写入系统环境变量**；非全局安装：将会安装在当前定位目录;全局安装可以通过命令行任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过要求调用;
+- `-g`：全局安装。 将会安装在 `C:\Users\Administrator\AppData\Roaming\npm`，**并且写入系统环境变量**；非全局安装：将会安装在当前定位目录;全局安装可以通过命令行任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过要求调用;
 - `-S`：即`npm install module_name --save`,写入`package.json`的`dependencies` ,`dependencies` 是需要发布到生产环境的，比如jq，vue全家桶，ele-ui等ui框架这些项目运行时必须使用到的插件就需要放到`dependencies`
 - `-D`：即`npm install module_name --save-dev`,写入`package.json`的`devDependencies` ,`devDependencies` 里面的插件只用于开发环境，不用于生产环境。比如一些babel编译功能的插件、webpack打包插件就是开发时候的需要，真正程序打包跑起来并不需要的一些插件。
 
@@ -84,3 +84,24 @@ npm ERR!     C:\Users\qing\AppData\Roaming\npm-cache\_logs\2020-05-12T04_34_24_3
 解决方法
 
 通过上面提到的nrm，把源从taobao切换为其它就解决了，因为我们公司的网络屏蔽了淘宝和京东等网站。
+
+## 需要全局安装的库
+
+全局安装的库在这个目录`C:\Users\qing\AppData\Roaming\npm`，都会有xx.cmd
+
+```shell
+--安装webpack
+npm install webpack -g
+npm install webpack-cli -g
+
+--安装yarn
+npm install --global yarn
+```
+
+参考资料：《['webpack' 不是内部或外部命令,也不是可运行的程序 或批处理文](https://www.cnblogs.com/steamed-twisted-roll/p/11299429.html)》
+
+## 其它问题
+
+为什么node_modules里面会有.staging这个东西？
+
+.staging是在运行过程中出现的，当真正install所有包之后，node_modules里面的包就会显示正常，也就是，出现这个就是没有加载完。
