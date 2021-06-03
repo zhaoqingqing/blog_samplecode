@@ -96,7 +96,7 @@ father.__index = function()
 end
 ```
 
-
+当father的元方法被定义为一个函数时，上面例子调用son.house，就会输出函数的返回值："i am function"
 
 ### Lua查找一个表元素的3个步骤
 
@@ -114,4 +114,4 @@ end
 
 本文示例代码：https://github.com/zhaoqingqing/blog_samplecode/tree/master/lua_scripts/metatable
 
-转载自：寰子 https://blog.csdn.net/xocoder/article/details/9028347 
+本文转载自寰子 https://blog.csdn.net/xocoder/article/details/9028347 ，自己实现了一遍加深理解
