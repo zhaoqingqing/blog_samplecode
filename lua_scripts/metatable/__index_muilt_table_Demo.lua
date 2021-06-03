@@ -18,5 +18,5 @@ local son = {
     car = 1
 }
 ---注意：在没有对father进行__index赋值之前，father中的成员通过son并不能查找到！
---local ret = setmetatable(son,father)
---print(son.house)
+local ret = setmetatable(son,father)
+print(son.house) ---结论：如果__index指向的是函数，则会返回函数，指向自己则返回table中的字段
