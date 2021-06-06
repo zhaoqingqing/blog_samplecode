@@ -1,6 +1,10 @@
+python默认的日志输出是不带颜色的，普通日志、error、warn都是一个颜色
+
 ## Logging
 
 官网：https://docs.python.org/zh-cn/3.8/howto/logging.html#advanced-logging-tutorial
+
+参考资料
 
 [python 标准库 logging](https://segmentfault.com/a/1190000008426434)
 

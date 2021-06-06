@@ -1,16 +1,16 @@
-在python领域我是从官方文档自学入门，本文适用于windows 操作系统，基于Inter和amd的CPU(涵盖市面80%的电脑)
+说到python我是跟着官方文档自学入门，本文适用于windows 操作系统，基于Inter和amd的CPU(涵盖市面80%的电脑)
 
 ## 下载和安装python
 
-对于window操作系统的初学者，在浏览器输入 [python官网下载页面](https://www.python.org/downloads/windows/)，请下载这个文件 [Windows x86-64 executable installer](https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe)
+对于window操作系统的初学者，进入 [python官网下载页面](https://www.python.org/downloads/windows/)，请下载这个文件 [Windows x86-64 executable installer](https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe)
 
-本文写于2020-4-26，目前官网最新版本3.8.2上述下载链接正是指向于新release版本。
+本文写于2020-4-26，目前官网最新版本3.8.2。
 
 ### 安装python
 
 官网安装文档：[在Windows上使用 Python](https://docs.python.org/zh-cn/3/using/windows.html)
 
-如果你是新手，使用你安装QQ/微信的经验，双击下载文件，点击下一步 - 下一步 - OK完成安装。
+如果你是新手，你就像安装QQ/微信那样，双击下载的python.ex，点击下一步 - 下一步 - OK，就完成了安装。
 
 ### 安装成功
 
@@ -71,12 +71,15 @@ python3不兼容python 2，但python2也添加了一些python3的功能，如果
 python 3.x 系列，比如3.5, 3.6在同一个月更新两个不同的版本，
 
 而且2.7 也是一直有更新，是为了提供对旧项目的维护支持。
-
-​      
+​            
 
 ## 安装多个版本的python
 
-参考这篇：《[安装多个版本的python环境](https://www.cnblogs.com/weew12/p/10583046.html)》，注意事项：在安装时，勾选把python安装目录添加到Path中，安装多版本后需要对python.exe和pythonw.exe进行重命名，这样在CMD可以使用不同版本的python
+参考这篇：《[安装多个版本的python环境](https://www.cnblogs.com/weew12/p/10583046.html)》，注意事项：
+
+在安装时，勾选把python安装目录添加到Path中，安装多版本后需要对python.exe和pythonw.exe进行重命名，这样在
+
+CMD可以使用不同版本的python
 
 pycharm中选择对应版本的python，参考：《[在pycharm中切换python版本的方法](https://blog.csdn.net/sgfmby1994/article/details/77876873)》
 
