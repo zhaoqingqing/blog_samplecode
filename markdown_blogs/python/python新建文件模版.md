@@ -1,10 +1,9 @@
-## PyCharm设置python文件创建模板
+## PyCharm中新建python文件的模板
+
+用途：每次在pycharm中新建python文件时，在新建文件中带上特定的信息，比如公司信息或作者信息。
 
 1. 在Pycharm中按快捷键 **Ctrl+Alt+S**，打开Settings
-
-2. **File**——**Settings**——**Editor**——**File and Code Templates**——**Python Script**，填入下列内容
-
-3. 按快捷键 **Alt+Insert**，选择**Python File**即可新建一个Python文件
+2. **File**——**Settings**——**Editor**——**File and Code Templates**——**Python Script**，粘贴下面内容
 
 ```python
 # -*- coding:utf-8 -*-
@@ -20,7 +19,9 @@ Author: qingqing-zhao(569032731@qq.com)
 '''
 ```
 
-更多可以预定义
+3. 按快捷键 **Alt+Insert**，选择**Python File**即可新建一个Python文件
+
+## 更多预定义变量
 
 ```shell
 ${PROJECT_NAME} - 当前项目的名称。
