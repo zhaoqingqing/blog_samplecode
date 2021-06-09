@@ -11,7 +11,7 @@ use-commit-times = yes
 
 ### 方法2.界面设置
 
-在TortoiseSVN，右键- 设置-常规(TortoiseSVN->Settings->General)->勾选 “将文件日期设置为‘最后提交时间’”。
+在TortoiseSVN，**右键** -  **设置** - **常规**(TortoiseSVN->Settings->General)->**勾选** “**将文件日期设置为‘最后提交时间**’”。
 
 ### 官方文档
 
@@ -24,3 +24,5 @@ TortoiseSvn的官方文档：https://tortoisesvn.net/docs/nightly/TortoiseSVN_zh
 ### 测试结果
 
 经测试在TortoiseSvn1.11版本设置之后，需要重启电脑才会生效。在未重启之前每次update或重新checkout还是会使用当前的系统时间
+
+> PS.对于文件夹的日期还是当前checkout的日期，但是单个文件的日期是提交时刻的日期。
