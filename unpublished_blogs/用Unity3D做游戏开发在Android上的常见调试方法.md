@@ -64,7 +64,7 @@ IDA官网：https://www.hex-rays.com/products/ida/
 
 ## 本机windows和安卓模拟器文件互传
 
-通过adb推送和拉取，可以参考我仓库下`blog_samplecode\workflow-tools\debug(调试工具)\`的bat文件
+通过adb推送和拉取，可以参考我仓库下 [blog_samplecode\workflow-tools\debug(调试工具)](https://github.com/zhaoqingqing/blog_samplecode) 的bat文件
 
 ```powershell
 ::从手机上拉取hosts文件到本地进行备份
@@ -80,6 +80,8 @@ IDA官网：https://www.hex-rays.com/products/ida/
 
 ## APK包名修改(制作分身)
 
+同一个包名只能一个APP，想安装不同版本的app，则可以通过修改包名来安装多个
+
 ## QuickEdit
 
-用来查看日志，显示行号，文件内查找，多标签页，比安卓自带的html编辑器好用
+在安卓上查看日志，可以显示行号，文件内查找，多标签页，比安卓自带的html编辑器好用很多。
