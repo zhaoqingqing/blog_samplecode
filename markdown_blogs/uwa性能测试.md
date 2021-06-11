@@ -32,10 +32,13 @@ SDK下载：云端测试产品SDK  选择对应的平台 ，比如我们的Andro
 
 
 
-## 最后
+## 注意事项
 
 注意：提交给uwa包需要以development build形式出包，虽然会比release卡一些，但不会对结果造成太多的影响。
 
 每月有一次的免费次数，当然也可以付费购买次数
+
+
+提交给UWA测试的包需要在Unity的设置中开启write access，这样SDK才能正常工作并采集性能数据
 
 最后感谢UWA的Bonnie 很细心指导。
