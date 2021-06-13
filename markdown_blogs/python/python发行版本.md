@@ -1,8 +1,8 @@
 ## 官网版本
 
-从python官网下载包含核心库文件的安装包
+从python官网下载安装包包含核心库文件
 
-mac os 内置python，windows需要自己安装
+mac os 10.15 内置安装了python2.7(建议重新安装python3)，windows需要自己安装
 
 ## anaconda
 

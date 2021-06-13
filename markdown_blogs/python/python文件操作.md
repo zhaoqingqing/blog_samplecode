@@ -1,8 +1,10 @@
+记录在我使用python过程中用到的文件操作，我使用python主要是用来解决自动化的问题，不仅仅是工作上的问题也有解决我自己自动化的工具，python是可以跨平台的而bat脚本只能在windows上跑
+
 ## 路径转义符
 
 对于路径中含有转义字符，在路径字符串前加 r，比如 filepath = r'E:\Code\test.txt'
 
-完整路径 os.path.abspath(xxx)
+对于相对路径或有../之类的路径获取完整路径： `os.path.abspath(xxx)`
 
 ## 文本读取和修改
 
