@@ -120,7 +120,7 @@ public class TestReporter : MonoBehaviour
 		elapsed += Time.deltaTime;
 		if (elapsed >= 1) {
 			elapsed = 0;
-			Debug.Log("One Second Passed");
+			//Debug.Log("One Second Passed");
 		}
 	}
 

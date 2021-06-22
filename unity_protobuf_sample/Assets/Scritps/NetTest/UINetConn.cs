@@ -392,7 +392,7 @@ public class UINetConn : MonoBehaviour
     T BindTemplte<T>(string path, Transform parent = null) where T : Component
     {
         if (parent == null) parent = transform;
-        var child = parent.FindChild(path);
+        var child = parent.Find(path);
         if (child != null)
         {
             var component = child.GetComponent<T>();

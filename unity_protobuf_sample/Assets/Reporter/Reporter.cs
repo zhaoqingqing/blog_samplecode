@@ -2131,7 +2131,10 @@ public partial class Reporter : MonoBehaviour
 
     private void SaveLogsToDevice()
     {
-        string filePath = Application.persistentDataPath + $"/logs_{DateTime.Now.ToString("yyyy-M-d HH.mm.ss")}.txt";
+	    string logDir = Application.persistentDataPath + "/logs/";
+	    if (Application.isEditor) logDir = Application.dataPath + "/../logs/";
+	    if (!Directory.Exists(logDir)) Directory.CreateDirectory(logDir);
+	    string filePath = logDir + $"/log_{DateTime.Now.ToString("yyyy-M-d HH.mm.ss")}.txt";
         List<string> fileContentsList = new List<string>();
         Debug.Log("Saving logs to " + filePath);
         File.Delete(filePath);
