@@ -15,6 +15,7 @@
 //use UNITY_CHANGE3 for unity 5.3 (fix for new SceneManger system)
 //use UNITY_CHANGE4 for unity 2018.3 (Networking system)
 
+using System;
 using UnityEngine;
 using System.IO;
 using System.Collections;
@@ -2130,7 +2131,7 @@ public partial class Reporter : MonoBehaviour
 
     private void SaveLogsToDevice()
     {
-        string filePath = Application.persistentDataPath + "/logs.txt";
+        string filePath = Application.persistentDataPath + $"/logs_{DateTime.Now.ToString("yyyy-M-d HH.mm.ss")}.txt";
         List<string> fileContentsList = new List<string>();
         Debug.Log("Saving logs to " + filePath);
         File.Delete(filePath);
