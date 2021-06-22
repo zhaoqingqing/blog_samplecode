@@ -53,3 +53,9 @@ lua_scripts/.idea/workspace.xml
 /build-tools/article_backup
 /build-tools/html2md/html2md.exe
 /build-tools/zhihu_config.json
+/unity_protobuf_sample/Logs
+/unity_protobuf_sample/Assets/Plugins/Editor/JetBrains.meta
+/unity_protobuf_sample/Assets/Plugins/Editor/JetBrains
+/unity_protobuf_sample/obj/
+/unity_protobuf_sample/Assets/StreamingAssets/build_info
+/unity_protobuf_sample/Assets/StreamingAssets/build_info.meta
