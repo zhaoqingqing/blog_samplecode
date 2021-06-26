@@ -27,4 +27,8 @@ google doc： https://developer.android.com/about/dashboards/?hl=zh-cn
 | [Nougat](https://zh.wikipedia.org/wiki/Android_7.0)[[15\]](https://zh.wikipedia.org/wiki/Android%E6%AD%B7%E5%8F%B2%E7%89%88%E6%9C%AC#cite_note-15) 牛轧糖 | 7.0 – 7.1.2 | 2016年8月22日  | 24 – 25   | 支持                                                         |
 | [Oreo](https://zh.wikipedia.org/wiki/Android_8.0)[[16\]](https://zh.wikipedia.org/wiki/Android%E6%AD%B7%E5%8F%B2%E7%89%88%E6%9C%AC#cite_note-16) 奥利奥 | 8.0 – 8.1   | 2017年8月21日  | 26 – 27   | 支持                                                         |
 | [Pie](https://zh.wikipedia.org/wiki/Android_9.0)派           | **9.0.0**   | 2018年8月6日   | 28        | 支持                                                         |
+| [Android 10](https://zh.wikipedia.org/wiki/Android_10)[[20\]](https://zh.wikipedia.org/wiki/Android版本列表#cite_note-20) | 10          | 2019年9月3日   | 29        | 支持                                                         |
+| [Android 11](https://zh.wikipedia.org/wiki/Android_11)[[21\]](https://zh.wikipedia.org/wiki/Android版本列表#cite_note-21) | **11**      | 2020年9月8日   | 30        | 支持                                                         |
+| [Android 12](https://zh.wikipedia.org/wiki/Android_12)[[22\]](https://zh.wikipedia.org/wiki/Android版本列表#cite_note-22) | 12          |                | 31        | 支持                                                         |
+|                                                              |             |                |           |                                                              |
 
