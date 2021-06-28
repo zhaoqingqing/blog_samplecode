@@ -21,17 +21,11 @@ echo.
 echo.
 echo.
 echo === 新创建环境变量 ANDROID_HOME=%sdkHome%
-setx "ANDROID_HOME" "%sdkHome%" -M
+setx "ANDROID_HOME" "%sdkHome%" -m
 echo.
 echo.
-echo === 新追加环境变量(追加到最前面) PATH=%%ANDROID_HOME%%\platform-tools;%%ANDROID_HOME%%\tools;
-for /f "tokens=1,* delims=:" %%a in ('reg QUERY "%regpath%" /v "path"') do (
-    set "L=%%a"
-    set "P=%%b"
-)
-set "Y=%L:~-1%:%P%"
 
-setx path "%%ANDROID_HOME%%\platform-tools;%%ANDROID_HOME%%\tools;%Y%" -m
+setx PATH "%PATH%;%%ANDROID_HOME%%\platform-tools;%%ANDROID_HOME%%\tools" -m
 echo.
 echo.
 echo === 请按任意键退出! 
