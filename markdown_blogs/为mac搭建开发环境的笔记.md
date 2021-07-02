@@ -6,7 +6,7 @@
 
 截图/贴图：snipaste，windows和mac下都是免费的
 
-svn:《[MAC OS 图形化SVN管理工具](https://www.cnblogs.com/zhaoqingqing/p/3715941.html)》
+svn：SnailSVN《[MAC OS 图形化SVN管理工具](https://www.cnblogs.com/zhaoqingqing/p/3715941.html)》
 
 文本编辑器：vscode
 
@@ -24,9 +24,9 @@ start Menu: 在任务栏显示网速和cpu使用率
 
 mac中没有home和end，取而代之的是苹果键+左右箭头
 
-### vs社区版
+### Rider/vs社区版
 
-vs社区版在mac上可以调试unity，使用习惯和windows上有些差异，也可以使用rider来编写C#代码，使用体验一致。
+vs社区版在mac上可以调试unity，功能比windows上的少很多，建议使用Rider来编写C#代码，使用体验与Windows一致。
 
 ## 系统管理
 
