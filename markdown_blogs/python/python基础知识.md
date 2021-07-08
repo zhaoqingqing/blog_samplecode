@@ -18,7 +18,9 @@ python报错“Non-ASCII character '\xe5' ”
 # coding:UTF-8 --
 ```
 
+(手册链接：https://docs.python.org/3.5/whatsnew/3.0.html#pep-3101-a-new-approach-to-string-formatting)
 
+python 2.x 不默认支持 UTF-8 编码，而 python 3.x 默认支持 UTF-8 编码。
 
 ## 变量定义
 
