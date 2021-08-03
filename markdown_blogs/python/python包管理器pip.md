@@ -122,6 +122,14 @@ pip install markdown -i https://mirrors.aliyun.com/pypi/simple
 
 > python -m pip install --upgrade pip
 
+
+
+## pip查看包的版本
+
+会列出全部已安装的pip，从里面找到你要的pkg的版本号
+
+> pip list
+
 ## python常用第三方模块
 
 ### requests

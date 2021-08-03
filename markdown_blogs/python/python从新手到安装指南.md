@@ -77,9 +77,7 @@ python 3.x 系列，比如3.5, 3.6在同一个月更新两个不同的版本，
 
 参考这篇：《[安装多个版本的python环境](https://www.cnblogs.com/weew12/p/10583046.html)》，注意事项：
 
-在安装时，勾选把python安装目录添加到Path中，安装多版本后需要对python.exe和pythonw.exe进行重命名，这样在
-
-CMD可以使用不同版本的python
+在安装时，勾选把python安装目录添加到Path中，安装多版本后需要对python.exe和pythonw.exe进行重命名，这样在CMD可以使用不同版本的python
 
 pycharm中选择对应版本的python，参考：《[在pycharm中切换python版本的方法](https://blog.csdn.net/sgfmby1994/article/details/77876873)》
 

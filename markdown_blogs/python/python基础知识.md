@@ -16,6 +16,8 @@ python报错“Non-ASCII character '\xe5' ”
 # coding=UTF-8
 #或者
 # coding:UTF-8 --
+#python2添加
+# -*- coding: utf-8 -*-
 ```
 
 (手册链接：https://docs.python.org/3.5/whatsnew/3.0.html#pep-3101-a-new-approach-to-string-formatting)
