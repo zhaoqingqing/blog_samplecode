@@ -6,8 +6,8 @@
 # 查看支持的metaweblog API：http://rpc.cnblogs.com/metaweblog/
 # 博客园限制，不能连续不断的发表，所以使用threading间隔60S发一次。
 # NOTE: 文章从目录中发布正式或草稿后，会删除原文件，所以需要对源md文件进行备份
-import xmlrpc.client as xmlrpclib
-#import xmlrpclib
+# import xmlrpc.client as xmlrpclib
+import xmlrpclib    #py2使用这个
 import glob
 import os
 import sys
@@ -163,7 +163,7 @@ def post_art(path, publish=True):
 
             f.close()
             if not postid.strip == "" :
-                filepath_ = os.path.join(path_draft, f'{title}.md')
+                filepath_ = os.path.join(path_draft, title + '.md') # f在py2不支持
                 os.remove(filepath_)
             else:
                 print("Send Draf Faild")
@@ -181,7 +181,7 @@ def post_art(path, publish=True):
 
             f.close()
             if succcess or (not postid.strip == ""):
-                filepath_ = os.path.join(path_publish, f'{title}.md')
+                filepath_ = os.path.join(path_publish, title + '.md')
                 os.remove(filepath_)
             else:
                 print("Send Publish Faild")
@@ -221,7 +221,7 @@ def send_article():
         title_postid_dict[title] = postid
 
 if __name__ == "__main__":
-    # 创建路径
+    # 创建路径 TODO py2不会创建新目录
     for path in [path_publish, path_draft, path_backup]:
         if not os.path.exists(path):
             os.makedirs(path)
