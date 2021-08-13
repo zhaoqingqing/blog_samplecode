@@ -14,9 +14,13 @@
 | Remote development capabilities    | ✔                            |                           |
 | Database & SQL support             | ✔                            |                           |
 
+### Scientific tools
+
 一组科学计算的库包括Matplotlib 和NumPy [Scientific tools | PyCharm (jetbrains.com)](https://www.jetbrains.com/help/pycharm/scientific-tools.html)
 
 科学工具例子介绍，可绘制图表 [Scientific & Data Science Tools - Features | PyCharm (jetbrains.com)](https://www.jetbrains.com/pycharm/features/scientific_tools.html)
+
+### 我的经验
 
 对于游戏开发者来说，使用社区版就足够了，当然我司有很多同事是使用vscode。因为pycharm在处理文件中文编码时很难完美的解决。
 
