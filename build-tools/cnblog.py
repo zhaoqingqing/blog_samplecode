@@ -6,8 +6,7 @@
 # 查看支持的metaweblog API：http://rpc.cnblogs.com/metaweblog/
 # 博客园限制，不能连续不断的发表，所以使用threading间隔60S发一次。
 # NOTE: 文章从目录中发布正式或草稿后，会删除原文件，所以需要对源md文件进行备份
-# import xmlrpc.client as xmlrpclib
-import xmlrpclib    #py2使用这个
+import xmlrpc.client as xmlrpclib
 import glob
 import os
 import sys
