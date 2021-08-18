@@ -124,7 +124,11 @@ print(name,pwd)
 
 转义字符后接 %()
 
-## 数据结构-dict 
+## 数据结构
+
+推荐一篇非常好的文章讲解python中的几种数据结构《[Python中list,tuple,dict,set的区别和用法 - soaringEveryday - 博客园 (cnblogs.com)](https://www.cnblogs.com/soaringeveryday/p/5044007.html)》
+
+### dict
 
 判断字典中不存在key
 
@@ -134,7 +138,7 @@ if "skin_name" not in hero:
     return
 ```
 
-## 数据结构-list
+### list
 
 遍历列表
 
