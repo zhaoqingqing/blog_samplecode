@@ -1,4 +1,4 @@
-rem TortoiseGit命令行更新多个不同的git库,每次更新会弹出窗口分支确认窗口
+rem 在TortoiseGit中更新多个不同的git库，每次更新会弹出窗口pull确认窗口，所以我建议使用git命令行自动化更新
 
 @echo off
 @echo ================自动更新git Start===============
@@ -9,7 +9,7 @@ SET git_home=C:\Program Files\TortoiseGit\bin
 
 rem git repo目录(请修改对应的目录)
 SET blog_samplecode=E:\Code\blog_samplecode
-SET code_snippetE:\Code\code_snippetE
+SET code_snippetE:\Code\code_snippet
 SET unity_study=E:\Code\unity_study
 SET python_study=E:\Code\python_study
 

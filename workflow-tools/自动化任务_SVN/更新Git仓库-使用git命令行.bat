@@ -7,8 +7,9 @@ rem Git命令行更新多个不同的git库
 rem git repo目录(请修改对应的目录)
 SET blog_samplecode=E:\Code\blog_samplecode
 SET code_snippet=E:\Code\code_snippet
-SET unity_study=E:\Code\unity_study
 SET python_study=E:\Code\python_study
+SET unity_study=E:\Code\unity_study
+
 
 
 cd e:
@@ -18,5 +19,9 @@ git pull
 
 cd %code_snippet%
 git pull
+
+cd %python_study%
+git pull
+
 echo ==============自动更新git Finish==============
 pause
