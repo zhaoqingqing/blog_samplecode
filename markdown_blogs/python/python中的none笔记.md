@@ -1,0 +1,27 @@
+平时判断对象是否为空，使用if not xx:就可以了。
+
+
+
+```python
+def printDebug(*arg):
+	if XXEngine.isPublishedVersion():
+		return
+	is_me = os.getenv("is_me")
+```
+
+
+
+```
+ class Test():
+    # def __bool__(self):
+    #     return False   #不能返回整形，
+    def __len__(self):
+        return 0   #可以返回int和布尔值（特例）
+```
+
+python中的None是一个独立的类型，可以理解为其他编程语言的 null、nil 或 undefined
+
+参考资料：
+
+[深入理解Python中的None - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/65193194)
+
