@@ -4,7 +4,7 @@
 
 那么在实际商业项目中使用python开发，我们是怎样做静态代码检查的呢？
 
-首先在我们项目组推荐使用vscode做为python开发工具，所以我介绍下我们在vscode中是怎样做代码静态审查的，减少运行期的py脚本错误。
+首先在我们项目组推荐使用vscode做为python开发工具，本文我介绍下我们做的python代码静态审查来减少运行期的py脚本错误。
 
 1. 安装vscode插件：save and run，下载地址：[Save and Run - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=wk-j.save-and-run)
 2. 通过pip install pyflakes 这个模块，安装后就有pyflakes.exe
@@ -30,7 +30,14 @@
 
 ### 语法报错
 
-代码缩进在python中是语法，如果在纯文本中编辑代码或复制粘贴的代码，很大概率的问题缩进不对从而在运行时报错，通过上面的设置后在从保存py文件时就会报错出来。
+代码缩进在python中是语法，如果在纯文本中编辑代码或复制粘贴的代码，很大概率会出现缩进不对从而在运行时报错，通过上面的设置后在从保存py文件时就会报错出来。
+
+```powershell
+PS E:\Code\python_study> python C:\Python27\Scripts\pyflakes.exe e:\Code\python_study\hello_netease.py
+e:\Code\python_study\hello_netease.py:10:1: unexpected indent
+        print ("hello netease")
+^
+```
 
 
 
