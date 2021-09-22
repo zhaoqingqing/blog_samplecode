@@ -1,6 +1,6 @@
 ## MetaWeblog API
 
-接上篇《博客园自动化之XML-RPC》，我们了解了MetaWeblog API。
+接上篇《[博客园自动化之XML-RP](https://www.cnblogs.com/zhaoqingqing/p/15321559.html)C》，我们了解了MetaWeblog API。
 
 MetaWeblog API（MWA）是一个编程接口，允许外部程序获取和设置weblog帖子的文本和属性。它建立在流行的XML-RPC通信协议之上，在许多流行的编程环境中都可以使用实现。
 
