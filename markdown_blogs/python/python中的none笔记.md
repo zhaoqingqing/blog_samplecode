@@ -25,3 +25,20 @@ python中的None是一个独立的类型，可以理解为其他编程语言的 
 
 [深入理解Python中的None - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/65193194)
 
+# python判断tuple、list、dict是否为空
+
+if not xxx:即可判断 tuple、list、dict 是否 **为空** ，而直接使用if xxx则会判断失败。
+
+测试代码：
+
+```python
+tuple_test = ()
+assert not tuple_test
+
+list_test = []
+assert not list_test
+
+dict_test = {}
+assert not dict_test
+```
+
