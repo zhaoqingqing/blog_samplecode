@@ -1,3 +1,9 @@
+## pycharm社区版可用于商业项目
+
+来源于官方的FAQ
+
+[Can I use Community Editions of JetBrains IDEs for developing commercial proprietary software? – Licensing and Purchasing FAQ](https://sales.jetbrains.com/hc/en-gb/articles/360021922640-Can-I-use-Community-Editions-of-JetBrains-IDEs-for-developing-commercial-proprietary-software-)
+
 ## pycharm专业版和社区版功能对比表
 
 |                                    | PyCharm Professional Edition | PyCharm Community Edition |
@@ -24,9 +30,9 @@
 
 ## 我的经验
 
-对于游戏开发者来说，使用社区版就足够了，当然我司有很多同事是使用vscode。
+对于游戏开发者来说，使用社区版就足够了，当然我司很多同事是使用vscode开发python。
 
-因为pycharm中文编码很难解决，甚至非常的头疼，这个问题我研究了很久也没有一套很好的解决办法，但是在vscode中无此问题。
+因为pycharm中文编码很难解决，甚至非常的头疼，这个问题我研究了很久也没有一套很好的解决办法，但是在vscode中原生就解决了。
 
 ## pycharm社区版和vscode
 
