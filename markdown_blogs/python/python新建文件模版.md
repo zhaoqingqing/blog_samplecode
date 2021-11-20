@@ -7,16 +7,11 @@
 
 ```python
 # -*- coding:utf-8 -*-
-
-'''
-
-Desc：${NAME} 
-
-Time: ${DATE} ${TIME}
-
-Author: qingqing-zhao(569032731@qq.com)
-
-'''
+"""
+@Author: qingqing.zhao(569032731@qq.com)
+@Time: ${DATE} ${TIME}
+@Desc：${NAME}
+"""
 ```
 
 3. 按快捷键 **Alt+Insert**，选择**Python File**即可新建一个Python文件
