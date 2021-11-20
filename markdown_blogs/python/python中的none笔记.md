@@ -1,6 +1,6 @@
 平时判断对象是否为空，使用if not xx:就可以了。
 
-
+在print中判断界面是否为空：xx is not None
 
 ```python
 def printDebug(*arg):
@@ -24,6 +24,8 @@ python中的None是一个独立的类型，可以理解为其他编程语言的 
 参考资料：
 
 [深入理解Python中的None - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/65193194)
+
+
 
 # python判断tuple、list、dict是否为空
 
