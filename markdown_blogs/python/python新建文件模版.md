@@ -12,6 +12,9 @@
 @Time: ${DATE} ${TIME}
 @Desc：${NAME}
 """
+class ${NAME}(object):
+	def __init__(self):
+        pass
 ```
 
 3. 按快捷键 **Alt+Insert**，选择**Python File**即可新建一个Python文件
