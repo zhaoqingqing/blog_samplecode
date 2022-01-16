@@ -16,7 +16,11 @@
 
 **下载地址一**
 
-在这个网站下载：https://www.microsoft.com/en-us/download/details.aspx?id=55168
+在下面网站下载：
+
+1. https://www.microsoft.com/en-us/download/details.aspx?id=55168
+
+2. [Download .NET Framework 4.7.2 | Free official downloads (microsoft.com)](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472)
 
 下载到的两个文件如下：
 
