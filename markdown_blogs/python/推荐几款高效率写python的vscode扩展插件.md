@@ -41,3 +41,27 @@ kite：[Kite - Free AI Coding Assistant and Code Auto-Complete Plugin](https://w
 
 <br/>
 
+## 代码命名插件
+
+vscode装：Codelf
+
+https://github.com/unbug/codelf
+
+pycharm装这个：OnlineSearch2，配置方法：《[【教程】给 WebStorm 添加 Codelf 实现一键搜索 · Issue #24 · unbug/codelf (github.com)](https://github.com/unbug/codelf/issues/24)》
+
+在pycharm的设置中找到OnlineSearch2，然后添加一行配置如下：
+
+| Codelf | https://unbug.github.io/codelf/#%S | %s   |
+| ------ | ---------------------------------- | ---- |
+
+其它文章：《[pycharm插件OnlineSearch2解决变量命名 - 简书 (jianshu.com)](https://www.jianshu.com/p/8c68348d83e6)》
+
+## 代码对齐
+
+pycharm:smart align
+
+vscode:Better Align
+
+### smart align
+
+Place your cursor at where you want your code to be aligned, and invoke the Align command via Code -> Smart Align or Press Alt + Shift + -. Then the code will be automatically aligned.
