@@ -26,6 +26,16 @@ pythonw.exe是无窗口的Python可执行程序，意思是在运行程序的时
 
 至于.pyc文件，是Python解释器运行程序的过程中产生的字节码文件（也就是中间文件）。[Python什么情况下产生pyc文件？](https://www.zhihu.com/question/30296617)
 
+## pyo
+
+在pyc的基础上，去掉了assert和docstring
+
+## 编译器基础
+
+.py经过编译，生成.pyc和.pyo,使用-O和-OO参数
+
+
+
 ## py文件执行后不马上关闭窗口
 
 这里还要解释一个问题，如果.py文件直接用python.exe打开，文件被执行完成之后，视窗会立即关闭，如果想让视窗停留，给大家提供几个方法：
