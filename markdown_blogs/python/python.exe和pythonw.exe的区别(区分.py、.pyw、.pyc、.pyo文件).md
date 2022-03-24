@@ -30,6 +30,10 @@ pythonw.exe是无窗口的Python可执行程序，意思是在运行程序的时
 
 在pyc的基础上，去掉了assert和docstring
 
+python3.5之后，无.pyo文件
+
+
+
 ## 编译器基础
 
 .py经过编译，生成.pyc和.pyo,使用-O和-OO参数
