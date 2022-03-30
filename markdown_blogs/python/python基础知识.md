@@ -1,6 +1,6 @@
 ## 前言
 
-python中需要特别注意代码的缩进，这不是为了可读性而是正确性，不像 C#，lua ( function do end)，js等语言的函数范围用{}表示。
+python中需要特别注意代码的缩进，这不是为了可读性而是正确性，不像 C#，lua ( function xxx do end)，js等语言的函数范围用{}表示。
 
 对于判断是否包含尽量使用in，而不使用for，具体参考：《Python编程惯例.md》
 
@@ -10,7 +10,7 @@ python报错“Non-ASCII character '\xe5' ”
 
 解决方法：
 
-在Python源文件的最开始一行，加入一句
+在Python源文件的第一行加上文件编码
 
 ```python
 # coding=UTF-8
@@ -22,7 +22,7 @@ python报错“Non-ASCII character '\xe5' ”
 
 (手册链接：https://docs.python.org/3.5/whatsnew/3.0.html#pep-3101-a-new-approach-to-string-formatting)
 
-python 2.x 不默认支持 UTF-8 编码，而 python 3.x 默认支持 UTF-8 编码。
+python 2.x 默认不是 UTF-8 编码，而 python 3.x 默认支持 UTF-8 编码。
 
 ## 变量定义
 
@@ -133,6 +133,9 @@ print(name,pwd)
 判断字典中不存在key
 
 ```python
+# 方法一
+dictxx.has_key(xx)
+# 方法二
 if "skin_name" not in hero:
     print("数据异常")
     return
@@ -150,11 +153,11 @@ for k in range(len(skins)):
 
 If和elif后面加冒号:
 
-没有++和--
+没有++和--，有+=1
 
 
 
-for else一般很少用，当for循环要退出时要加break
+当for循环要退出时要加break，C#中的continue也有效
 
 ## for循环
 
@@ -167,11 +170,18 @@ for i in range (0,2):
 
 ## 类
 
-python类中的方法，需要传入self，这点和原生的Lua是一样的。
+python类中的方法，需要传入self，这点和Lua是一样的。
 
 ## py文件执行完不直接退出
 
 在python文件的未尾添加一行输入符，等待用户按下任意键才会退出
+
+```python
+input("press any key .....")
+os.system("pause")
+```
+
+
 
 ## python执行
 
@@ -182,7 +192,7 @@ python test.py 和python -m test.py 这两者的区别？
 
 ## end=
 
-end=，对于文本中文字本来就是有换行的，如果想在输出时不换行，可以写end=""，如果不加，那么会多出换行
+end=，文本中文字本来就是有换行的，如果想在输出时不换行，可以写end=""，如果不加，那么会多处换行
 
 ```python
 filepath = r'E:\Code\test.txt'
@@ -190,8 +200,9 @@ with open(filepath, mode="r", encoding="utf-8") as f:
     for line in f:
         print(line)
 
+#不加 end="" 输出如下
 """
-不加 end=""
+
 第一行
 
 第二行
@@ -199,8 +210,8 @@ with open(filepath, mode="r", encoding="utf-8") as f:
 共三行
 """
 
+#加上end="" 输出如下
 """
-加上end=""
 第一行
 第二行
 共三行

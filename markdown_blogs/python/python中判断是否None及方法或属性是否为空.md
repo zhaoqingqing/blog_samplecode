@@ -4,13 +4,11 @@ python中的None是一个独立的类型，可以理解为其他编程语言的 
 
 如果通过 if xx == None 或 if not xx 在一些其它情况下并不能判断出是否为真正的None
 
-
+<br/>
 
 ## python判断tuple、list、dict是否为空
 
 if not xxx:即可判断 tuple、list、dict 的内容是否为空 ，这点和C#中的null是有很大区别的。
-
-
 
 ```python
 list_test = []
@@ -24,6 +22,8 @@ if list_test is None:
 
 ```
 
+<br/>
+
 ## 判断一个属性或方法是否存在
 
 ```python
@@ -34,3 +34,4 @@ if hasattr(self.panel,"xxx")
 if getattr(self.panel,"xxx",None)
 ```
 
+<br/>
