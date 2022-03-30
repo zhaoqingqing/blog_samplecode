@@ -21,3 +21,16 @@ data={'comment': '\xd2\xbb\xb6\xce\xb2\xe2\xca\xd4\xb6\xcc\xc6\xc0-2021-10-19 17
 print data["t_when"],getattr(data,"t_when",None),data.keys()
 ```
 
+## print的改进版
+
+支持python2和python3：[gruns/icecream: 🍦 Never use print() to debug again. (github.com)](https://github.com/gruns/icecream)
+
+国人开发的一个库 objprint：[objprint, 让你轻松打印python object - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/355996663)
+
+## dir()
+
+打印某个对象所有的方法
+
+## help()
+
+以文档的形式打印类型的用法，或者方法
