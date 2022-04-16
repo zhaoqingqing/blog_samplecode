@@ -22,6 +22,8 @@
 
 ## pycharm专业版特有的功能
 
+专业版可以把其它文件夹附加到当前项目中，好比可以同时打开多个目录。
+
 ### Scientific tools
 
 一组科学计算的库包括Matplotlib 和NumPy [Scientific tools | PyCharm (jetbrains.com)](https://www.jetbrains.com/help/pycharm/scientific-tools.html)
