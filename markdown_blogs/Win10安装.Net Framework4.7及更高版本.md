@@ -30,6 +30,8 @@
 
 ​      
 
+认准：Developer pack 非runtime
+
 **下载地址二**
 
 下载安装.net framework的开发版或者说开发包。
