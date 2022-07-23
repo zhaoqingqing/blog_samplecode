@@ -59,3 +59,25 @@
 
 参考资料：[python2 和 python 3和多版本如何共存_KM (netease.com)](https://km.netease.com/article/223505)
 
+## python2 x64
+
+在我安装python2 x64版本之后，#! python3 这条指令就失效了，打印出来的sys.version为python2 x64
+
+测试代码：
+
+```python
+#! python3
+# coding=utf-8
+
+import sys
+import os
+print(sys.version)
+os.system('pause')
+#输出结果：2.7 (r27:82525, Jul  4 2010, 07:43:08) [MSC v.1500 64 bit (AMD64)]
+```
+
+然后我把python2 x64的版本卸载后，.py文件的打开方式就丢失了，所以可以认为是它修改了.py的打开方式。
+
+- 官方认为, py文件的默认打开方式应该是py.exe，完整路径：C:\Windows\py.exe
+
+修改后一切都正常了，我是同时安装了python2和python3，然后查看py.exe的版本号是3.x
