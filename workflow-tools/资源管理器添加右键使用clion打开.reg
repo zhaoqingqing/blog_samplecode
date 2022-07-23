@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\Shell\Editor With CLion]
+
+[HKEY_CLASSES_ROOT\*\Shell\Editor With CLion\Command]
+
+@="\"C:\\Program Files\\JetBrains\\CLion 2020.3.4\\bin\\clion64.exe\" \"%1\""
