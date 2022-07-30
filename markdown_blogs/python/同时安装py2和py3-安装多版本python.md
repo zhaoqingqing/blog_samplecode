@@ -116,6 +116,8 @@ os.system('pause')
 
 是否需要在C:\Windows\下放python.exe才能正常识别#!python2和#!python3？
 
+结论：不需要C:\Windows\python.exe，但是要把.py文件的打开方式修改为C:\Windows\py.exe，然后双击py执行就可以正确识别要使用python2或python3来执行
+
 这个exe的源码如下(编译为32位的C程序)：
 
 ```c
