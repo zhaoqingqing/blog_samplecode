@@ -1,6 +1,6 @@
 @echo off
 set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-set sdkhome=C:\Program Files\Java\jdk-13.0.2
+set sdkhome=C:\Program Files\Java\jdk1.8.0_202
 rem sdkhome=D:\Tools\Java\jdk1.7.0_51
 echo.
 echo ************************************************************

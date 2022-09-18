@@ -1,7 +1,7 @@
 @echo off
 set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-set javaHome=C:\Program Files\Java\jdk1.8.0_92
-set androidHome=D:\Android\AndroidSdk
+set javaHome=C:\Program Files\Java\jdk1.8.0_202
+set androidHome=E:\Android\sdk
 
 echo.
 echo ************************************************************
