@@ -37,6 +37,8 @@ print data["t_when"],getattr(data,"t_when",None),data.keys()
 
 ## print的改进版
 
+使用系统自带的print只能输出一条log，而在unity中的Debug.log是可以带函数调用堆栈的，下面这两个库也可以在print时打印函数调用栈。
+
 支持python2和python3：[gruns/icecream: 🍦 Never use print() to debug again. (github.com)](https://github.com/gruns/icecream)
 
 国人开发的一个库 objprint：[objprint, 让你轻松打印python object - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/355996663)
