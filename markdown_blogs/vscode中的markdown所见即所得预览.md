@@ -30,7 +30,6 @@ github地址：[cweijan/vscode-office: 让VSCode支持预览PDF,Excel等格式, 
 
 [请问如何修改保持图片的路径 · Issue #70 · cweijan/vscode-office (github.com)](https://github.com/cweijan/vscode-office/issues/70)
 
-
 ## 代码预览
 
 建议关闭代码预览 ，扩展设置中的Preview Code，因为鼠标点击后会显示两份代码。
@@ -38,6 +37,5 @@ github地址：[cweijan/vscode-office: 让VSCode支持预览PDF,Excel等格式, 
 参考：[请问如何更改vditor设置 · Issue #112 · cweijan/vscode-office (github.com)](https://github.com/cweijan/vscode-office/issues/112)
 
 ## 其它设置
-
 
 ## 存在问题
