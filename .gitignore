@@ -59,3 +59,9 @@ lua_scripts/.idea/workspace.xml
 /unity_protobuf_sample/obj/
 /unity_protobuf_sample/Assets/StreamingAssets/build_info
 /unity_protobuf_sample/Assets/StreamingAssets/build_info.meta
+
+#link files
+markdown_blogs/blogs
+markdown_blogs/kms-zone
+markdown_blogs/km-zone
+markdown_blogs/我的随笔

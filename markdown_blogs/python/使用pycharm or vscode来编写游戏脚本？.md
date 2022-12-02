@@ -24,6 +24,8 @@
 
 专业版可以把其它文件夹附加到当前项目中，好比可以同时打开多个目录。
 
+TODO：尝试一下这个方法能否在社区版中使用《[pycharm同时加载多个项目](https://blog.csdn.net/u012922485/article/details/106729363/)》
+
 ### Scientific tools
 
 一组科学计算的库包括Matplotlib 和NumPy [Scientific tools | PyCharm (jetbrains.com)](https://www.jetbrains.com/help/pycharm/scientific-tools.html)
